@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: "Montserrat";
+}
+
+/* Contenedor general */
+/* .page-container {
+    max-width: 80%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* Hero (Header con imagen de fondo) */
+.hero {
+    background-image: url('/Images/sampa_casa_3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Capa oscura sobre la imagen */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Navbar fijo y transparente */
+.navbar {
+    position: fixed;
+    top: 0;
+    /* left: 10%; */
+    width: 100%;
+    height: 10vh;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar-nav .nav-link {
+    color: black !important;
+    font-weight: bold;
+    transition: color 0.3s ease, border 0.3s ease, padding 0.3s ease;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    border-color: rgb(49, 146, 85);
+    background-color: rgb(49, 146, 85);
+    height: 100%;
+}
+
+/* Navbar al hacer scroll */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgb(49, 146, 85);
+    color: white !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el dropdown-menu (submenú) */
+.navbar-nav .dropdown-menu {
+    background-color: rgba(49, 146, 85, 0.4);
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+/* Estilos para los ítems del dropdown-menu */
+.navbar-nav .dropdown-item {
+    color: black !important;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border: 2px solid transparent;
+    display: block;
+}
+
+/* Efecto hover para los ítems del dropdown-menu */
+.navbar-nav .dropdown-item:hover {
+    color: white !important;
+    background-color: rgb(49, 146, 85);
+    border-color: rgb(49, 146, 85);
+}
+
+/* Ajustes para el dropdown-toggle (enlace "Productos") */
+.navbar-nav .dropdown-toggle::after {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Estilo del logo */
+.logo img {
+    height: 8vh;
+}
+
+.presentacion {
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+.presentacion .bienvenida {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.presentacion h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.presentacion h2 span {
+    font-size: 55px;
+    color: rgb(49, 146, 85);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Sección Presenta */
+.container_presenta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5vh 0;
+    padding: 10px;
+    flex-wrap: wrap;
+    /* background-color: rgba(151, 197, 169, 0.3); */
+}
+
+/* Información de la sección presenta */
+.presenta_info {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.presenta_text h1 {
+    font-size: 6vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Imagen en la sección presenta */
+.presenta_img {
+    width: 50%;
+    text-align: center;
+}
+
+.presenta_img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Seccion Servicios */
+.servicios {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.servicios h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.servicio {
+    margin-bottom: 30px;
+}
+
+.servicio i {
+    font-size: 4em;
+    color: rgb(49, 146, 85);
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    color: #fff;
+}
+.imagen_fondo {
+    position: relative; /* Necesario para el pseudo-elemento */
+    background-image: url('/Images/sampa_casa_2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 30em;
+    display: flex; /* Centrar contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center;
+    padding: 20px;
+}
+
+.imagen_fondo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Ajusta el nivel de opacidad aquí */
+    z-index: 1; /* Asegura que la capa esté encima de la imagen */
+}
+
+.imagen_fondo * { 
+    position: relative; 
+    z-index: 2; /* Asegura que el contenido se vea sobre la capa oscura */
+}
+
+/* Sección Productos */
+.seccion {
+    background-color: #fff;
+    margin: 5vh 0;
+    padding: 20px 0;
+}
+
+/* Lista de productos */
+.list-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para alinear los productos de 2 en 2 */
+#productos {
+    max-width: 1100px;
+    padding: 100px 0;
+    margin: auto;
+}
+
+#productos h2 {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+
+#productos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.producto-item {
+    max-width: 450px;
+    border: 1px solid #000;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.producto-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.producto-item:hover img {
+    filter: grayscale(0);
+}
+
+.producto-item .overlay {
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(49, 146, 85);
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    bottom: -40px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.producto-item:hover .overlay {
+    opacity: 1;
+    bottom: 0;
+}
+
+
+/* Estilos para la sección de marcas */
+#marcas {
+    padding: 60px 0;
+}
+
+#marcas img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#marcas img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    background-color: rgb(49, 146, 85);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Capa negra semi-transparente */
+    z-index: 0; /* Capa detrás del contenido */
+}
+
+.footer * {
+    position: relative;
+    z-index: 1; /* Mantiene el texto y otros elementos sobre la capa negra */
+}
+
+
+.footer .container {
+    padding: 0;
+}
+
+.footer .row {
+    align-items: center;
+}
+
+.footer .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer img {
+    max-height: 15vh;
+    width: auto;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: black;
+}
+
+/* Estilos para iconos sociales */
+.footer .bi {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .bi:hover {
+    transform: scale(1.2);
+}
+
+.footer hr {
+    margin: 20px 0;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer .text-center {
+    margin-top: 10px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .page-container {
+        max-width: 100%;
+    }
+
+    .navbar {
+        left: 0;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 10vh;
+    }
+
+    .offcanvas {
+        width: 75%; /* Ancho del menú offcanvas en móviles */
+    }
+
+    .container_presenta {
+        flex-direction: column;
+    }
+
+    .presenta_info, .presenta_img {
+        width: 100%;
+    }
+
+    .presenta_text h1 {
+        font-size: 4vh;
+    }
+
+    .producto-item {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    #marcas .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+
+    .footer img {
+        max-height: 10vh;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer ul {
+        padding: 0;
+    }
+
+    .footer .d-flex {
+        justify-content: center;
+    }
+
+    .footer hr {
+        margin: 10px 0;
+    }
+
+    .footer .text-center {
+        margin-top: 20px;
+    }
+}
