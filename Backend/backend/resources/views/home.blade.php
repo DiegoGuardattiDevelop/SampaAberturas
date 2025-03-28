@@ -33,18 +33,17 @@
                                     Productos
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="aberturas_aluminio.html">Aberturas de aluminio</a></li>
-                                    <li><a class="dropdown-item" href="Puertas_placa.html">Puertas placas</a></li>
-                                    <li><a class="dropdown-item" href="mamparas.html">Mamparas</a></li>
-                                    <li><a class="dropdown-item" href="mosquiteros.html">Mosquiteros</a></li>
-                                    <li><a class="dropdown-item" href="herrajes.html">Herrajes</a></li>
-                                    <li><a class="dropdown-item" href="perfileria.html">Perfileria</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/aberturas-aluminio') }}">Aberturas de aluminio</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/puertas-placa') }}">Puertas placas</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/mamparas') }}">Mamparas</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/mosquiteros') }}">Mosquiteros</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/herrajes') }}">Herrajes</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/perfileria') }}">Perfileria</a></li>
                                 </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link fw-bold fs-6" href="obras.html">Obras</a></li>
-                            <li class="nav-item"><a class="nav-link fw-bold fs-6" href="outlet.html">Outlet</a></li>
-                            <li class="nav-item"><a class="nav-link fw-bold fs-6" href="nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link fw-bold fs-6" href="contacto.html">Contacto</a></li>
+                                <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/obras') }}">Obras</a></li>
+                                <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/outlet') }}">Outlet</a></li>
+                                <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/nosotros') }}">Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/contacto') }}">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
