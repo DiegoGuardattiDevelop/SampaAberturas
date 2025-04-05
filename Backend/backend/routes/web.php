@@ -36,7 +36,7 @@ Route::get('/obras', function () {
 });
 
 Route::get('/outlet', function () {
-    return view('outlet');
+    return view('tienda');
 });
 
 Route::get('/nosotros', function () {
