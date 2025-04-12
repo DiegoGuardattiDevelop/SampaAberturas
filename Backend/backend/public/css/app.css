@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -6,21 +7,14 @@ body {
     font-family: "Montserrat";
 }
 
-/* Contenedor general */
-/* .page-container {
-    max-width: 80%;
+.page-container {
+    max-width: 100%;
     margin: 0 auto;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-} */
+}
 
-/* Hero (Header con imagen de fondo) */
 .hero {
-    background-image: url('/Images/sampa_casa_3.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 95vh;
     position: relative;
     color: #fff;
     display: flex;
@@ -29,7 +23,6 @@ body {
     text-align: center;
 }
 
-/* Capa oscura sobre la imagen */
 .hero::before {
     content: "";
     position: absolute;
@@ -40,19 +33,15 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Navbar fijo y transparente */
 .navbar {
     position: fixed;
     top: 0;
-    /* left: 10%; */
     width: 100%;
-    height: 10vh;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.5);
     transition: background-color 0.3s ease;
 }
 
-/* Estilos para los enlaces del navbar */
 .navbar-nav .nav-link {
     color: black !important;
     font-weight: bold;
@@ -68,10 +57,8 @@ body {
     color: white !important;
     border-color: rgb(49, 146, 85);
     background-color: rgb(49, 146, 85);
-    height: 100%;
 }
 
-/* Navbar al hacer scroll */
 .navbar-scrolled {
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -85,7 +72,6 @@ body {
     align-items: center;
 }
 
-/* Estilos para el dropdown-menu (submenú) */
 .navbar-nav .dropdown-menu {
     background-color: rgba(49, 146, 85, 0.4);
     border: none;
@@ -93,7 +79,6 @@ body {
     padding: 0;
 }
 
-/* Estilos para los ítems del dropdown-menu */
 .navbar-nav .dropdown-item {
     color: black !important;
     font-weight: bold;
@@ -103,20 +88,17 @@ body {
     display: block;
 }
 
-/* Efecto hover para los ítems del dropdown-menu */
 .navbar-nav .dropdown-item:hover {
     color: white !important;
     background-color: rgb(49, 146, 85);
     border-color: rgb(49, 146, 85);
 }
 
-/* Ajustes para el dropdown-toggle (enlace "Productos") */
 .navbar-nav .dropdown-toggle::after {
     margin-left: 5px;
     vertical-align: middle;
 }
 
-/* Estilo del logo */
 .logo img {
     height: 8vh;
 }
@@ -133,6 +115,7 @@ body {
     position: relative;
     z-index: 2;
 }
+
 .presentacion .bienvenida {
     font-size: 16px;
     margin-bottom: 20px;
@@ -145,6 +128,7 @@ body {
     margin-bottom: 25px;
     text-align: center;
 }
+
 .presentacion h2 span {
     font-size: 55px;
     color: rgb(49, 146, 85);
@@ -152,7 +136,11 @@ body {
     font-weight: bold;
 }
 
-/* Sección Presenta */
+.presentacion .descripcion {
+    font-size: 16px;
+}
+
+/* Estilos de style_home.css */
 .container_presenta {
     display: flex;
     align-items: center;
@@ -160,10 +148,8 @@ body {
     margin: 5vh 0;
     padding: 10px;
     flex-wrap: wrap;
-    /* background-color: rgba(151, 197, 169, 0.3); */
 }
 
-/* Información de la sección presenta */
 .presenta_info {
     width: 50%;
     text-align: center;
@@ -175,7 +161,6 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Imagen en la sección presenta */
 .presenta_img {
     width: 50%;
     text-align: center;
@@ -186,7 +171,6 @@ body {
     height: auto;
 }
 
-/* Seccion Servicios */
 .servicios {
     padding: 50px 0;
     text-align: center;
@@ -215,16 +199,17 @@ body {
 .servicio p {
     color: #fff;
 }
+
 .imagen_fondo {
-    position: relative; /* Necesario para el pseudo-elemento */
+    position: relative;
     background-image: url('/Images/sampa_casa_2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 30em;
-    display: flex; /* Centrar contenido */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
 }
@@ -236,23 +221,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Ajusta el nivel de opacidad aquí */
-    z-index: 1; /* Asegura que la capa esté encima de la imagen */
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 .imagen_fondo * { 
-    position: relative; 
-    z-index: 2; /* Asegura que el contenido se vea sobre la capa oscura */
+    position: relative;
+    z-index: 2;
 }
 
-/* Sección Productos */
 .seccion {
     background-color: #fff;
     margin: 5vh 0;
     padding: 20px 0;
 }
 
-/* Lista de productos */
 .list-1 {
     display: flex;
     flex-wrap: wrap;
@@ -262,7 +245,6 @@ body {
     margin: 0;
 }
 
-/* Estilos para alinear los productos de 2 en 2 */
 #productos {
     max-width: 1100px;
     padding: 100px 0;
@@ -327,8 +309,6 @@ body {
     bottom: 0;
 }
 
-
-/* Estilos para la sección de marcas */
 #marcas {
     padding: 60px 0;
 }
@@ -340,7 +320,200 @@ body {
 }
 
 #marcas img:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    transform: scale(1.1);
+}
+
+/* Estilos de style_views.css */
+.obras-gallery .gallery {
+    padding: 20px 0;
+}
+
+.obra-card {
+    margin-bottom: 20px;
+}
+
+.card {
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 0;
+    position: relative;
+}
+
+.obra-images {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.obra-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.obra-image.active {
+    opacity: 1;
+}
+
+.card-title, .card-text, .prev-image, .next-image {
+    display: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    color: rgb(49, 146, 85);
+    margin-bottom: 20px;
+}
+
+.contact-section .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-section .btn-primary {
+    background-color: rgb(49, 146, 85);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+    background-color: rgb(39, 126, 75);
+}
+
+.outlet-gallery {
+    padding-bottom: 50px;
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-images {
+    margin-bottom: 15px;
+}
+
+.product-card .btn {
+    margin-top: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.aluar-lines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lines-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.line-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s;
+    background-color: white;
+}
+
+.line-card:hover {
+    transform: scale(1.05);
+}
+
+.line-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.line-card h4 {
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+.line-card p {
+    margin: 5px 0 0;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+}
+
+#obraModalCarousel {
+    background-color: #f8f9fa;
+}
+
+#obraModalCarousel .carousel-item {
+    height: 400px;
+}
+
+#obraModalCarousel .carousel-item img {
+    height: 100%;
+    object-fit: contain;
+}
+
+#carouselIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+#carouselIndicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+}
+
+#carouselIndicators button.active {
+    background-color: #007bff;
 }
 
 /* Footer */
@@ -361,15 +534,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Capa negra semi-transparente */
-    z-index: 0; /* Capa detrás del contenido */
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
 }
 
 .footer * {
     position: relative;
-    z-index: 1; /* Mantiene el texto y otros elementos sobre la capa negra */
+    z-index: 1;
 }
-
 
 .footer .container {
     padding: 0;
@@ -406,7 +578,6 @@ body {
     color: black;
 }
 
-/* Estilos para iconos sociales */
 .footer .bi {
     font-size: 1.5rem;
     margin-right: 5px;
@@ -430,76 +601,53 @@ body {
     margin-top: 10px;
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    .page-container {
-        max-width: 100%;
-    }
+.list-group-item.active {
+    background-color: rgb(49, 146, 85); /* Verde de Bootstrap */
+    border-color: rgb(49, 146, 85);
+    color: white;
+}
+.list-group-item:hover {
+    background-color: #f8f9fa; /* Gris claro al pasar el mouse */
+}
 
+/* Media queries */
+@media (max-width: 768px) {
     .navbar {
-        left: 0;
         width: 100%;
     }
-
     .logo img {
         height: 10vh;
     }
-
     .offcanvas {
-        width: 75%; /* Ancho del menú offcanvas en móviles */
+        width: 75%;
     }
-
     .container_presenta {
         flex-direction: column;
     }
-
     .presenta_info, .presenta_img {
         width: 100%;
     }
-
     .presenta_text h1 {
         font-size: 4vh;
     }
-
     .producto-item {
         flex-basis: 100%;
         margin: 10px 0;
     }
-
     #marcas .col-6 {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
     .footer .row {
         flex-direction: column;
         text-align: center;
     }
-
     .footer .col-md-3 {
         margin-bottom: 20px;
     }
-
     .footer img {
         max-height: 10vh;
         max-width: 100%;
         margin: 0 auto;
     }
-
-    .footer ul {
-        padding: 0;
-    }
-
-    .footer .d-flex {
-        justify-content: center;
-    }
-
-    .footer hr {
-        margin: 10px 0;
-    }
-
-    .footer .text-center {
-        margin-top: 20px;
-    }
 }
-

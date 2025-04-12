@@ -1,9 +1,12 @@
-@include('header_views')
-        
-        <main>
+@extends('layouts.app')
+
+@section('title', 'Sampa - Contacto')
+
+@section('content')
+        <main class="container mt-5">
             <div>
                 <hr class="bg-sucess-light">
-                <h1>Puertas Placas | Productos</h1>
+                <h1>Puertas de Interior | Productos</h1>
                 <hr class="bg-light">
             </div>
     
@@ -46,9 +49,7 @@
                 <p><strong>Consulta con nosotros:</strong> En Sampa Aberturas, te asesoramos para encontrar la puerta perfecta que se adapte a tus necesidades. ¡Contáctanos y descubre cómo nuestras Puertas Placas Indoors pueden transformar tus espacios!</p>
             </section>
         </main>
-
-        @include('footer')        
-    </div>
+@endsection
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Función para cambiar el color del navbar al hacer scroll
@@ -65,5 +66,3 @@
             });
         });
     </script>
-</body>
-</html>

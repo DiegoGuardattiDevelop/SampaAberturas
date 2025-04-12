@@ -19,7 +19,7 @@
 
             <!-- Contacto -->
             <div class="col-12 col-md-3 mb-4 mb-md-0">
-                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> Calle Falsa 123, Ciudad</p>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> San Lucas 245</p>
                 <p class="mb-1"><i class="bi bi-telephone-fill"></i> +12 345 6789</p>
                 <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@sampaaberturas.com</p>
             </div>
@@ -30,6 +30,7 @@
                     <a href="https://www.facebook.com/profile.php?id=100063444205455" target="_blank" class="text-light"><i class="bi bi-facebook fs-4"></i></a>
                     <a href="https://www.instagram.com/sampaaberturas/" target="_blank" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
                     <a href="https://wa.me/5493572666666" target="_blank" class="text-light"><i class="bi bi-whatsapp fs-4"></i></a>
+                    <a href="https://maps.app.goo.gl/rQCjw4VXtCsv2WxG9" target="_blank" class="text-light" title="Nuestra ubicación"><i class="bi bi-geo-alt fs-4"></i></a>
                 </div>
             </div>
         </div>
