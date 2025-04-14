@@ -1,73 +1,258 @@
-
 @extends('layouts.app')
 
 @section('title', 'Sampa - Aluminio')
 
 @section('content')
-    <main class="container mt-5">
-        <div>
-            <hr class="bg-sucess-light">
-            <h1>Aberturas de Aluminio | Productos</h1>
-            <hr class="bg-light">
-        </div>
-
-        <section id="aberturas">
-            <h3>Líneas</h3>
-            {{-- <strong>resistencia, durabilidad y diseño moderno</strong> --}}
-            
-            <div class="aluar-lines">
-                <div class="line-card">
-                    <img src="{{ asset('Images/sampa_modena.png')}}" alt="Modena">
-                    <div>
-                        <h4>Modena</h4>
-                        <p>Línea versátil ideal para hogares y oficinas, con diseño elegante y funcional.</p>
+<main class="container mt-5">
+    <div>
+        <hr class="bg-success-light">
+        <h1>Aberturas Aluminio | Productos</h1>
+        <hr class="bg-light">
+    </div>
+    <!-- Sección 1: Líneas -->
+    <section id="lineas" class="bg-section mt-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestras Líneas</h2>
+            <p class="text-center lead">Descubrí nuestras líneas premium, diseñadas para elevar cada proyecto con estilo y resistencia.</p>
+            <div class="row g-5"> <!-- Más espacio entre tarjetas -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{ asset('Images/aluar-system-06.svg') }}" class="card-img-top" alt="Modena">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Modena</h4>
+                            <p class="card-text">Elegancia funcional para hogares y oficinas.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="line-card">
-                    <img src="{{asset('Images/A30.png')}}" alt="A30 New">
-                    <div>
-                        <h4>A30 New</h4>
-                        <p>Sistema de alta prestación, ideal para grandes aberturas y máxima hermeticidad.</p>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{ asset('Images/aluar-system-01.svg') }}" class="card-img-top" alt="A30 New">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">A30 New</h4>
+                            <p class="card-text">Alta prestación para grandes aberturas.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="line-card">
-                    <img src="{{asset('Images/sampa_A40.png')}}" alt="Línea Herrero">
-                    <div>
-                        <h4>Línea Herrero</h4>
-                        <p>Opción económica y resistente, recomendada para obras estándar.</p>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{ asset('Images/aluar-system-031.svg') }}" class="card-img-top" alt="Línea Herrero">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Línea Herrero</h4>
+                            <p class="card-text">Economía y resistencia para obras estándar.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="line-card">
-                    <img src="{{asset('Images/A30.png')}}" alt="Monoblock">
-                    <div>
-                        <h4>Monoblock</h4>
-                        <p>Integración de ventanas con persianas para mayor comodidad.</p>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{ asset('Images/aluar-system-02.svg') }}" class="card-img-top" alt="Monoblock">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Monoblock</h4>
+                            <p class="card-text">Ventanas y persianas en un solo sistema.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </section>
 
-            {{-- <h3>Tipologías</h3>
-            <p>Elegir la abertura adecuada depende de la función que cumplirá en tu proyecto. A continuación, te guiamos para seleccionar la mejor opción:</p>
-            <ul>
-                <li><strong>Ventanas Corredizas:</strong> Ideales para balcones, terrazas y áreas con limitaciones de espacio. <em>Línea recomendada: Modena o A30 New.</em></li>
-                <li><strong>Ventanas Oscilobatientes:</strong> Perfectas para baños, cocinas y áreas que necesitan ventilación controlada. <em>Línea recomendada: Modena o Monoblock.</em></li>
-                <li><strong>Puertas de Entrada:</strong> Opta por puertas robustas con vidrios de seguridad. <em>Línea recomendada: A30 New.</em></li>
-                <li><strong>Frentes Vidriados:</strong> Ideales para locales comerciales, oficinas y living rooms. <em>Línea recomendada: A30 New.</em></li>
-                <li><strong>Mamparas de Baño:</strong> Perfectas para baños y áreas húmedas. <em>Línea recomendada: Monoblock.</em></li>
-                <li><strong>Mosquiteros:</strong> Complemento ideal para ventanas y puertas en zonas con alta presencia de insectos. <em>Compatible con todas las líneas de Aluar.</em></li>
-            </ul> --}}
+    <div class="section-divider container"></div>
 
-            <h3>¿Cómo elegir la abertura ideal?</h3>
-                <p>Una abertura es un sistema compuesto por perfiles de aluminio, vidrio, accesorios y herrajes. Elegir correctamente estos elementos garantiza un buen rendimiento a largo plazo y aprovecha al máximo las ventajas del aluminio.
+    <!-- Sección 2: ¿Por qué elegir aberturas de aluminio? -->
+    <section id="por-que-aluminio" class="bg-section-alt mt-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+            <h2 class="text-center mb-4">¿Por qué elegir aluminio?</h2>
+            <p class="text-center lead">Transformá tus espacios con un material duradero y versátil.</p>
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="bi bi-shield-check fs-2 text-success-dark mb-3"></i>
+                        <h5>Durabilidad</h5>
+                        <p>Resiste corrosión y climas extremos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="bi bi-brush fs-2 text-success-dark mb-3"></i>
+                        <h5>Diseño versátil</h5>
+                        <p>Formas y cortes personalizados.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="bi bi-gear fs-2 text-success-dark mb-3"></i>
+                        <h5>Mantenimiento mínimo</h5>
+                        <p>Limpieza fácil, sin repintado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    Todos los componentes deben ser de alta calidad y adecuados según las condiciones de la ventana: presión del viento, aislamiento térmico y acústico deseado, y relación entre ancho y alto. A mayor tamaño, se necesita mayor resistencia en los perfiles.
-                    
-                    El diseño también influye en la elección: formas curvas o rectas, cortes a 90º o 45º son detalles estéticos que pueden ser decisivos.
-                    
-                    Además, es esencial que la fabricación y ensamblaje se realicen con precisión en talleres especializados y con personal capacitado. La calidad de la mano de obra es tan importante como la de los materiales.
-                    
-                    Finalmente, al elegir la ventana adecuada, se deben considerar aspectos como tipologías, tipos de vidrio, herrajes, accesorios y opciones de recubrimiento.</p>
-        </section>
-    </main>
+    <div class="section-divider container"></div>
+
+    <!-- Sección 3: Tipologías -->
+<section id="tipologias" class="aberturas-section" data-aos="fade-up" data-aos-delay="200">
+    <div class="container">
+        <h2 class="text-center mb-4">Tipologías de Aberturas</h2>
+        <p class="text-center lead">Soluciones específicas para cada espacio de tu proyecto.</p>
+        <div class="row g-5">
+            <div class="col-md-4">
+                <div class="aberturas-card h-100">
+                    <div class="aberturas-card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-window fs-2 text-success-dark me-4"></i>
+                            <div>
+                                <h5 class="aberturas-card-title">Ventanas Corredizas</h5>
+                                <p class="aberturas-card-text">Ideales para balcones. <em>Modena, A30 New.</em></p>
+                            </div>
+                        </div>
+                        <div class="aberturas-video-wrapper mt-auto">
+                            <video src="{{ asset('Images/VID-20250403-WA0009.mp4') }}" class="aberturas-video" controls muted width="100%" height="auto">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="aberturas-card h-100">
+                    <div class="aberturas-card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-window-stack fs-2 text-success-dark me-4"></i>
+                            <div>
+                                <h5 class="aberturas-card-title">Ventanas Oscilobatientes</h5>
+                                <p class="aberturas-card-text">Ventilación para cocinas y baños. <em>Modena, Monoblock.</em></p>
+                            </div>
+                        </div>
+                        <div class="aberturas-video-wrapper mt-auto">
+                            <video src="{{ asset('Images/VID-20250403-WA0012.mp4') }}" class="aberturas-video" controls muted width="100%" height="auto">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="aberturas-card h-100">
+                    <div class="aberturas-card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-door-open fs-2 text-success-dark me-4"></i>
+                            <div>
+                                <h5 class="aberturas-card-title">Ventana Desplazable</h5>
+                                <p class="aberturas-card-text">Seguridad y estilo. <em>A30 New.</em></p>
+                            </div>
+                        </div>
+                        <div class="aberturas-video-wrapper mt-auto">
+                            <video src="{{ asset('Images/VID-20250403-WA0010.mp4') }}" class="aberturas-video" controls muted width="100%" height="auto">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="aberturas-card h-100">
+                    <div class="aberturas-card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-building fs-2 text-success-dark me-4"></i>
+                            <div>
+                                <h5 class="aberturas-card-title">Frentes Vidriados</h5>
+                                <p class="aberturas-card-text">Oficinas y locales comerciales. <em>A30 New.</em></p>
+                            </div>
+                        </div>
+                        <div class="aberturas-video-wrapper mt-auto">
+                            <video src="{{ asset('Images/VID-20250403-WA0011.mp4') }}" class="aberturas-video" controls muted width="100%" height="auto">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="aberturas-card h-100">
+                    <div class="aberturas-card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-shower fs-2 text-success-dark me-4"></i>
+                            <div>
+                                <h5 class="aberturas-card-title">Mamparas de Baño</h5>
+                                <p class="aberturas-card-text">Durabilidad en áreas húmedas. <em>Monoblock.</em></p>
+                            </div>
+                        </div>
+                        <div class="aberturas-video-wrapper mt-auto">
+                            <video src="{{ asset('Images/VID-20250403-WA0008.mp4') }}" class="aberturas-video" controls muted width="100%" height="auto">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <div class="section-divider container"></div>
+
+    <!-- Sección 4: Colores -->
+    <section id="colores" class="bg-section-alt mt-5" data-aos="fade-up" data-aos-delay="300">
+        <div class="container">
+            <h2 class="text-center mb-4">Colores y Acabados</h2>
+            <p class="text-center lead">Personalizá tus aberturas con acabados únicos.</p>
+            <div class="row g-5">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="color-sample bg-white border" style="background-color: #FFFFFF;"></div>
+                            <h5 class="card-title">Blanco</h5>
+                            <p class="card-text">Versatilidad para cualquier diseño.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="color-sample" style="background-color: #2F2F2F;"></div>
+                            <h5 class="card-title">Anodizado Negro</h5>
+                            <p class="card-text">Sofisticación moderna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="color-sample" style="background-color: #A8A8A8;"></div>
+                            <h5 class="card-title">Anodizado Natural</h5>
+                            <p class="card-text">Brillo clásico del aluminio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="color-sample" style="background-color: #8B4513;"></div>
+                            <h5 class="card-title">Imitación Madera</h5>
+                            <p class="card-text">Calidez con resistencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@endsection
+
+@section('scripts')
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-out'
+    });
+
+    // Ajustar volumen por defecto de los videos
+    document.querySelectorAll('.aberturas-video').forEach(video => {
+        video.volume = 0.2; // Volumen al 20%
+    });
+</script>
 @endsection

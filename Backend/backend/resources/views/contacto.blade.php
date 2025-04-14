@@ -3,7 +3,7 @@
 @section('title', 'Sampa - Contacto')
 
 @section('content')
-    <main class="container contact-section">
+    <main class="container mt-5">
         <div>
             <hr class="bg-success-light">
             <h1>Contacto</h1>
