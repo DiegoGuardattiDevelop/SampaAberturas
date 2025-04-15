@@ -3,7 +3,7 @@
 @section('title', 'Sampa - Contacto')
 
 @section('content')
-    <main class="container mt-5">
+    <main class="container contact-section">
         <div>
             <hr class="bg-success-light">
             <h1>Contacto</h1>
@@ -36,7 +36,9 @@
                     <label for="fileUpload" class="form-label"><i class="bi bi-upload"></i> Cargar Planilla de Aberturas</label>
                     <input class="form-control" type="file" id="fileUpload" name="fileUpload">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-send btn-block">Enviar</button>
+                </div>
             </fieldset>
         </form>
     </main>

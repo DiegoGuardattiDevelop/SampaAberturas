@@ -23,11 +23,11 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ url('/aberturas-aluminio') }}">Aberturas de aluminio</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/puertas-placa') }}">Puertas placas</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/mamparas') }}">Mamparas</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/mosquiteros') }}">Mosquiteros</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/herrajes') }}">Herrajes</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/perfileria') }}">Perfileria</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/puertas-placa') }}">Puertas de Interior</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/mamparas') }}">Vidrios y Mamparas</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/mosquiteros') }}">Cortinas y Mosquiteros</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/herrajes') }}">Herrajes y perfileria</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/perfileria') }}">Portones Automáticos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

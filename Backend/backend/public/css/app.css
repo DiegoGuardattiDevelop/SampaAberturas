@@ -462,14 +462,15 @@ body {
     border: 1px solid #ccc;
 }
 
-.contact-section .btn-primary {
+.contact-section .btn-send {
     background-color: rgb(49, 146, 85);
     border: none;
     transition: background-color 0.3s ease;
+    color: #fff;
 }
 
-.contact-section .btn-primary:hover {
-    background-color: rgb(39, 126, 75);
+.contact-section .btn-send:hover {
+    background-color: rgb(34, 121, 70);
 }
 
 /* Footer */
