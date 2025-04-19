@@ -97,6 +97,10 @@ body {
     text-align: center;
 }
 
+.hero-header {
+    background: linear-gradient(135deg, #2c3e50 0%, rgb(49, 146, 85)100%);
+}
+
 .hero::before {
     content: "";
     position: absolute;
@@ -473,6 +477,75 @@ body {
     background-color: rgb(34, 121, 70);
 }
 
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+    url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L10 10" stroke="white" stroke-width="0.5" opacity="0.3"/></svg>') repeat;
+    opacity: 0.1;
+}
+
+.text-gradient-primary {
+    background: linear-gradient(135deg, #2c3e50 0%, rgb(49, 146, 85) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-card {
+    border-left: 5px solid rgb(49, 146, 85);
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+.shadow-hover {
+    transition: all 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.icon-container {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-primary-light {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.video-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.color-sample {
+    transition: all 0.3s ease;
+}
+
+.color-card:hover .color-sample {
+    transform: scale(1.05);
+}
+
 /* Footer */
 .footer {
     position: relative;
@@ -570,7 +643,7 @@ body {
 }
 
 /* Estilos para aberturas_aluminio.blade.php */
-.aberturas-section {
+/* .aberturas-section {
     padding: 100px 0;
     background-color: #ffffff;
     border-radius: 15px;
@@ -630,7 +703,7 @@ body {
 .aberturas-btn-cta:hover {
     background-color: #009e76;
     color: #ffffff;
-}
+} */
 
 /* Tarjetas generales para aberturas */
 .aberturas-card {

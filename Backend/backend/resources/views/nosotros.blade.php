@@ -3,59 +3,312 @@
 @section('title', 'Sampa - Nosotros')
 
 @section('content')
-    <main class="container mt-5">
-        <section id="historia" class="mb-5">
-            <div>
-                <hr class="bg-success-light">
-                <h1>Nuestra Historia</h1>
-                <hr class="bg-light">
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="{{ asset('Images/sampa_nosotros_2.jpg') }}" alt="Historia 2" class="img-fluid rounded">
-                </div>
-                <div class="col-md-6 text-md-start">
-                    <p>Sampa Aberturas es una empresa creada en la localidad de Laguna Larga, Córdoba, Argentina. Con una experiencia previa en el rubro y un pequeño capital, nació como un proyecto familiar con el sueño de brindar productos de calidad y un servicio confiable. Desde sus inicios, la empresa se ha destacado por su compromiso con la excelencia y la satisfacción del cliente.</p>
-                    <p>Con humildad y dedicación, fue sentando las bases de un crecimiento constante. A medida que pasaba el tiempo, la empresa incorporó nuevas tecnologías y materiales innovadores, permitiendo la fabricación de aberturas más eficientes, seguras y estéticamente atractivas.</p>
-                    <p>El asesoramiento personalizado y el servicio postventa fueron clave para expandir el alcance de la empresa y acceder a proyectos de mayor envergadura. Gracias a la confianza de sus clientes y al esfuerzo del equipo de trabajo, Sampa Aberturas logró posicionarse como un referente en la provincia de Córdoba, participando en proyectos residenciales, comerciales e institucionales.</p>
-                    <p>Hoy, con una sólida trayectoria en el mercado, Sampa Aberturas continúa apostando por la calidad, la innovación y el compromiso con cada uno de sus clientes. La empresa sigue en constante evolución, adaptándose a las nuevas tendencias y necesidades del sector para ofrecer soluciones a medida, garantizando durabilidad, diseño y funcionalidad en cada uno de sus productos.</p>
-                </div>
-            </div>
-        </section>
+<main class="container mt-5">
+    <!-- Hero Header -->
+    <div class="hero-header bg-gradient-green rounded-4 p-5 mb-5 text-white position-relative overflow-hidden">
+        <div class="bg-overlay"></div>
+        <div class="position-relative z-index-1 text-center">
+            <hr class="bg-white-light">
+            <h1 class="display-4 fw-bold">Nuestra Historia</h1>
+            <p class="lead">Más de una década de excelencia en aberturas</p>
+            <hr class="bg-white-light">
+        </div>
+    </div>
 
-        <section id="mision-vision" class="mb-5">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-md-start">
-                    <h2>Nuestra Misión</h2>
-                    <p>En Sampa Aberturas, nuestra misión es ofrecer soluciones innovadoras y de alta calidad en aberturas para el hogar, comercios e industrias, brindando seguridad, diseño y eficiencia en cada uno de nuestros productos.</p>
-                    <p>Nos enfocamos en proporcionar una atención personalizada, asegurando que cada cliente reciba el asesoramiento necesario para encontrar la mejor opción según sus necesidades. Nuestro compromiso con la excelencia nos impulsa a mejorar continuamente nuestros procesos, incorporando nuevas tecnologías y materiales de vanguardia.</p>
-                    <p>Además, trabajamos con un fuerte sentido de responsabilidad y ética, priorizando la satisfacción del cliente y la confianza en cada proyecto que emprendemos. Buscamos contribuir al desarrollo del sector, promoviendo la sustentabilidad y la innovación en cada una de nuestras creaciones.</p>
-        
-                    <h2>Nuestra Visión</h2>
-                    <p>En Sampa Aberturas, aspiramos a ser la empresa líder en soluciones de aberturas en la región, reconocida por la calidad, innovación y excelencia en el servicio. Nuestro objetivo es expandir nuestra presencia en el mercado, consolidándonos como la primera opción para hogares, empresas e instituciones que buscan seguridad, diseño y durabilidad en sus espacios.</p>
-                    <p>Buscamos crecer de manera sostenible, implementando tecnologías avanzadas y materiales de última generación que nos permitan ofrecer productos cada vez más eficientes y adaptados a las necesidades del futuro.</p>
-                    <p>Además, nos comprometemos a fortalecer nuestras relaciones con clientes, proveedores y colaboradores, fomentando una cultura de trabajo basada en la confianza, el respeto y la mejora continua. Queremos dejar una huella positiva en la comunidad, contribuyendo al desarrollo del sector y promoviendo prácticas responsables con el medio ambiente.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src=" {{asset('Images/sampa_nosotros_3.jpg') }}" alt="Nuestra Misión y Visión" class="img-fluid rounded">
+    <!-- Sección Historia -->
+    <section id="historia" class="section-card bg-section-soft rounded-4 p-5 mb-5" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="about-image-container rounded-4 overflow-hidden shadow">
+                    <img src="{{ asset('Images/sampa_nosotros_2.jpg') }}" alt="Historia Sampa" class="img-fluid w-100">
                 </div>
             </div>
-        </section>
-        
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2 class="fw-bold text-gradient-green mb-4">De un sueño familiar a líder en el sector</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-green"></div>
+                            <div class="timeline-content">
+                                <p>Sampa Aberturas nació en Laguna Larga, Córdoba, como un proyecto familiar con el sueño de brindar productos de calidad y un servicio confiable.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-green"></div>
+                            <div class="timeline-content">
+                                <p>Con humildad y dedicación, incorporamos nuevas tecnologías y materiales innovadores para fabricar aberturas más eficientes y estéticas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-green"></div>
+                            <div class="timeline-content">
+                                <p>Nuestro asesoramiento personalizado y servicio postventa nos permitieron acceder a proyectos de mayor envergadura.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-green"></div>
+                            <div class="timeline-content">
+                                <p>Hoy somos referentes en Córdoba, participando en proyectos residenciales, comerciales e institucionales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="equipo" class="mb-5">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src=" {{asset('Images/sampa_nosotros_4.jpg') }}" alt="Equipo de Sampa Aberturas" class="img-fluid rounded">
-                </div>
-                <div class="col-md-6 text-md-start">
-                    <h2>Nuestro Equipo de Trabajo</h2>
-                    <p>En Sampa Aberturas, creemos que el éxito de nuestra empresa se basa en el compromiso, la pasión y la experiencia de nuestro equipo. Contamos con un grupo de profesionales altamente capacitados que trabajan día a día para ofrecer soluciones innovadoras y de calidad en aberturas.</p>
-                    <p>Desde el área de diseño y producción hasta el equipo de ventas y atención al cliente, cada uno de nuestros colaboradores aporta su conocimiento y dedicación para garantizar que cada proyecto cumpla con los más altos estándares de excelencia.</p>
-                    <p>Nos destacamos por fomentar un ambiente de trabajo basado en la confianza, el respeto y la mejora continua. La capacitación constante y la incorporación de nuevas tecnologías son claves para nuestro crecimiento, permitiéndonos ofrecer productos cada vez más eficientes y adaptados a las necesidades del mercado.</p>
-                    <p>Juntos, trabajamos con un mismo propósito: brindar soluciones seguras, funcionales y estéticamente atractivas para hogares, empresas e instituciones. En Sampa Aberturas, más que un equipo, somos una familia comprometida con la calidad y la satisfacción de nuestros clientes.</p>
+    <!-- Sección Misión y Visión -->
+    <section id="mision-vision" class="section-card bg-section-green-soft rounded-4 p-5 mb-5" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+                <div class="about-image-container rounded-4 overflow-hidden shadow">
+                    <img src="{{ asset('Images/sampa_nosotros_3.jpg') }}" alt="Misión y Visión" class="img-fluid w-100">
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="col-lg-6 order-lg-1">
+                <div class="mission-vision-content">
+                    <div class="mission-card bg-white rounded-3 p-4 mb-4 shadow-sm">
+                        <h3 class="fw-bold text-green mb-3">
+                            <i class="bi bi-bullseye me-2"></i>
+                            Nuestra Misión
+                        </h3>
+                        <p>Ofrecer soluciones innovadoras y de alta calidad en aberturas, brindando seguridad, diseño y eficiencia en cada producto.</p>
+                        <ul class="feature-list mt-3">
+                            <li>
+                                <i class="bi bi-check-circle text-green me-2"></i>
+                                Atención personalizada y asesoramiento especializado
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-green me-2"></i>
+                                Mejora continua de procesos con tecnologías de vanguardia
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-green me-2"></i>
+                                Responsabilidad y ética en cada proyecto
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vision-card bg-white rounded-3 p-4 shadow-sm">
+                        <h3 class="fw-bold text-green mb-3">
+                            <i class="bi bi-eye-fill me-2"></i>
+                            Nuestra Visión
+                        </h3>
+                        <p>Ser la empresa líder en soluciones de aberturas en la región, reconocida por calidad, innovación y excelencia en el servicio.</p>
+                        <ul class="feature-list mt-3">
+                            <li>
+                                <i class="bi bi-arrow-up-right-circle text-green me-2"></i>
+                                Expandir nuestra presencia con crecimiento sostenible
+                            </li>
+                            <li>
+                                <i class="bi bi-arrow-up-right-circle text-green me-2"></i>
+                                Implementar materiales de última generación
+                            </li>
+                            <li>
+                                <i class="bi bi-arrow-up-right-circle text-green me-2"></i>
+                                Fortalecer relaciones basadas en confianza y respeto
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Equipo -->
+    <section id="equipo" class="section-card bg-section-soft rounded-4 p-5 mb-5" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="about-image-container rounded-4 overflow-hidden shadow">
+                    <img src="{{ asset('Images/sampa_nosotros_4.jpg') }}" alt="Equipo Sampa" class="img-fluid w-100">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold text-gradient-green mb-4">Nuestro Equipo</h2>
+                <p class="lead">El corazón de Sampa Aberturas</p>
+                
+                <div class="team-features row g-4 mt-4">
+                    <div class="col-md-6">
+                        <div class="team-card bg-white rounded-3 p-3 h-100 shadow-sm">
+                            <i class="bi bi-people-fill fs-2 text-green mb-3"></i>
+                            <h5 class="fw-bold">Profesionales Capacitados</h5>
+                            <p class="text-muted">Expertos en diseño, producción y atención al cliente</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="team-card bg-white rounded-3 p-3 h-100 shadow-sm">
+                            <i class="bi bi-lightbulb-fill fs-2 text-green mb-3"></i>
+                            <h5 class="fw-bold">Innovación Constante</h5>
+                            <p class="text-muted">Capacitación continua y adopción de nuevas tecnologías</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="team-card bg-white rounded-3 p-3 h-100 shadow-sm">
+                            <i class="bi bi-heart-fill fs-2 text-green mb-3"></i>
+                            <h5 class="fw-bold">Cultura de Trabajo</h5>
+                            <p class="text-muted">Ambiente de confianza, respeto y mejora continua</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="team-card bg-white rounded-3 p-3 h-100 shadow-sm">
+                            <i class="bi bi-shield-check fs-2 text-green mb-3"></i>
+                            <h5 class="fw-bold">Compromiso</h5>
+                            <p class="text-muted">Dedicación a la calidad y satisfacción del cliente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    {{-- <div class="cta-box bg-gradient-green-light rounded-4 p-5 text-white text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold mb-3">¿Quieres ser parte de nuestra historia?</h2>
+        <p class="lead mb-4">Contáctanos y descubre cómo podemos transformar tus espacios</p>
+        <a href="{{ route('contacto') }}" class="btn btn-light btn-lg px-4">
+            <i class="bi bi-chat-left-text me-2"></i> Contactar
+        </a>
+    </div> --}}
+</main>
+@endsection
+
+@section('styles')
+<style>
+    /* Estilos específicos para Nosotros */
+    .about-image-container {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .about-image-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .about-image-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    }
+    
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 25px;
+    }
+    
+    .timeline-badge {
+        position: absolute;
+        left: -30px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        z-index: 2;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    
+    .timeline-content::before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 20px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 15px solid white;
+    }
+    
+    .mission-card, .vision-card {
+        transition: all 0.3s ease;
+    }
+    
+    .mission-card:hover, .vision-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .team-card {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(49, 146, 85, 0.1);
+    }
+    
+    .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(49, 146, 85, 0.1);
+        border-color: rgba(49, 146, 85, 0.3);
+    }
+    
+    /* Mantenemos los estilos base del layout */
+    .bg-gradient-green {
+        background: linear-gradient(135deg, rgba(49, 146, 85, 1) 0%, rgba(39, 126, 75, 1) 100%);
+    }
+    
+    .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L10 10" stroke="white" stroke-width="0.5" opacity="0.3"/></svg>') repeat;
+        opacity: 0.1;
+    }
+    
+    .text-gradient-green {
+        background: linear-gradient(135deg, rgba(49, 146, 85, 1) 0%, rgba(39, 126, 75, 1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    .bg-section-soft {
+        background-color: rgba(249, 249, 249, 0.7);
+        border-left: 5px solid rgba(49, 146, 85, 0.3);
+    }
+    
+    .bg-section-green-soft {
+        background-color: rgba(49, 146, 85, 0.05);
+        border-left: 5px solid rgba(49, 146, 85, 0.2);
+    }
+    
+    .bg-gradient-green-light {
+        background: linear-gradient(135deg, rgba(49, 146, 85, 0.8) 0%, rgba(39, 126, 75, 0.9) 100%);
+    }
+    
+    .text-green {
+        color: rgb(49, 146, 85);
+    }
+    
+    .bg-green {
+        background-color: rgb(49, 146, 85);
+    }
+</style>
+@endsection
+
+@section('scripts')
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-out-back'
+    });
+</script>
 @endsection

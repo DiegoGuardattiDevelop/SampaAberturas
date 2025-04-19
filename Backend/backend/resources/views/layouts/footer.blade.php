@@ -9,7 +9,7 @@
             <!-- Navegación -->
             <div class="col-12 col-md-3 mb-4 mb-md-0">
                 <ul class="list-unstyled">
-                    <li class="nav-item"><a class="nav-link fw-bold fs-6 {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/') }}">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/obras') }}">Obras</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/outlet') }}">Tienda</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/nosotros') }}">Nosotros</a></li>
@@ -19,7 +19,7 @@
 
             <!-- Contacto -->
             <div class="col-12 col-md-3 mb-4 mb-md-0">
-                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> San Lucas 245</p>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> San Lucas 235</p>
                 <p class="mb-1"><i class="bi bi-telephone-fill"></i> +12 345 6789</p>
                 <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@sampaaberturas.com</p>
             </div>
