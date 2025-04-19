@@ -45,4 +45,5 @@ Route::get('/nosotros', function () {
 
 Route::get('/contacto', function () {
     return view('contacto');
-});
+})->name('contacto');
+

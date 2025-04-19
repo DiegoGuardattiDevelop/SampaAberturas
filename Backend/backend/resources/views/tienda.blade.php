@@ -1,143 +1,473 @@
-@include('header_views')
-        <main class="content outlet-gallery">
-            <section class="gallery">
-                <div>
-                    <hr class="bg-success-light">
-                    <h1>Productos en Outlet</h1>
-                    <hr class="bg-light">
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <!-- Producto 1 -->
-                        <div class="col-md-4 product-card">
-                            <a href="detalle-producto.html?id=1" class="text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="product-images">
-                                            <img src="{{asset('Images/sampa_outlet_1.jpg') }}" alt="Producto 1" class="product-image active">
-                                            <!-- <img src="assets/producto1a.jpg" alt="Producto 1 - otra vista" class="product-image"> -->
-                                        </div>
-                                        <h5 class="card-title text-center">Producto 1</h5>
-                                        <p class="card-text text-center text-success fw-bold">$9,999</p>
-                                        <div class="d-flex justify-content-center">
-                                            <button class="btn btn-success">Comprar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+@extends('layouts.app')
+
+@section('title', 'Sampa - Tienda')
+
+@section('content')
+<main class="container mt-5">
+    <!-- Hero Header -->
+    <div class="hero-header bg-gradient-green rounded-4 p-5 mb-5 text-white position-relative overflow-hidden">
+        <div class="bg-overlay"></div>
+        <div class="position-relative z-index-1 text-center">
+            <hr class="bg-white-light">
+            <h1 class="display-4 fw-bold">Nuestra Tienda</h1>
+            <p class="lead">Productos de calidad para tus proyectos</p>
+            <hr class="bg-white-light">
+        </div>
+    </div>
+
+    <!-- Sección de Tienda -->
+    <section id="tienda" class="mb-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Menú de categorías -->
+                <div class="col-lg-3">
+                    <div class="category-card bg-section-soft rounded-4 p-4 shadow-sm">
+                        <h3 class="fw-bold text-green mb-4">
+                            <i class="bi bi-filter-circle me-2"></i>
+                            Categorías
+                        </h3>
+                        <div class="list-group list-group-flush">
+                            <button class="list-group-item list-group-item-action d-flex align-items-center active" 
+                                    data-category="all">
+                                <i class="bi bi-grid-fill me-2"></i>
+                                Todas las categorías
+                            </button>
+                            <button class="list-group-item list-group-item-action d-flex align-items-center" 
+                                    data-category="aluminio">
+                                <i class="bi bi-border-width me-2"></i>
+                                Aberturas de Aluminio
+                            </button>
+                            <button class="list-group-item list-group-item-action d-flex align-items-center" 
+                                    data-category="puertas-interior">
+                                <i class="bi bi-door-open me-2"></i>
+                                Puertas de Interior
+                            </button>
+                            <button class="list-group-item list-group-item-action d-flex align-items-center" 
+                                    data-category="mamparas">
+                                <i class="bi bi-shower me-2"></i>
+                                Mamparas
+                            </button>
+                            <button class="list-group-item list-group-item-action d-flex align-items-center" 
+                                    data-category="cortinas">
+                                <i class="bi bi-layers me-2"></i>
+                                Cortinas
+                            </button>
                         </div>
-        
-                        <!-- Producto 2 -->
-                        <div class="col-md-4 product-card">
-                            <a href="detalle-producto.html?id=2" class="text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="product-images">
-                                            <img src="{{asset('Images/sampa_outlet_2.jpg') }}" alt="Producto 2" class="product-image active">
-                                            <!-- <img src="assets/producto2a.jpg" alt="Producto 2 - otra vista" class="product-image"> -->
-                                        </div>
-                                        <h5 class="card-title text-center">Producto 2</h5>
-                                        <p class="card-text text-center text-success fw-bold">$7,499</p>
-                                        <div class="d-flex justify-content-center">
-                                            <button class="btn btn-success">Comprar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                    </div>
+
+                    <!-- Filtros adicionales -->
+                    <div class="filter-card bg-section-soft rounded-4 p-4 mt-4 shadow-sm">
+                        <h3 class="fw-bold text-green mb-4">
+                            <i class="bi bi-funnel me-2"></i>
+                            Filtros
+                        </h3>
+                        <div class="mb-3">
+                            <label for="priceRange" class="form-label">Rango de precios</label>
+                            <input type="range" class="form-range" id="priceRange" min="0" max="50000" step="1000">
+                            <div class="d-flex justify-content-between">
+                                <small>$0</small>
+                                <small>$50,000</small>
+                            </div>
                         </div>
-        
-                        <!-- Producto 3 -->
-                        <div class="col-md-4 product-card">
-                            <a href="detalle-producto.html?id=3" class="text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="product-images">
-                                            <img src="{{asset('Images/sampa_outlet_3.jpg') }}" alt="Producto 3" class="product-image active">
-                                            <!-- <img src="assets/producto3a.jpg" alt="Producto 3 - otra vista" class="product-image"> -->
-                                        </div>
-                                        <h5 class="card-title text-center">Producto 3</h5>
-                                        <p class="card-text text-center text-success fw-bold">$12,299</p>
-                                        <div class="d-flex justify-content-center">
-                                            <button class="btn btn-success">Comprar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 product-card">
-                            <a href="detalle-producto.html?id=3" class="text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="product-images">
-                                            <img src="{{asset('Images/sampa_outlet_4.jpg') }}" alt="Producto 3" class="product-image active">
-                                            <!-- <img src="assets/producto3a.jpg" alt="Producto 3 - otra vista" class="product-image"> -->
-                                        </div>
-                                        <h5 class="card-title text-center">Producto 3</h5>
-                                        <p class="card-text text-center text-success fw-bold">$12,299</p>
-                                        <div class="d-flex justify-content-center">
-                                            <button class="btn btn-success">Comprar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 product-card">
-                            <a href="detalle-producto.html?id=3" class="text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="product-images">
-                                            <img src="{{asset('Images/sampa_outlet_6.jpg') }}" alt="Producto 3" class="product-image active">
-                                            <!-- <img src="assets/producto3a.jpg" alt="Producto 3 - otra vista" class="product-image"> -->
-                                        </div>
-                                        <h5 class="card-title text-center">Producto 3</h5>
-                                        <p class="card-text text-center text-success fw-bold">$12,299</p>
-                                        <div class="d-flex justify-content-center">
-                                            <button class="btn btn-success">Comprar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 product-card">
-                            <a href="detalle-producto.html?id=3" class="text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="product-images">
-                                            <img src="{{asset('Images/sampa_outlet_7.png') }}" alt="Producto 3" class="product-image active">
-                                            <!-- <img src="assets/producto3a.jpg" alt="Producto 3 - otra vista" class="product-image"> -->
-                                        </div>
-                                        <h5 class="card-title text-center">Producto 3</h5>
-                                        <p class="card-text text-center text-success fw-bold">$12,299</p>
-                                        <div class="d-flex justify-content-center">
-                                            <button class="btn btn-success">Comprar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-        
+                        <button class="btn btn-outline-green w-100 mt-2">
+                            <i class="bi bi-arrow-clockwise me-2"></i>
+                            Reiniciar filtros
+                        </button>
                     </div>
                 </div>
-            </section>
-        </main>
-        
-        @include('footer')       
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Función para cambiar el color del navbar al hacer scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('scroll', function() {
-                var navbar = document.querySelector('.navbar');
-                
-                // Agregar clase al hacer scroll (puedes ajustar el valor 50 según prefieras)
-                if (window.scrollY > 50) {
-                    navbar.classList.add('navbar-scrolled');
-                } else {
-                    navbar.classList.remove('navbar-scrolled');
-                }
-            });
+
+                <!-- Área de productos -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-bold text-gradient-green m-0">
+                            <i class="bi bi-box-seam me-2"></i>
+                            Nuestros Productos
+                        </h3>
+                        <div class="sort-dropdown">
+                            <select class="form-select" aria-label="Ordenar por">
+                                <option selected>Ordenar por</option>
+                                <option value="1">Precio: Menor a mayor</option>
+                                <option value="2">Precio: Mayor a menor</option>
+                                <option value="3">Más recientes</option>
+                                <option value="4">Mejor valorados</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-4" id="product-container">
+                        <!-- Producto 1 -->
+                        <div class="col-md-6 col-lg-4 product-card" data-category="aluminio" data-price="9999">
+                            <div class="card h-100 border-0 shadow-hover">
+                                <div class="product-badge bg-success">Nuevo</div>
+                                <a href="#" class="text-decoration-none">
+                                    <div class="product-image-container">
+                                        <img src="{{ asset('Images/sampa_outlet_1.jpg') }}" class="card-img-top" alt="Ventana de aluminio Modena">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title text-green">Ventana Modena</h5>
+                                            <div class="rating small text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-muted small">Línea Modena - Blanco</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-success fw-bold m-0">$9,999</span>
+                                            <button class="btn btn-sm btn-outline-green">
+                                                <i class="bi bi-cart-plus me-1"></i> Añadir
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="col-md-6 col-lg-4 product-card" data-category="puertas-interior" data-price="7499">
+                            <div class="card h-100 border-0 shadow-hover">
+                                <div class="product-badge bg-danger">Oferta</div>
+                                <a href="#" class="text-decoration-none">
+                                    <div class="product-image-container">
+                                        <img src="{{ asset('Images/sampa_outlet_2.jpg') }}" class="card-img-top" alt="Puerta interior diseño moderno">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title text-green">Puerta Interior</h5>
+                                            <div class="rating small text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-muted small">Diseño moderno - Roble claro</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="text-decoration-line-through text-muted me-2">$8,499</span>
+                                                <span class="h5 text-success fw-bold">$7,499</span>
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-green">
+                                                <i class="bi bi-cart-plus me-1"></i> Añadir
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="col-md-6 col-lg-4 product-card" data-category="mamparas" data-price="12299">
+                            <div class="card h-100 border-0 shadow-hover">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="product-image-container">
+                                        <img src="{{ asset('Images/sampa_outlet_3.jpg') }}" class="card-img-top" alt="Mampara para baño Alukit">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title text-green">Mampara Alukit</h5>
+                                            <div class="rating small text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-muted small">Modelo Premium - Vidrio templado</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-success fw-bold m-0">$12,299</span>
+                                            <button class="btn btn-sm btn-outline-green">
+                                                <i class="bi bi-cart-plus me-1"></i> Añadir
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="col-md-6 col-lg-4 product-card" data-category="cortinas" data-price="12299">
+                            <div class="card h-100 border-0 shadow-hover">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="product-image-container">
+                                        <img src="{{ asset('Images/sampa_outlet_4.jpg') }}" class="card-img-top" alt="Cortina roller blackout">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title text-green">Cortina Roller</h5>
+                                            <div class="rating small text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-muted small">Blackout - Varios colores</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-success fw-bold m-0">$12,299</span>
+                                            <button class="btn btn-sm btn-outline-green">
+                                                <i class="bi bi-cart-plus me-1"></i> Añadir
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="col-md-6 col-lg-4 product-card" data-category="aluminio" data-price="12299">
+                            <div class="card h-100 border-0 shadow-hover">
+                                <div class="product-badge bg-primary">Popular</div>
+                                <a href="#" class="text-decoration-none">
+                                    <div class="product-image-container">
+                                        <img src="{{ asset('Images/sampa_outlet_6.jpg') }}" class="card-img-top" alt="Ventana corrediza A30">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title text-green">Ventana A30</h5>
+                                            <div class="rating small text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-muted small">Línea A30 - Anodizado</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-success fw-bold m-0">$12,299</span>
+                                            <button class="btn btn-sm btn-outline-green">
+                                                <i class="bi bi-cart-plus me-1"></i> Añadir
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Producto 6 -->
+                        <div class="col-md-6 col-lg-4 product-card" data-category="puertas-interior" data-price="12299">
+                            <div class="card h-100 border-0 shadow-hover">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="product-image-container">
+                                        <img src="{{ asset('Images/sampa_outlet_7.png') }}" class="card-img-top" alt="Puerta interior diseño clásico">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title text-green">Puerta Clásica</h5>
+                                            <div class="rating small text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-text text-muted small">Diseño clásico - Nogal</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-success fw-bold m-0">$12,299</span>
+                                            <button class="btn btn-sm btn-outline-green">
+                                                <i class="bi bi-cart-plus me-1"></i> Añadir
+                                            </button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paginación -->
+                    <nav class="mt-5" aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Siguiente</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@endsection
+
+@section('styles')
+<style>
+    /* Estilos específicos para tienda */
+    .category-card, .filter-card {
+        transition: all 0.3s ease;
+    }
+    
+    .category-card:hover, .filter-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .list-group-item {
+        border: none;
+        padding: 12px 15px;
+        margin-bottom: 5px;
+        border-radius: 8px !important;
+        transition: all 0.3s ease;
+    }
+    
+    .list-group-item:hover, .list-group-item.active {
+        background-color: rgba(49, 146, 85, 0.1);
+        color: rgb(49, 146, 85);
+    }
+    
+    .list-group-item.active {
+        font-weight: bold;
+        border-left: 3px solid rgb(49, 146, 85);
+    }
+    
+    .product-card .card {
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .shadow-hover:hover {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        transform: translateY(-5px);
+    }
+    
+    .product-image-container {
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+    }
+    
+    .product-image-container img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease;
+    }
+    
+    .product-card:hover .product-image-container img {
+        transform: scale(1.05);
+    }
+    
+    .product-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+        padding: 5px 10px;
+        border-radius: 20px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .rating {
+        color: #ffc107;
+    }
+    
+    .btn-outline-green {
+        border-color: rgb(49, 146, 85);
+        color: rgb(49, 146, 85);
+    }
+    
+    .btn-outline-green:hover {
+        background-color: rgb(49, 146, 85);
+        color: white;
+    }
+    
+    .page-item.active .page-link {
+        background-color: rgb(49, 146, 85);
+        border-color: rgb(49, 146, 85);
+    }
+    
+    .page-link {
+        color: rgb(49, 146, 85);
+    }
+    
+    /* Mantenemos los estilos base del layout */
+    .bg-gradient-green {
+        background: linear-gradient(135deg, rgba(49, 146, 85, 1) 0%, rgba(39, 126, 75, 1) 100%);
+    }
+    
+    .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L10 10" stroke="white" stroke-width="0.5" opacity="0.3"/></svg>') repeat;
+        opacity: 0.1;
+    }
+    
+    .text-gradient-green {
+        background: linear-gradient(135deg, rgba(49, 146, 85, 1) 0%, rgba(39, 126, 75, 1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    .bg-section-soft {
+        background-color: rgba(249, 249, 249, 0.7);
+        border-left: 5px solid rgba(49, 146, 85, 0.3);
+    }
+    
+    .text-green {
+        color: rgb(49, 146, 85);
+    }
+</style>
+@endsection
+
+@section('scripts')
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Inicializar animaciones
+    AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-out-back'
+    });
+    
+    // Filtrado de productos por categoría
+    
+    // Convertir enlaces de producto a modal/consulta
+    document.querySelectorAll('.product-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = this.dataset.id;
+            alert(`Mostraría el producto ${productId} (en un sistema real esto abriría el detalle)`);
+            // Alternativa: mostrar un modal con $('#productModal').modal('show');
         });
-    </script>
-</body>
-</html>
+    });
+
+    // Filtrado por rango de precio
+    const priceRange = document.getElementById('priceRange');
+    priceRange.addEventListener('input', function() {
+        const maxPrice = parseInt(this.value);
+        const products = document.querySelectorAll('.product-card');
+        
+        products.forEach(product => {
+            const price = parseInt(product.dataset.price);
+            if (price <= maxPrice) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+</script>
+@endsection
