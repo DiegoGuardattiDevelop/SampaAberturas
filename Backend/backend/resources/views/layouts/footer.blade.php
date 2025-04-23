@@ -9,7 +9,7 @@
             <!-- Navegación -->
             <div class="col-12 col-md-3 mb-4 mb-md-0">
                 <ul class="list-unstyled">
-                    <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/') }}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold fs-6 'active text-green'" href="{{ url('/home') }}">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/obras') }}">Obras</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/outlet') }}">Tienda</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold fs-6" href="{{ url('/nosotros') }}">Nosotros</a></li>

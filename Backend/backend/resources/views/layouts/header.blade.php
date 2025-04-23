@@ -1,10 +1,10 @@
-<header class="hero position-relative {{ Request::is('/') ? 'hero-full' : 'hero-min' }}">
+<header class="hero position-relative {{ Request::is('home') ? 'hero-full' : 'hero-min' }}">
     <!-- Overlay para mejorar legibilidad -->
     <div class="hero-overlay"></div>
     
     <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100">
         <div class="container">
-            <a href="/" class="navbar-brand">
+            <a href="/home" class="navbar-brand">
                 <img src="{{ asset('Images/Sampa_Logo_Livianno.png') }}" alt="Sampa Aberturas" class="logo-img" style="height: 50px;">
             </a>
             
@@ -20,7 +20,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('/') ? 'active text-green' : 'text-dark' }}" href="{{ url('/') }}">Inicio</a>
+                            <a class="nav-link fw-semibold {{ Request::is('home') ? 'active text-green' : 'text-dark' }}" href="{{ url('/home') }}">Inicio</a>
                         </li>
                         
                         <li class="nav-item dropdown">
@@ -63,7 +63,7 @@
         </div>
     </nav>
 
-    @if(Request::is('/'))
+    @if(Request::is('home'))
     <div class="hero-bg"></div>
     <div class="hero-content">
         <div class="container text-center text-white position-relative">
@@ -109,7 +109,7 @@
         z-index: -1;
     }
     
-    @if(Request::is('/'))
+    @if(Request::is('home'))
     .hero-bg::after {
         content: '';
         position: absolute;
