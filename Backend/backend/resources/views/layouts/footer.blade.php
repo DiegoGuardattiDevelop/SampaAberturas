@@ -1,13 +1,12 @@
-```blade
-<footer class="footer bg-dark text-light py-4 py-lg-5">
+<footer class="footer text-light py-4 py-lg-5">
     <div class="container">
         <div class="row text-center text-md-start align-items-start">
             <!-- Logo - Versión optimizada -->
             <div class="col-12 col-md-3 mb-4 mb-md-0 footer-logo-container">
                 <img src="{{ asset('Images/Sampa_Logo.jpg') }}" 
-                     alt="Logo Sampa Aberturas" 
-                     class="img-fluid footer-logo"
-                     loading="lazy">
+                    alt="Logo Sampa Aberturas" 
+                    class="img-fluid footer-logo"
+                    loading="lazy">
             </div>
 
             <!-- Navegación -->
@@ -75,8 +74,8 @@
 <style>
 /* ===== ESTILOS GENERALES DEL FOOTER ===== */
 .footer {
-    background-color: #2a2a2a;
-    color: #f8f9fa;
+    background-color: rgb(49, 146, 85);
+    color: #2a2a2a;
     position: relative;
     font-size: 0.95rem;
 }

@@ -4,7 +4,7 @@
 @section('title', 'Sampa Aberturas - Inicio')
 
 @section('content')
-<main class="content">
+<main class="content mt-5">
     <section id="presenta" class="presenta">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -77,7 +77,7 @@
         </div>
     </section>
 
-    <section id="productos" class="seccion">
+    {{-- <section id="productos" class="seccion">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
@@ -130,7 +130,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 </main>
 @endsection
 @section ('script')

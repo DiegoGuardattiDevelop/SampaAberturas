@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color:rgba(233, 251, 229, 0.85);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -27,10 +27,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* .navbar-scrolled {
+.navbar-scrolled {
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-} */
+}
 
 .navbar-nav .nav-link {
     color: black !important;
@@ -183,15 +183,12 @@ body {
 .servicios {
     padding: 50px 0;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .servicios h2 {
     margin-bottom: 30px;
     color: #333;
-}
-
-.servicios {
-    margin-bottom: 30px;
 }
 
 .servicios i {
@@ -215,6 +212,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     height: 30em;
     display: flex;
     justify-content: center;
