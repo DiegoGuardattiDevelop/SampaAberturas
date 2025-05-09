@@ -14,7 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f8f9fa;
+            background-color: rgba(233, 251, 229, 0.85);
             overflow: hidden;
         }
         

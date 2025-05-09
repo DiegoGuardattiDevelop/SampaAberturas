@@ -133,3 +133,38 @@
     </section>
 </main>
 @endsection
+@section ('script')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Configuración del observador
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+    
+        // Observar todos los productos
+        document.querySelectorAll('#productos .producto-item').forEach(item => {
+            observer.observe(item);
+        });
+    
+        // Optimización para resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            document.body.classList.add('resize-animation-stopper');
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                document.body.classList.remove('resize-animation-stopper');
+            }, 400);
+        });
+    });
+    </script>
+@endsection

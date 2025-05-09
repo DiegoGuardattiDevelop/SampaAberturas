@@ -20,7 +20,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('home') ? 'active text-green' : 'text-dark' }}" href="{{ url('/home') }}">Inicio</a>
+                            <a class="nav-link fw-semibold {{ Request::is('/home') ? 'active text-green' : 'text-dark' }}" href="{{ url('/home') }}">Inicio</a>
                         </li>
                         
                         <li class="nav-item dropdown">
@@ -82,7 +82,7 @@
     </div>
     @endif
 </header>
-
+@section('styles')
 <style>
     /* Estilos del Header */
     /* .hero {
@@ -117,7 +117,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
+        background: linear-gradient(to bottom, rgba(49, 146, 85, 0.7), rgba(0, 0, 0, 0.5));
     }
     @endif
     
@@ -131,19 +131,19 @@
         z-index: 0;
     }
     
-    .navbar {
+    /* .navbar {
         z-index: 1000;
         transition: all 0.3s ease;
         padding-top: 15px;
         padding-bottom: 15px;
-    }
+    } */
     
-    .navbar.scrolled {
+    /* .navbar.scrolled {
         background-color: rgba(255, 255, 255, 0.95) !important;
         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         padding-top: 10px;
         padding-bottom: 10px;
-    }
+    } */
     
     .navbar.scrolled .nav-link {
         color: #333 !important;
@@ -262,9 +262,10 @@
         background-color: rgba(49, 146, 85, 0.1);
     }
 </style>
+@endsection
 
 <script>
-    // Efecto de navbar al hacer scroll
+    /* // Efecto de navbar al hacer scroll */
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
@@ -274,7 +275,7 @@
         }
     });
     
-    // Inicializar tooltips
+    /* // Inicializar tooltips */
     document.addEventListener('DOMContentLoaded', function() {
         const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         tooltipTriggerList.map(function(tooltipTriggerEl) {

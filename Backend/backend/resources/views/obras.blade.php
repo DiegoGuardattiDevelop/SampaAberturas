@@ -6,11 +6,11 @@
 @section('content') 
     <main class="container mt-5"">
         
-            <div class="hero-header bg-gradient-green rounded-4 p-5 mb-5 text-white position-relative overflow-hidden">
+            <div class="hero-header bg-gradient-green rounded-4 p-2 mb-5 text-white position-relative overflow-hidden">
                 <div class="bg-overlay"></div>
                 <div class="position-relative z-index-1 text-center">
                     <hr class="bg-white-light">
-                    <h1 class="display-4 fw-bold">Nuestros Trabajos</h1>
+                    <h1 class="display-4 fw-bold">Obras</h1>
                     <p class="lead">Lo que hacemos habla por nosotros</p>
                     <hr class="bg-white-light">
                 </div>

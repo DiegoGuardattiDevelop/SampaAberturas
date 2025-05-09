@@ -5,11 +5,11 @@
 @section('content')
 <main class="container mt-5">
     <!-- Hero Header -->
-    <div class="hero-header bg-gradient-green rounded-4 p-5 mb-5 text-white position-relative overflow-hidden">
+    <div class="hero-header bg-gradient-green rounded-4 p-4 mb-5 text-white position-relative overflow-hidden">
         <div class="bg-overlay"></div>
         <div class="position-relative z-index-1 text-center">
             <hr class="bg-white-light">
-            <h1 class="display-4 fw-bold">Nuestra Tienda</h1>
+            <h1 class="display-4 fw-bold">Tienda</h1>
             <p class="lead">Productos de calidad para tus proyectos</p>
             <hr class="bg-white-light">
         </div>
@@ -101,7 +101,7 @@
                                 <div class="product-badge bg-success">Nuevo</div>
                                 <a href="#" class="text-decoration-none">
                                     <div class="product-image-container">
-                                        <img src="{{ asset('Images/sampa_outlet_1.jpg') }}" class="card-img-top" alt="Ventana de aluminio Modena">
+                                        <img src="{{ asset('Images/sampa_outlet_1.jpg') }}" class="card-img-top" alt="Ventana de aluminio Modena" loading="lazy">
                                     </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-start">
@@ -132,7 +132,7 @@
                                 <div class="product-badge bg-danger">Oferta</div>
                                 <a href="#" class="text-decoration-none">
                                     <div class="product-image-container">
-                                        <img src="{{ asset('Images/sampa_outlet_2.jpg') }}" class="card-img-top" alt="Puerta interior diseño moderno">
+                                        <img src="{{ asset('Images/sampa_outlet_2.jpg') }}" class="card-img-top" alt="Puerta interior diseño moderno" loading="lazy">
                                     </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-start">
@@ -165,7 +165,7 @@
                             <div class="card h-100 border-0 shadow-hover">
                                 <a href="#" class="text-decoration-none">
                                     <div class="product-image-container">
-                                        <img src="{{ asset('Images/sampa_outlet_3.jpg') }}" class="card-img-top" alt="Mampara para baño Alukit">
+                                        <img src="{{ asset('Images/sampa_outlet_3.jpg') }}" class="card-img-top" alt="Mampara para baño Alukit" loading="lazy">
                                     </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-start">
@@ -195,7 +195,7 @@
                             <div class="card h-100 border-0 shadow-hover">
                                 <a href="#" class="text-decoration-none">
                                     <div class="product-image-container">
-                                        <img src="{{ asset('Images/sampa_outlet_4.jpg') }}" class="card-img-top" alt="Cortina roller blackout">
+                                        <img src="{{ asset('Images/sampa_outlet_4.jpg') }}" class="card-img-top" alt="Cortina roller blackout" loading="lazy">
                                     </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-start">
@@ -226,7 +226,7 @@
                                 <div class="product-badge bg-primary">Popular</div>
                                 <a href="#" class="text-decoration-none">
                                     <div class="product-image-container">
-                                        <img src="{{ asset('Images/sampa_outlet_6.jpg') }}" class="card-img-top" alt="Ventana corrediza A30">
+                                        <img src="{{ asset('Images/sampa_outlet_6.jpg') }}" class="card-img-top" alt="Ventana corrediza A30" loading="lazy">
                                     </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-start">
@@ -256,7 +256,7 @@
                             <div class="card h-100 border-0 shadow-hover">
                                 <a href="#" class="text-decoration-none">
                                     <div class="product-image-container">
-                                        <img src="{{ asset('Images/sampa_outlet_7.png') }}" class="card-img-top" alt="Puerta interior diseño clásico">
+                                        <img src="{{ asset('Images/sampa_outlet_7.png') }}" class="card-img-top" alt="Puerta interior diseño clásico" loading="lazy">
                                     </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-start">
@@ -337,27 +337,29 @@
         transition: all 0.3s ease;
         border-radius: 12px;
         overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.05);
     }
     
     .shadow-hover:hover {
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
         transform: translateY(-5px);
     }
     
     .product-image-container {
-        height: 200px;
+        aspect-ratio: 4 / 3;
         overflow: hidden;
+        background-color: #f8f9fa;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #f8f9fa;
     }
     
     .product-image-container img {
-        object-fit: cover;
         width: 100%;
         height: 100%;
+        object-fit: cover;
         transition: transform 0.5s ease;
+        display: block;
     }
     
     .product-card:hover .product-image-container img {
@@ -366,14 +368,22 @@
     
     .product-badge {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 2;
-        padding: 5px 10px;
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
         border-radius: 20px;
         color: white;
-        font-size: 12px;
+        font-size: 0.85rem;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .card-body {
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     
     .rating {
@@ -429,6 +439,33 @@
     .text-green {
         color: rgb(49, 146, 85);
     }
+    
+    /* Responsividad */
+    @media (max-width: 768px) {
+        .hero-header {
+            padding: 1.5rem !important;
+        }
+        
+        .hero-header h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-header p {
+            font-size: 1rem;
+        }
+        
+        .category-card, .filter-card {
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-image-container {
+            aspect-ratio: 1 / 1;
+        }
+        
+        .card-body {
+            min-height: 140px;
+        }
+    }
 </style>
 @endsection
 
@@ -441,16 +478,25 @@
         once: true,
         easing: 'ease-out-back'
     });
-    
-    // Filtrado de productos por categoría
-    
-    // Convertir enlaces de producto a modal/consulta
-    document.querySelectorAll('.product-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const productId = this.dataset.id;
-            alert(`Mostraría el producto ${productId} (en un sistema real esto abriría el detalle)`);
-            // Alternativa: mostrar un modal con $('#productModal').modal('show');
+
+    // Filtrado por categoría
+    const categoryButtons = document.querySelectorAll('.list-group-item[data-category]');
+    const products = document.querySelectorAll('.product-card');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const selectedCategory = this.dataset.category;
+
+            products.forEach(product => {
+                if (selectedCategory === 'all' || product.dataset.category === selectedCategory) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
         });
     });
 
@@ -458,8 +504,7 @@
     const priceRange = document.getElementById('priceRange');
     priceRange.addEventListener('input', function() {
         const maxPrice = parseInt(this.value);
-        const products = document.querySelectorAll('.product-card');
-        
+
         products.forEach(product => {
             const price = parseInt(product.dataset.price);
             if (price <= maxPrice) {
@@ -468,6 +513,15 @@
                 product.style.display = 'none';
             }
         });
+    });
+
+    // Reiniciar filtros
+    const resetButton = document.querySelector('.btn-outline-green.w-100');
+    resetButton.addEventListener('click', function() {
+        priceRange.value = priceRange.max;
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        categoryButtons[0].classList.add('active');
+        products.forEach(product => product.style.display = 'block');
     });
 </script>
 @endsection
