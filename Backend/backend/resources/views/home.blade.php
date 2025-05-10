@@ -77,10 +77,10 @@
         </div>
     </section>
     
-    {{-- <section id="productos" class="seccion">
+    <section id="productos" class="productos">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="producto-item" onclick="window.location='{{ url('/aberturas-aluminio') }}';">
                         <img src="{{ asset('Images/sampa_aluminio.jpeg') }}" alt="Aberturas de Aluminio" class="img-fluid rounded">
                         <div class="overlay">
@@ -130,7 +130,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 </main>
 @endsection
 @section ('script')
