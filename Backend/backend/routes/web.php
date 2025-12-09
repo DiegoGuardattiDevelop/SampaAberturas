@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TiendaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,9 +40,9 @@ Route::get('/obras', function () {
     return view('obras');
 })->name('obras');
 
-Route::get('/outlet', function () {
-    return view('tienda');
-})->name('outlet');
+// Route::get('/outlet', function () {
+//     return view('tienda');
+// })->name('outlet');
 
 Route::get('/nosotros', function () {
     return view('nosotros');
@@ -50,3 +51,7 @@ Route::get('/nosotros', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 })->name('contacto');
+
+Route::get('/outlet', [TiendaController::class, 'mostrarTienda'])->name('tienda.index');
+Route::get('/outlet/categoria/{categoria:slug}', [TiendaController::class, 'categoria'])->name('tienda.categoria');
+Route::get('/outlet/{producto:slug}', [TiendaController::class, 'producto'])->name('tienda.producto');

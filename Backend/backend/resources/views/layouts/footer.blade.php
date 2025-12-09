@@ -10,13 +10,13 @@
             </div>
 
             <!-- Navegación -->
-            <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <div class="col-12 col-md-2 mb-3 mb-md-0">
                 <h5 class="mb-2 fw-bold text-uppercase text-green">Navegación</h5>
-                <ul class="list-unstyled">
-                    <li class="nav-item mb-2"><a class="nav-link d-inline-block" href="{{ url('/home') }}">Inicio</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link d-inline-block" href="{{ url('/obras') }}">Obras</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link d-inline-block" href="{{ url('/outlet') }}">Tienda</a></li>
-                    <li class="nav-item mb-2"><a class="nav-link d-inline-block" href="{{ url('/nosotros') }}">Nosotros</a></li>
+                <ul class="list-unstyled d-flex flex-column" style="gap: 3px;"> {{-- Aquí el cambio --}}
+                    <li class="nav-item"><a class="nav-link d-inline-block" href="{{ url('/home') }}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link d-inline-block" href="{{ url('/obras') }}">Obras</a></li>
+                    <li class="nav-item"><a class="nav-link d-inline-block" href="{{ url('/outlet') }}">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link d-inline-block" href="{{ url('/nosotros') }}">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link d-inline-block" href="{{ url('/contacto') }}">Contacto</a></li>
                 </ul>
             </div>

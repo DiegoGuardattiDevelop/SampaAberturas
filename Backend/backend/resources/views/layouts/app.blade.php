@@ -36,5 +36,6 @@
             });
         });
     </script>
+    <script src="{{ asset('js/tienda.js') }}"></script>
 </body>
 </html>
