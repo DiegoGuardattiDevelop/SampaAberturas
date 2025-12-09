@@ -192,6 +192,89 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+
+    <section id="proceso-trabajo" class="seccion">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Nuestro Proceso de Trabajo</h2>
+                <p class="lead">De la idea inicial a la instalación final, cada paso con profesionalismo</p>
+            </div>
+
+            <div class="proceso-timeline">
+                <!-- Paso 1 -->
+                <div class="proceso-paso">
+                    <div class="proceso-icon">
+                        <i class="bi bi-pencil-square"></i>
+                        <span class="proceso-numero">1</span>
+                    </div>
+                    <div class="proceso-contenido">
+                        <h3>Consulta y Diseño</h3>
+                        <p>Asesoramiento personalizado para entender tus necesidades y crear el diseño perfecto para tu espacio.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="proceso-paso">
+                    <div class="proceso-icon">
+                        <i class="bi bi-rulers"></i>
+                        <span class="proceso-numero">2</span>
+                    </div>
+                    <div class="proceso-contenido">
+                        <h3>Medición Profesional</h3>
+                        <p>Nuestro equipo técnico realiza mediciones precisas sin cargo para garantizar un ajuste perfecto.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="proceso-paso">
+                    <div class="proceso-icon">
+                        <i class="bi bi-hammer"></i>
+                        <span class="proceso-numero">3</span>
+                    </div>
+                    <div class="proceso-contenido">
+                        <h3>Fabricación a Medida</h3>
+                        <p>Producción con materiales de primera calidad en nuestro taller equipado con tecnología avanzada.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="proceso-paso">
+                    <div class="proceso-icon">
+                        <i class="bi bi-truck"></i>
+                        <span class="proceso-numero">4</span>
+                    </div>
+                    <div class="proceso-contenido">
+                        <h3>Entrega y Logística</h3>
+                        <p>Coordinación de entrega en el plazo acordado con protección especial para tus aberturas.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 5 -->
+                <div class="proceso-paso">
+                    <div class="proceso-icon">
+                        <i class="bi bi-tools"></i>
+                        <span class="proceso-numero">5</span>
+                    </div>
+                    <div class="proceso-contenido">
+                        <h3>Instalación Profesional</h3>
+                        <p>Instalación realizada por nuestro equipo especializado con limpieza y sin molestias.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 6 -->
+                <div class="proceso-paso">
+                    <div class="proceso-icon">
+                        <i class="bi bi-shield-check"></i>
+                        <span class="proceso-numero">6</span>
+                    </div>
+                    <div class="proceso-contenido">
+                        <h3>Garantía y Soporte</h3>
+                        <p>5 años de garantía en materiales y servicio postventa para tu total tranquilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                     <div class="producto-item" onclick="window.location='{{ url('/puertas-placa') }}';">
                         <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas Placas" class="img-fluid rounded">
                         <div class="overlay">

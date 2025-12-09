@@ -747,6 +747,140 @@ body {
     background-color: rgb(49, 146, 85);
     border: none;
     padding: 12px 30px;
+/* Sección Proceso de Trabajo */
+#proceso-trabajo {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.proceso-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.proceso-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, rgb(49, 146, 85), #ddd);
+}
+
+.proceso-paso {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.proceso-paso:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.proceso-icon {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgb(49, 146, 85), #2c3e50);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.proceso-numero {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.proceso-contenido {
+    flex: 1;
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proceso-paso:hover .proceso-contenido {
+    transform: translateY(-5px);
+}
+
+.proceso-contenido h3 {
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.proceso-contenido h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: rgb(49, 146, 85);
+}
+
+.proceso-contenido p {
+    color: #666;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsivo para proceso de trabajo */
+@media (max-width: 767.98px) {
+    .proceso-timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .proceso-paso {
+        flex-direction: column !important;
+        margin-bottom: 30px;
+    }
+
+    .proceso-paso:nth-child(even) {
+        flex-direction: column !important;
+    }
+
+    .proceso-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+
+    .proceso-contenido {
+        padding: 15px;
+        margin-left: 30px;
+    }
+
+    .proceso-contenido::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        width: 20px;
+        height: 2px;
+        background: #ddd;
+    }
+}
     font-size: 1.1rem;
     font-weight: 600;
 }
