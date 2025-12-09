@@ -180,6 +180,79 @@
         </div>
     </section>
     
+    <section id="tienda-destacada" class="seccion">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Productos Destacados</h2>
+                <p class="lead">Selección especial con entrega inmediata</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Producto 1 - Puerta Placa -->
+                <div class="col-md-4">
+                    <div class="producto-destacado-card">
+                        <div class="producto-destacado-badge">¡EN STOCK!</div>
+                        <div class="producto-destacado-imagen">
+                            <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puerta Placa Premium" class="img-fluid">
+                        </div>
+                        <div class="producto-destacado-info">
+                            <h3>Puerta Placa Premium</h3>
+                            <p class="producto-destacado-precio">$125.000</p>
+                            <p class="producto-destacado-desc">Puerta placa de 80cm x 210cm con aislamiento térmico y acústico. Incluye herrajes y instalación.</p>
+                            <div class="producto-destacado-acciones">
+                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver en Tienda</a>
+                                <a href="{{ url('/contacto') }}" class="btn btn-outline-primary">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 - Mosquitero -->
+                <div class="col-md-4">
+                    <div class="producto-destacado-card">
+                        <div class="producto-destacado-badge">¡EN STOCK!</div>
+                        <div class="producto-destacado-imagen">
+                            <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Mosquitero Corredizo" class="img-fluid">
+                        </div>
+                        <div class="producto-destacado-info">
+                            <h3>Mosquitero Corredizo</h3>
+                            <p class="producto-destacado-precio">$45.000</p>
+                            <p class="producto-destacado-desc">Mosquitero de aluminio corredizo para ventana estándar. Incluye malla anti-insectos de alta durabilidad.</p>
+                            <div class="producto-destacado-acciones">
+                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver en Tienda</a>
+                                <a href="{{ url('/contacto') }}" class="btn btn-outline-primary">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 - Herrajes -->
+                <div class="col-md-4">
+                    <div class="producto-destacado-card">
+                        <div class="producto-destacado-badge">¡EN STOCK!</div>
+                        <div class="producto-destacado-imagen">
+                            <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Kit de Herrajes" class="img-fluid">
+                        </div>
+                        <div class="producto-destacado-info">
+                            <h3>Kit de Herrajes Premium</h3>
+                            <p class="producto-destacado-precio">$28.500</p>
+                            <p class="producto-destacado-desc">Kit completo de herrajes para puerta de aluminio. Incluye manija, cerradura y bisagras de alta resistencia.</p>
+                            <div class="producto-destacado-acciones">
+                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver en Tienda</a>
+                                <a href="{{ url('/contacto') }}" class="btn btn-outline-primary">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="{{ url('/tienda') }}" class="btn btn-primary btn-lg">Ver Todos los Productos</a>
+                <p class="mt-2">Envíos a todo el país | Stock limitado</p>
+            </div>
+        </div>
+    </section>
+
     <section id="productos" class="productos">
         <div class="container">
             <div class="row g-4">
