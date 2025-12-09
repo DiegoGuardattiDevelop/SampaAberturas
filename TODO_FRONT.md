@@ -1,5 +1,17 @@
 # Lista de Tareas - Frontend (Mejoras para el Sitio Web)
 
+## Metodología de Trabajo
+
+- Leemos el archivo de tareas según sea front o back
+- En cada tarea crearemos una rama feature para tal caso
+- Haremos pull desde develop y comenzaremos a trabajar
+- Se debe probar la funcionalidad total de la tarea y del proyecto
+- Actualizaremos el archivo de tareas marcando las tareas realizadas
+- Una vez realizado podemos comitear y pusher a la rama remota
+- Para después mergear a develop
+- Por último eliminaremos la rama feature
+- En todos los casos debes pedir autorización para comenzar
+
 ## Diseño y UI/UX
 
 - [ ] Mejorar el diseño responsivo en dispositivos móviles (especialmente el carrusel y la sección de productos)
