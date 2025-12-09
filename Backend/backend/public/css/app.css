@@ -547,6 +547,94 @@ body {
 
 /* Estilos responsivos para botones del carousel */
 @media (max-width: 767.98px) {
+/* Sección Sobre Nosotros */
+#sobre-nosotros {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.nosotros-contenido {
+    padding: 20px;
+}
+
+.nosotros-contenido h2 {
+    color: rgb(49, 146, 85);
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.nosotros-contenido h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: rgb(49, 146, 85);
+}
+
+.nosotros-contenido p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.nosotros-destacados {
+    margin: 30px 0;
+}
+
+.destacado-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.destacado-item i {
+    color: rgb(49, 146, 85);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.destacado-item span {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.nosotros-imagen {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nosotros-imagen img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.nosotros-imagen img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsivo para sección Sobre Nosotros */
+@media (max-width: 767.98px) {
+    .nosotros-contenido h2 {
+        font-size: 1.8rem;
+    }
+
+    .nosotros-contenido p {
+        font-size: 1rem;
+    }
+
+    .nosotros-imagen {
+        margin-bottom: 20px;
+    }
+}
     .presenta_text h1 {
         font-size: 2.5rem;
     }

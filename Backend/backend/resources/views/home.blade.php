@@ -55,6 +55,43 @@
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
+
+    <section id="sobre-nosotros" class="seccion">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="nosotros-imagen">
+                        <img src="{{ asset('Images/sampa_nosotros_1.jpg') }}" alt="Nuestro taller" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="nosotros-contenido">
+                        <h2>Sobre Sampa Aberturas</h2>
+                        <p>Con más de 15 años de experiencia en el mercado, <strong>Sampa Aberturas</strong> se ha consolidado como líder en la fabricación e instalación de aberturas de aluminio de alta calidad en la región.</p>
+
+                        <div class="nosotros-destacados">
+                            <div class="destacado-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Más de 500 proyectos realizados</span>
+                            </div>
+                            <div class="destacado-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Materiales de primera calidad con garantía</span>
+                            </div>
+                            <div class="destacado-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Equipo profesional con experiencia certificada</span>
+                            </div>
+                        </div>
+
+                        <p>Nos especializamos en soluciones a medida para hogares, oficinas y proyectos comerciales, combinando tecnología avanzada con diseño personalizado.</p>
+
+                        <a href="{{ url('/nosotros') }}" class="btn btn-primary">Conocer más sobre nosotros</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
