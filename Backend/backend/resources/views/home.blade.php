@@ -119,6 +119,66 @@
             </div>
         </div>
     </section>
+
+    <section id="proyectos-destacados" class="seccion">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Nuestros Proyectos Destacados</h2>
+                <p class="lead">Más de 500 obras realizadas con los más altos estándares de calidad</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Proyecto 1 -->
+                <div class="col-md-4">
+                    <div class="proyecto-card">
+                        <div class="proyecto-imagen">
+                            <img src="{{ asset('Images/sampa_obra_1.jpg') }}" alt="Proyecto Residencial Moderno" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Residencia Moderna</h3>
+                            <p class="proyecto-lugar"><i class="bi bi-geo-alt"></i> Buenos Aires, Argentina</p>
+                            <p class="proyecto-tipo"><i class="bi bi-house"></i> Residencial</p>
+                            <a href="{{ url('/obras') }}" class="btn btn-outline-primary">Ver todos los proyectos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="col-md-4">
+                    <div class="proyecto-card">
+                        <div class="proyecto-imagen">
+                            <img src="{{ asset('Images/sampa_obra_2.jpg') }}" alt="Proyecto Comercial" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Edificio Comercial</h3>
+                            <p class="proyecto-lugar"><i class="bi bi-geo-alt"></i> Córdoba, Argentina</p>
+                            <p class="proyecto-tipo"><i class="bi bi-building"></i> Comercial</p>
+                            <a href="{{ url('/obras') }}" class="btn btn-outline-primary">Ver todos los proyectos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="col-md-4">
+                    <div class="proyecto-card">
+                        <div class="proyecto-imagen">
+                            <img src="{{ asset('Images/sampa_obra_3.jpg') }}" alt="Proyecto de Remodelación" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Remodelación Integral</h3>
+                            <p class="proyecto-lugar"><i class="bi bi-geo-alt"></i> Rosario, Argentina</p>
+                            <p class="proyecto-tipo"><i class="bi bi-tools"></i> Remodelación</p>
+                            <a href="{{ url('/obras') }}" class="btn btn-outline-primary">Ver todos los proyectos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="{{ url('/obras') }}" class="btn btn-primary btn-lg">Ver Todos Nuestros Proyectos</a>
+            </div>
+        </div>
+    </section>
     
     <section id="productos" class="productos">
         <div class="container">
