@@ -517,6 +517,49 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Estilos para botones del carousel en home */
+.btn-primary {
+    background-color: rgb(49, 146, 85);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: rgb(34, 121, 70);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.presenta_text p {
+    font-size: 1.1rem;
+    color: white;
+    margin: 15px 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Estilos responsivos para botones del carousel */
+@media (max-width: 767.98px) {
+    .presenta_text h1 {
+        font-size: 2.5rem;
+    }
+
+    .presenta_text p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
 .section-card:hover {
     transform: translateY(-5px);
 }

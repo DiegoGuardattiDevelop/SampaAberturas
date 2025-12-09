@@ -12,7 +12,9 @@
                     <div class="container_presenta">
                         <div class="presenta_info">
                             <div class="presenta_text">
-                                <h1>Brindamos soluciones <br> integrales a tu hogar</h1>
+                                <h1>Fabricación profesional <br> de aberturas de aluminio</h1>
+                                <p>Más de 15 años de experiencia en soluciones a medida</p>
+                                <a href="{{ url('/contacto') }}" class="btn btn-primary">Solicitar presupuesto</a>
                             </div>
                         </div>
                         <div class="presenta_img">
@@ -27,7 +29,9 @@
                         </div>
                         <div class="presenta_info">
                             <div class="presenta_text">
-                                <h1>Le damos valor <br> a tus ambientes</h1>
+                                <h1>Proyectos realizados <br> con garantía de calidad</h1>
+                                <p>Más de 500 obras entregadas a clientes satisfechos</p>
+                                <a href="{{ url('/obras') }}" class="btn btn-primary">Ver nuestros proyectos</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +40,9 @@
                     <div class="container_presenta">
                         <div class="presenta_info">
                             <div class="presenta_text">
-                                <h1>La experiencia es <br> nuestro mejor producto</h1>
+                                <h1>Tecnología y diseño <br> para tu hogar u oficina</h1>
+                                <p>Materiales de primera calidad con instalación profesional</p>
+                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver productos disponibles</a>
                             </div>
                         </div>
                         <div class="presenta_img">
