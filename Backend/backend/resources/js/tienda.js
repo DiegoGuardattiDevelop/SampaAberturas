@@ -51,18 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         cartCount.textContent = data.cart_count;
                     }
                     
-                    // Mostrar notificación
-                    Toastify({
-                        text: "Producto añadido al carrito",
-                        duration: 3000,
-                        close: true,
-                        gravity: "top",
-                        position: "right",
-                        backgroundColor: "linear-gradient(to right, #319255, #277e4b)",
-                        stopOnFocus: true
-                    }).showToast();
+                    // Mostrar notificación usando la función global
+                    showToast('success', 'Producto añadido al carrito');
                 } else {
-                    alert(data.message || 'Error al agregar el producto');
+                    showToast('error', data.message || 'Error al agregar el producto');
                 }
             })
             .catch(error => {

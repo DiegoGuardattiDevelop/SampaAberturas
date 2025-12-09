@@ -17,8 +17,8 @@
 - [x] Mejorar el diseño responsivo en dispositivos móviles (especialmente el carrusel y la sección de productos)
 - [x] Implementar un sistema de temas (claro/oscuro) para mejorar la accesibilidad
 - [x] Optimizar las imágenes: convertir a formatos modernos (WebP), implementar lazy loading completo
-- [ ] Mejorar la tipografía: usar fuentes más modernas y consistentes en todo el sitio
-- [ ] Añadir animaciones sutiles para mejorar la experiencia de usuario (transiciones en hover, carga de elementos)
+- [x] Mejorar la tipografía: usar fuentes más modernas y consistentes en todo el sitio
+- [x] Añadir animaciones sutiles para mejorar la experiencia de usuario (transiciones en hover, carga de elementos)
 - [ ] Implementar un sistema de notificaciones toast más robusto (reemplazar alert() por una librería como Toastify en todas las páginas)
 
 ## Funcionalidad y Interactividad

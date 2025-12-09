@@ -21,7 +21,7 @@
             <h2 class="fw-bold text-gradient-green">¿En qué podemos ayudarte?</h2>
             <p class="text-muted">Completa el formulario y nos pondremos en contacto contigo</p>
         </div>
-        <form action="#" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
+        <form action="#" method="POST" class="needs-validation" novalidate enctype="multipart/form-data" id="contactForm">
             @csrf
             <div class="row g-3">
                 <!-- Nombre -->
@@ -212,10 +212,10 @@
     // Validación de formulario
     (function() {
         'use strict'
-        
+
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.querySelectorAll('.needs-validation')
-        
+
         // Loop over them and prevent submission
         Array.prototype.slice.call(forms)
             .forEach(function(form) {
@@ -223,8 +223,21 @@
                     if (!form.checkValidity()) {
                         event.preventDefault()
                         event.stopPropagation()
+                        showToast('error', 'Por favor completa todos los campos requeridos');
+                    } else {
+                        event.preventDefault()
+                        event.stopPropagation()
+
+                        // Simular envío de formulario
+                        showToast('success', 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.');
+
+                        // Resetear formulario después de 3 segundos
+                        setTimeout(function() {
+                            form.reset();
+                            form.classList.remove('was-validated');
+                        }, 3000);
                     }
-                    
+
                     form.classList.add('was-validated')
                 }, false)
             })
