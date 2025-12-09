@@ -1,5 +1,6 @@
 /* Importaciones */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 /* Estilos globales */
 
@@ -131,6 +132,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-family: "Poppins", sans-serif;
+    animation: fadeInDown 1s ease-out;
 }
 
 .presentacion h2 {
@@ -138,6 +140,7 @@ body {
     margin-bottom: 25px;
     text-align: center;
     font-family: "Poppins", sans-serif;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .presentacion h2 span {
@@ -146,11 +149,13 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Poppins", sans-serif;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .presentacion .descripcion {
     font-size: 16px;
     font-family: "Inter", sans-serif;
+    animation: fadeIn 2s ease-out;
 }
 
 .container_presenta {
@@ -290,6 +295,7 @@ body {
     overflow: hidden;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
 }
 
 .producto-item img {
@@ -353,6 +359,7 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
 }
 
 .card-body {
@@ -735,6 +742,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+    animation: fadeIn 1s ease-out;
 }
 
 .aberturas-card:hover {
@@ -870,6 +878,7 @@ body {
     padding: 10px;
     transition: transform 0.3s;
     background-color: white;
+    animation: fadeIn 1s ease-out;
 }
 
 .line-card:hover {
