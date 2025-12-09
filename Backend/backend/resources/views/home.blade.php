@@ -277,6 +277,86 @@
     </section>
                     <div class="producto-item" onclick="window.location='{{ url('/puertas-placa') }}';">
                         <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas Placas" class="img-fluid rounded">
+
+    <section id="testimonios" class="seccion">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Lo que Nuestros Clientes Dicen</h2>
+                <p class="lead">Más de 500 clientes satisfechos en toda la región</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Testimonio 1 -->
+                <div class="col-md-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-header">
+                            <img src="{{ asset('Images/sampa_nosotros_2.jpg') }}" alt="Cliente 1" class="testimonio-img">
+                            <div class="testimonio-info">
+                                <h4>Carlos Martínez</h4>
+                                <p class="testimonio-proyecto">Residencia en Palermo</p>
+                                <div class="testimonio-calificacion">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonio-contenido">
+                            <p>"Excelente servicio desde el primer contacto. La calidad de las aberturas superó nuestras expectativas y la instalación fue impecable. Recomiendo Sampa Aberturas sin dudarlo."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="col-md-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-header">
+                            <img src="{{ asset('Images/sampa_nosotros_3.jpg') }}" alt="Cliente 2" class="testimonio-img">
+                            <div class="testimonio-info">
+                                <h4>Laura Gómez</h4>
+                                <p class="testimonio-proyecto">Oficina en Microcentro</p>
+                                <div class="testimonio-calificacion">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonio-contenido">
+                            <p>"Quedamos muy conformes con el trabajo realizado. El equipo fue muy profesional y respetuoso con los plazos. Las aberturas de aluminio le dieron un look moderno a nuestras oficinas."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="col-md-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-header">
+                            <img src="{{ asset('Images/sampa_nosotros_4.jpg') }}" alt="Cliente 3" class="testimonio-img">
+                            <div class="testimonio-info">
+                                <h4>Roberto Sánchez</h4>
+                                <p class="testimonio-proyecto">Local Comercial</p>
+                                <div class="testimonio-calificacion">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonio-contenido">
+                            <p>"La atención postventa es excepcional. Tuvimos un pequeño problema con una puerta y lo resolvieron en menos de 24 horas. Eso demuestra su compromiso con el cliente."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                         <div class="overlay">
                             <p>PUERTAS<br>PLACAS</p>
                         </div>

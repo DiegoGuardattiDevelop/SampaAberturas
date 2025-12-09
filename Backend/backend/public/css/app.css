@@ -847,6 +847,121 @@ body {
     .proceso-timeline::before {
         left: 20px;
         transform: none;
+/* Sección Testimonios */
+#testimonios {
+    padding: 60px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/Images/sampa_casa_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.testimonio-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 20px;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.testimonio-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonio-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(49, 146, 85);
+    margin-right: 15px;
+}
+
+.testimonio-info h4 {
+    margin: 0;
+    color: rgb(49, 146, 85);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+}
+
+.testimonio-proyecto {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-family: "Inter", sans-serif;
+}
+
+.testimonio-calificacion {
+    color: #ffc107;
+    margin: 5px 0;
+}
+
+.testimonio-contenido {
+    flex-grow: 1;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    line-height: 1.6;
+    color: #555;
+    position: relative;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+.testimonio-contenido::before {
+    content: '"';
+    font-size: 3rem;
+    color: rgba(49, 146, 85, 0.2);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-family: serif;
+}
+
+.testimonio-contenido::after {
+    content: '"';
+    font-size: 3rem;
+    color: rgba(49, 146, 85, 0.2);
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    font-family: serif;
+}
+
+/* Responsivo para testimonios */
+@media (max-width: 767.98px) {
+    .testimonio-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .testimonio-img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .testimonio-contenido {
+        padding: 10px;
+    }
+
+    .testimonio-contenido::before,
+    .testimonio-contenido::after {
+        font-size: 2rem;
+    }
+}
     }
 
     .proceso-paso {
