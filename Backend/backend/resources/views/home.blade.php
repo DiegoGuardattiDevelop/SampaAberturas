@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('title', 'Sampa Aberturas - Inicio')
@@ -100,20 +99,34 @@
     </section>
 
     <section id="servicios" class="servicios">
-        <div class="imagen_fondo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 servicio">
-                        <i class="bi bi-rulers"></i> <h3>Medición Profesional</h3>
-                        <p>Servicio de medición técnico sin cargo <br>para garantizar precisión milimétrica.</p>
+        <div class="container">
+            <h2>NUESTROS SERVICIOS DIFERENCIALES</h2>
+            <div class="row">
+                <div class="col-md-4 servicio">
+                    <div class="servicio-icon-container">
+                        <i class="bi bi-rulers"></i>
                     </div>
-                    <div class="col-md-4 servicio">
-                        <i class="bi bi-shield-check"></i> <h3>Garantía Extendida</h3>
-                        <p>5 años de garantía en materiales <br>y 2 años en mano de obra.</p>
+                    <div class="servicio-content">
+                        <h3>Medición Profesional</h3>
+                        <p>Servicio de medición técnico sin cargo para garantizar precisión milimétrica en cada proyecto.</p>
                     </div>
-                    <div class="col-md-4 servicio">
-                        <i class="bi bi-calendar-check"></i> <h3>Entrega en Tiempo</h3>
-                        <p>Plazos de fabricación claros <br>y cumplimiento garantizado.</p>
+                </div>
+                <div class="col-md-4 servicio">
+                    <div class="servicio-icon-container">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Garantía Extendida</h3>
+                        <p>5 años de garantía en materiales y 2 años en mano de obra para tu total tranquilidad.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 servicio">
+                    <div class="servicio-icon-container">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <div class="servicio-content">
+                        <h3>Entrega en Tiempo</h3>
+                        <p>Plazos de fabricación claros y cumplimiento garantizado según lo acordado.</p>
                     </div>
                 </div>
             </div>
@@ -179,7 +192,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="tienda-destacada" class="seccion">
         <div class="container">
             <div class="section-header text-center mb-5">
@@ -255,16 +268,98 @@
 
     <section id="productos" class="productos">
         <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Nuestros Productos</h2>
+                <p class="lead">Soluciones completas para tu hogar u oficina</p>
+            </div>
+
             <div class="row g-4">
+                <!-- Aberturas de Aluminio -->
                 <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/aberturas-aluminio') }}';">
+                        <div class="producto-badge">Línea Premium</div>
                         <img src="{{ asset('Images/sampa_aluminio.jpeg') }}" alt="Aberturas de Aluminio" class="img-fluid rounded">
                         <div class="overlay">
                             <p>ABERTURAS<br>DE ALUMINIO</p>
                         </div>
+                        <div class="producto-desc">
+                            <p>Perfiles de alta resistencia con aislamiento térmico y acústico</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Puertas Placas -->
                 <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                    <div class="producto-item" onclick="window.location='{{ url('/puertas-placa') }}';">
+                        <div class="producto-badge">Novedad</div>
+                        <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas Placas" class="img-fluid rounded">
+                        <div class="overlay">
+                            <p>PUERTAS<br>PLACAS</p>
+                        </div>
+                        <div class="producto-desc">
+                            <p>Diseño moderno con máxima seguridad y aislamiento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mamparas -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                    <div class="producto-item" onclick="window.location='{{ url('/mamparas') }}';">
+                        <div class="producto-badge">Oferta</div>
+                        <img src="{{ asset('Images/sampa_mampara.jpg') }}" alt="Mamparas" class="img-fluid rounded">
+                        <div class="overlay">
+                            <p>MAMPARAS<br>PARA BAÑO</p>
+                        </div>
+                        <div class="producto-desc">
+                            <p>Mamparas de vidrio templado con perfiles de aluminio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mosquiteros -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                    <div class="producto-item" onclick="window.location='{{ url('/mosquiteros') }}';">
+                        <div class="producto-badge">Más Vendido</div>
+                        <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Mosquiteros" class="img-fluid rounded">
+                        <div class="overlay">
+                            <p>MOSQUITEROS</p>
+                        </div>
+                        <div class="producto-desc">
+                            <p>Protección contra insectos con mallas de alta durabilidad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herrajes -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                    <div class="producto-item" onclick="window.location='{{ url('/herrajes') }}';">
+                        <div class="producto-badge">Accesorios</div>
+                        <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Herrajes" class="img-fluid rounded">
+                        <div class="overlay">
+                            <p>HERRAJES</p>
+                        </div>
+                        <div class="producto-desc">
+                            <p>Herrajes de alta resistencia para mayor durabilidad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perfilería -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                    <div class="producto-item" onclick="window.location='{{ url('/perfileria') }}';">
+                        <div class="producto-badge">Profesional</div>
+                        <img src="{{ asset('Images/sampa_perfileria.jpg') }}" alt="Perfilería" class="img-fluid rounded">
+                        <div class="overlay">
+                            <p>PERFILERÍA</p>
+                        </div>
+                        <div class="producto-desc">
+                            <p>Perfiles de aluminio para estructuras personalizadas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="proceso-trabajo" class="seccion">
         <div class="container">
@@ -348,125 +443,179 @@
             </div>
         </div>
     </section>
-                    <div class="producto-item" onclick="window.location='{{ url('/puertas-placa') }}';">
-                        <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas Placas" class="img-fluid rounded">
 
-    <section id="testimonios" class="seccion">
+    <section id="marcas-certificaciones" class="seccion">
         <div class="container">
             <div class="section-header text-center mb-5">
-                <h2>Lo que Nuestros Clientes Dicen</h2>
-                <p class="lead">Más de 500 clientes satisfechos en toda la región</p>
+                <h2>Marcas y Certificaciones</h2>
+                <p class="lead">Trabajamos con los mejores proveedores y contamos con certificaciones de calidad</p>
             </div>
 
             <div class="row g-4">
-                <!-- Testimonio 1 -->
-                <div class="col-md-4">
-                    <div class="testimonio-card">
-                        <div class="testimonio-header">
-                            <img src="{{ asset('Images/sampa_nosotros_2.jpg') }}" alt="Cliente 1" class="testimonio-img">
-                            <div class="testimonio-info">
-                                <h4>Carlos Martínez</h4>
-                                <p class="testimonio-proyecto">Residencia en Palermo</p>
-                                <div class="testimonio-calificacion">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
+                <!-- Marcas -->
+                <div class="col-md-6">
+                    <div class="marcas-card">
+                        <h3>Nuestros Proveedores</h3>
+                        <p>Trabajamos con las marcas líderes en la industria para garantizar la mejor calidad:</p>
+
+                        <div class="marcas-logos">
+                            <div class="marca-logo">
+                                <img src="{{ asset('Images/aluar-system-01.svg') }}" alt="Aluar System" class="img-fluid">
+                                <p>Perfiles de aluminio premium</p>
                             </div>
-                        </div>
-                        <div class="testimonio-contenido">
-                            <p>"Excelente servicio desde el primer contacto. La calidad de las aberturas superó nuestras expectativas y la instalación fue impecable. Recomiendo Sampa Aberturas sin dudarlo."</p>
+                            <div class="marca-logo">
+                                <img src="{{ asset('Images/aluar-system-02.svg') }}" alt="Aluar System" class="img-fluid">
+                                <p>Sistemas de apertura avanzados</p>
+                            </div>
+                            <div class="marca-logo">
+                                <img src="{{ asset('Images/aluar-system-06.svg') }}" alt="Aluar System" class="img-fluid">
+                                <p>Tecnología de vanguardia</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonio 2 -->
-                <div class="col-md-4">
-                    <div class="testimonio-card">
-                        <div class="testimonio-header">
-                            <img src="{{ asset('Images/sampa_nosotros_3.jpg') }}" alt="Cliente 2" class="testimonio-img">
-                            <div class="testimonio-info">
-                                <h4>Laura Gómez</h4>
-                                <p class="testimonio-proyecto">Oficina en Microcentro</p>
-                                <div class="testimonio-calificacion">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonio-contenido">
-                            <p>"Quedamos muy conformes con el trabajo realizado. El equipo fue muy profesional y respetuoso con los plazos. Las aberturas de aluminio le dieron un look moderno a nuestras oficinas."</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Certificaciones -->
+                <div class="col-md-6">
+                    <div class="certificaciones-card">
+                        <h3>Certificaciones de Calidad</h3>
+                        <p>Contamos con certificaciones que avalan nuestra calidad y profesionalismo:</p>
 
-                <!-- Testimonio 3 -->
-                <div class="col-md-4">
-                    <div class="testimonio-card">
-                        <div class="testimonio-header">
-                            <img src="{{ asset('Images/sampa_nosotros_4.jpg') }}" alt="Cliente 3" class="testimonio-img">
-                            <div class="testimonio-info">
-                                <h4>Roberto Sánchez</h4>
-                                <p class="testimonio-proyecto">Local Comercial</p>
-                                <div class="testimonio-calificacion">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                        <div class="certificaciones-list">
+                            <div class="certificacion-item">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <div>
+                                    <h4>Certificación IRAM</h4>
+                                    <p>Normas argentinas para calidad en aberturas</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="testimonio-contenido">
-                            <p>"La atención postventa es excepcional. Tuvimos un pequeño problema con una puerta y lo resolvieron en menos de 24 horas. Eso demuestra su compromiso con el cliente."</p>
+
+                            <div class="certificacion-item">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <div>
+                                    <h4>ISO 9001:2015</h4>
+                                    <p>Sistema de gestión de calidad internacional</p>
+                                </div>
+                            </div>
+
+                            <div class="certificacion-item">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <div>
+                                    <h4>Garantía Extendida</h4>
+                                    <p>5 años en materiales y 2 años en mano de obra</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="text-center mt-4">
+                <p>Trabajamos con materiales certificados y procesos de fabricación controlados para garantizar tu satisfacción.</p>
+            </div>
         </div>
     </section>
-                        <div class="overlay">
-                            <p>PUERTAS<br>PLACAS</p>
+
+    <section id="preguntas-frecuentes" class="seccion">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Preguntas Frecuentes</h2>
+                <p class="lead">Respuestas a las consultas más comunes sobre nuestros productos y servicios</p>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué materiales utilizan en sus aberturas?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Utilizamos aluminio de primera calidad con perfiles de la línea Aluar System, que ofrecen excelente resistencia, durabilidad y aislamiento térmico/acústico. Todos nuestros materiales cumplen con las normas IRAM y cuentan con certificaciones de calidad.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/mamparas') }}';">
-                        <img src="{{ asset('Images/sampa_mampara.jpg') }}" alt="Mamparas" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>MAMPARAS<br>PARA BAÑO</p>
+
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Cuánto tiempo demora la fabricación e instalación?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Los plazos varían según la complejidad del proyecto:</p>
+                            <ul>
+                                <li>Productos estándar: 7-10 días hábiles</li>
+                                <li>Proyectos personalizados: 15-20 días hábiles</li>
+                                <li>Instalación: 1-2 días una vez fabricados los productos</li>
+                            </ul>
+                            <p>Todos los plazos son coordinados y confirmados antes de iniciar la fabricación.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/mosquiteros') }}';">
-                        <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Mosquiteros" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>MOSQUITEROS</p>
+
+                <!-- Pregunta 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Ofrecen garantía en sus productos?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Sí, ofrecemos garantía extendida:</p>
+                            <ul>
+                                <li>5 años en materiales contra defectos de fabricación</li>
+                                <li>2 años en mano de obra e instalación</li>
+                                <li>1 año en herrajes y accesorios</li>
+                            </ul>
+                            <p>La garantía cubre cualquier defecto en materiales o instalación bajo uso normal.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/herrajes') }}';">
-                        <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Herrajes" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>HERRAJES</p>
+
+                <!-- Pregunta 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Realizan envíos a todo el país?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Sí, realizamos envíos a todo el territorio argentino. Los costos de envío varían según la ubicación y el volumen del pedido. Para proyectos grandes, ofrecemos descuentos especiales en logística.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/perfileria') }}';">
-                        <img src="{{ asset('Images/sampa_perfileria.jpg') }}" alt="Perfilería" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>PERFILERÍA</p>
+
+                <!-- Pregunta 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            ¿Cómo puedo solicitar un presupuesto?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Puedes solicitar un presupuesto de varias formas:</p>
+                            <ul>
+                                <li>Completando el formulario en nuestra sección de contacto</li>
+                                <li>Llamando a nuestro número de teléfono</li>
+                                <li>Visitando nuestro showroom para una asesoría personalizada</li>
+                                <li>Enviando un mensaje por WhatsApp con las medidas y requisitos</li>
+                            </ul>
+                            <p>Nuestro servicio de medición técnico es sin cargo y sin compromiso.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p>¿No encontraste la respuesta que buscabas? <a href="{{ url('/contacto') }}" class="btn btn-outline-primary">Contáctanos</a></p>
             </div>
         </div>
     </section>
@@ -480,7 +629,7 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-    
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -489,12 +638,12 @@
                 }
             });
         }, observerOptions);
-    
+
         // Observar todos los productos
         document.querySelectorAll('#productos .producto-item').forEach(item => {
             observer.observe(item);
         });
-    
+
         // Optimización para resize
         let resizeTimer;
         window.addEventListener('resize', () => {

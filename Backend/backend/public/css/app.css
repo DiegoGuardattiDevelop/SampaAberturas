@@ -190,32 +190,81 @@ body {
 
 /* Servicios */
 .servicios {
-    padding: 50px 0;
+    padding: 80px 0;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.servicios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(49, 146, 85, 0.03) 0%, rgba(255, 255, 255, 0) 50%);
+    z-index: 0;
+}
+
+.servicios .container {
+    position: relative;
+    z-index: 1;
 }
 
 .servicios h2 {
-    margin-bottom: 30px;
-    color: #333;
+    margin-bottom: 40px;
+    color: rgb(49, 146, 85);
     font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.servicios h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(49, 146, 85), rgb(34, 121, 70));
+    border-radius: 2px;
 }
 
 .servicios i {
-    font-size: 4em;
+    font-size: 3.5em;
     color: rgb(49, 146, 85);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.servicio:hover .servicios i {
+    transform: scale(1.1);
+    color: rgb(34, 121, 70);
 }
 
 .servicios h3 {
-    color: #fff;
-    margin-bottom: 10px;
+    color: #333;
+    margin-bottom: 15px;
     font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .servicios p {
-    color: #fff;
+    color: #555;
     font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 400;
 }
 
 .imagen_fondo {
@@ -251,9 +300,11 @@ body {
 
 /* Secciones genéricas */
 .seccion {
-    /* background-color: #fff; */
+    background-color: #fff;
     margin: 5vh 0;
-    padding: 20px 0;
+    padding: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .list-1 {
@@ -267,11 +318,57 @@ body {
 
 /* Productos */
 #productos {
-    /* max-width: 1100px;
-    padding: 100px 0;
-    margin: auto; */
-    padding-top: 0px;
-    padding-bottom: 80px;
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(49, 146, 85, 0.02) 0%, rgba(255, 255, 255, 0) 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+#productos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/Images/todas_lineas.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+#productos .container {
+    position: relative;
+    z-index: 1;
+}
+
+#productos h2 {
+    text-align: center;
+    color: rgb(49, 146, 85);
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#productos h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(49, 146, 85), rgb(34, 121, 70));
+    border-radius: 2px;
+}
+
+#productos .row {
+    margin-top: 30px;
 }
 
 /* #productos h2 {
@@ -293,42 +390,154 @@ body {
 .producto-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation: fadeIn 1s ease-out;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+}
+
+.producto-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, rgb(49, 146, 85), rgb(34, 121, 70));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    z-index: 2;
+}
+
+.producto-item:hover::before {
+    transform: scaleX(1);
+}
+
+.producto-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: rgba(49, 146, 85, 0.1);
+}
+
+.producto-imagen-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px 12px 0 0;
 }
 
 .producto-item img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
     aspect-ratio: 16/9;
-    filter: grayscale(1);
-    transition: filter 0.5s;
+    transition: all 0.6s ease;
+    filter: brightness(0.9) contrast(1.1);
 }
 
 .producto-item:hover img {
-    /* filter: grayscale(0); */
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.2) saturate(1.1);
+}
+
+.producto-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgb(49, 146, 85);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    z-index: 3;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.producto-badge.novedad {
+    background: #ff6b6b;
+}
+
+.producto-badge.oferta {
+    background: #4dabf7;
+}
+
+.producto-badge.vendido {
+    background: #51cf66;
+}
+
+.producto-badge.accesorios {
+    background: #ff922b;
+}
+
+.producto-badge.profesional {
+    background: #9b59b6;
 }
 
 .producto-item .overlay {
     position: absolute;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
     color: rgb(49, 146, 85);
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     opacity: 0;
-    bottom: -40px;
-    transition: opacity 0.5s, bottom 0.5s;
-    text-align: center;
+    transition: opacity 0.5s ease;
+    z-index: 2;
 }
 
 .producto-item:hover .overlay {
     opacity: 1;
+}
+
+.overlay p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.producto-desc {
+    position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+.producto-item:hover .producto-desc {
+    opacity: 1;
 }
 
 /* Marcas */
@@ -549,21 +758,49 @@ body {
 @media (max-width: 767.98px) {
 /* Sección Sobre Nosotros */
 #sobre-nosotros {
-    padding: 60px 0;
+    padding: 80px 0;
     background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+#sobre-nosotros::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(49, 146, 85, 0.05) 0%, rgba(255, 255, 255, 0) 50%);
+    z-index: 0;
 }
 
 .nosotros-contenido {
-    padding: 20px;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.nosotros-contenido:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .nosotros-contenido h2 {
     color: rgb(49, 146, 85);
     font-family: "Poppins", sans-serif;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nosotros-contenido h2::after {
@@ -571,32 +808,54 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 60px;
-    height: 3px;
-    background-color: rgb(49, 146, 85);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(49, 146, 85), rgb(34, 121, 70));
+    border-radius: 2px;
 }
 
 .nosotros-contenido p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 25px;
     font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.nosotros-contenido p strong {
+    color: rgb(49, 146, 85);
+    font-weight: 600;
 }
 
 .nosotros-destacados {
-    margin: 30px 0;
+    margin: 35px 0;
+    padding: 20px;
+    background: rgba(49, 146, 85, 0.05);
+    border-left: 4px solid rgb(49, 146, 85);
+    border-radius: 10px;
 }
 
 .destacado-item {
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    align-items: flex-start;
+    margin-bottom: 20px;
     color: #333;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(49, 146, 85, 0.1);
+}
+
+.destacado-item:last-child {
+    border-bottom: none;
 }
 
 .destacado-item i {
     color: rgb(49, 146, 85);
+    font-size: 1.3rem;
+    margin-right: 15px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
 /* Estilos mejorados para sección de servicios */
 .servicios h3 {
     color: #fff;
@@ -625,26 +884,98 @@ body {
 }
 
 .servicio {
-    padding: 20px;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, rgb(49, 146, 85), rgb(34, 121, 70));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.servicio:hover::before {
+    transform: scaleX(1);
 }
 
 .servicio:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: rgba(49, 146, 85, 0.1);
 }
 
-.servicios i {
-    font-size: 3em;
+.servicio-icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(49, 146, 85, 0.1), rgba(34, 121, 70, 0.05));
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    border: 2px solid rgba(49, 146, 85, 0.1);
+}
+
+.servicio:hover .servicio-icon-container {
+    background: linear-gradient(135deg, rgb(49, 146, 85), rgb(34, 121, 70));
+    transform: scale(1.15) rotate(5deg);
+    border-color: transparent;
+}
+
+.servicio-icon-container i {
+    font-size: 2.5em;
     color: rgb(49, 146, 85);
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
+    transition: all 0.4s ease;
 }
 
-.servicio:hover i {
-    transform: scale(1.1);
+.servicio:hover .servicio-icon-container i {
+    color: white;
+    transform: scale(1.2);
+}
+
+.servicio-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicio h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.servicios p {
+    color: #555;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 0;
+    flex: 1;
 }
 
 /* Galería de Proyectos Destacados */
@@ -1165,9 +1496,6 @@ body {
     .servicios i {
         font-size: 2.5em;
     }
-}
-    margin-right: 10px;
-    font-size: 1.2rem;
 }
 
 .destacado-item span {
@@ -1979,4 +2307,877 @@ body {
     .aberturas-video {
         height: 120px;
     }
-} */
+/* Sección Preguntas Frecuentes */
+#preguntas-frecuentes {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+#preguntas-frecuentes .section-header h2 {
+    color: rgb(49, 146, 85);
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#preguntas-frecuentes .section-header h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background-color: rgb(49, 146, 85);
+}
+
+#preguntas-frecuentes .section-header .lead {
+    color: #666;
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+}
+
+#preguntas-frecuentes .accordion-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+#preguntas-frecuentes .accordion-button {
+    background-color: white;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 15px 20px;
+    position: relative;
+}
+
+#preguntas-frecuentes .accordion-button:not(.collapsed) {
+    background-color: rgb(49, 146, 85);
+    color: white;
+}
+
+#preguntas-frecuentes .accordion-button::after {
+    content: "\f078";
+    font-family: "Bootstrap-icons";
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+#preguntas-frecuentes .accordion-button:not(.collapsed)::after {
+    content: "\f077";
+    transform: rotate(180deg);
+}
+
+#preguntas-frecuentes .accordion-body {
+    background-color: #f8f9fa;
+    color: #555;
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+}
+
+#preguntas-frecuentes .accordion-body ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+#preguntas-frecuentes .accordion-body li {
+    margin-bottom: 8px;
+}
+
+#preguntas-frecuentes .btn-outline-primary {
+    color: rgb(49, 146, 85);
+    border-color: rgb(49, 146, 85);
+    font-weight: 600;
+}
+
+#preguntas-frecuentes .btn-outline-primary:hover {
+    background-color: rgb(49, 146, 85);
+    color: white;
+}
+
+/* Responsivo para preguntas frecuentes */
+@media (max-width: 767.98px) {
+    #preguntas-frecuentes {
+        padding: 40px 0;
+    }
+
+    #preguntas-frecuentes .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    #preguntas-frecuentes .section-header .lead {
+        font-size: 1rem;
+    }
+
+    #preguntas-frecuentes .accordion-button {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    #preguntas-frecuentes .accordion-body {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+/* Estilos para badges y descripciones de productos */
+.producto-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgb(49, 146, 85);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Inter", sans-serif;
+}
+
+.producto-badge.novedad {
+    background: #ff6b6b;
+}
+
+.producto-badge.oferta {
+    background: #4dabf7;
+}
+
+.producto-badge.vendido {
+    background: #51cf66;
+}
+
+.producto-badge.accesorios {
+    background: #ff922b;
+}
+
+.producto-badge.profesional {
+    background: #9b59b6;
+}
+
+.producto-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    font-size: 0.85rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: "Inter", sans-serif;
+    line-height: 1.4;
+}
+
+.producto-item:hover .producto-desc {
+    opacity: 1;
+}
+
+/* Mejoras en botones de llamado a acción */
+.btn-primary {
+    background-color: rgb(49, 146, 85);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: rgb(34, 121, 70);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-outline-primary {
+    color: rgb(49, 146, 85);
+    border: 2px solid rgb(49, 146, 85);
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgb(49, 146, 85);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Sistema de colores consistente con identidad de marca */
+:root {
+    --primary-green: rgb(49, 146, 85);
+    --primary-green-dark: rgb(34, 121, 70);
+    --primary-green-light: rgba(49, 146, 85, 0.1);
+    --secondary-green: #51cf66;
+    --accent-blue: #4dabf7;
+    --accent-red: #ff6b6b;
+    --accent-orange: #ff922b;
+    --accent-purple: #9b59b6;
+    --text-dark: #333;
+    --text-light: #fff;
+    --text-medium: #666;
+    --background-light: #f8f9fa;
+    --background-white: #fff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Aplicación del sistema de colores a elementos existentes */
+.btn-primary {
+    background-color: var(--primary-green);
+    border: none;
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-green-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+}
+
+/* Secciones con colores de marca */
+#sobre-nosotros {
+    background-color: var(--background-white);
+}
+
+#servicios .imagen_fondo::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#proyectos-destacados {
+    background-color: var(--background-light);
+}
+
+#tienda-destacada {
+    background: linear-gradient(135deg, var(--background-light) 0%, var(--primary-green-light) 100%);
+}
+
+#productos {
+    background-color: var(--background-white);
+}
+
+#proceso-trabajo {
+    background-color: var(--background-white);
+}
+
+#marcas-certificaciones {
+    background-color: var(--background-white);
+}
+
+#preguntas-frecuentes {
+    background-color: var(--background-light);
+}
+
+/* Badges con colores de marca */
+.producto-badge {
+    background-color: var(--primary-green);
+}
+
+.producto-badge.novedad {
+    background-color: var(--accent-red);
+}
+
+.producto-badge.oferta {
+    background-color: var(--accent-blue);
+}
+
+.producto-badge.vendido {
+    background-color: var(--secondary-green);
+}
+
+.producto-badge.accesorios {
+    background-color: var(--accent-orange);
+}
+
+.producto-badge.profesional {
+    background-color: var(--accent-purple);
+}
+
+/* Tarjetas con colores consistentes */
+.proyecto-card {
+    background: var(--text-light);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.testimonio-card {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+}
+
+.marcas-card, .certificaciones-card {
+    background: var(--background-light);
+    border-top: 4px solid var(--primary-green);
+}
+
+/* Encabezados con colores de marca */
+.section-header h2 {
+    color: var(--primary-green);
+}
+
+.section-header h2::after {
+    background-color: var(--primary-green);
+}
+
+/* Botones con colores consistentes */
+.btn-primary {
+    background-color: var(--primary-green);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-green-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Iconos con colores de marca */
+.servicios i {
+    color: var(--primary-green);
+}
+
+.proceso-icon {
+    background: linear-gradient(135deg, var(--primary-green), #2c3e50);
+}
+
+.certificacion-item i {
+    color: var(--primary-green);
+}
+/* Responsividad perfecta para nuevas secciones */
+@media (max-width: 767.98px) {
+    /* Preguntas Frecuentes */
+    #preguntas-frecuentes {
+        padding: 40px 0;
+    }
+
+    #preguntas-frecuentes .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    #preguntas-frecuentes .accordion-button {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    #preguntas-frecuentes .accordion-body {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    /* Marcas y Certificaciones */
+    #marcas-certificaciones {
+        padding: 40px 0;
+    }
+
+    .marcas-card, .certificaciones-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .marcas-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marca-logo {
+        margin-bottom: 20px;
+    }
+
+    /* Productos - Ajustes para móviles */
+    #productos .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    #productos .col-lg-2,
+    #productos .col-md-4 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .producto-item {
+        margin-bottom: 15px;
+    }
+
+    .producto-badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .producto-desc {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    /* Proceso de Trabajo */
+    .proceso-paso {
+        flex-direction: column !important;
+        margin-bottom: 30px;
+    }
+
+    .proceso-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+
+    .proceso-contenido {
+        padding: 15px;
+        margin-left: 0;
+        margin-left: 30px;
+    }
+
+    .proceso-contenido::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        width: 20px;
+        height: 2px;
+        background: #ddd;
+    }
+
+    /* Ajustes generales para móviles */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header .lead {
+        font-size: 1rem;
+    }
+
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    /* Ajustes para cards en móviles */
+    .proyecto-card, .testimonio-card {
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para timeline en móviles */
+    .proceso-timeline::before {
+        left: 20px;
+        transform: none;
+    }
+}
+
+/* Tablets y dispositivos medianos */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Ajustes para tablets */
+    #productos .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .proceso-paso:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .proceso-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+    }
+
+    /* Ajustes para secciones */
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Dispositivos pequeños en horizontal */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    /* Ajustes para landscape */
+    #productos .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .proceso-paso {
+        flex-direction: row;
+    }
+
+    .proceso-paso:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+/* Ajustes para secciones específicas */
+@media (max-width: 575.98px) {
+    /* Móviles muy pequeños */
+    #productos .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .producto-badge {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+
+    .producto-desc p {
+        font-size: 0.75rem;
+    }
+
+    /* Ajustes para botones */
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes para navegación en móviles */
+@media (max-width: 767.98px) {
+    /* Mejorar navegación en móviles */
+    .seccion {
+        padding: 30px 0;
+    }
+
+    /* Ajustes para imágenes */
+    .producto-item img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* Ajustes para overlays */
+    .overlay p {
+        font-size: 0.8rem;
+    }
+
+    /* Ajustes para badges */
+    .producto-destacado-badge {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+}
+
+/* Enlaces con colores consistentes */
+a {
+    color: var(--primary-green);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-green-dark);
+}
+
+/* Bordes y sombras consistentes */
+.card, .producto-item, .proyecto-card {
+    box-shadow: 0 3px 10px var(--shadow-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Colores para estados interactivos */
+:focus {
+    outline-color: var(--primary-green);
+}
+
+::selection {
+    background: var(--primary-green);
+    color: var(--text-light);
+}
+
+/* Gradientes con colores de marca */
+.gradient-primary {
+    background: linear-gradient(135deg, var(--primary-green), #2c3e50);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+}
+
+/* Colores para secciones específicas */
+#testimonios {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/Images/sampa_casa_2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+}
+
+/* Estilos para mantener consistencia en móviles */
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+
+    .producto-badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+}
+/* Botones más grandes para secciones importantes */
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.btn-lg:hover {
+    transform: translateY(-3px);
+}
+
+/* Estilos para botones en cards */
+.producto-destacado-acciones .btn {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.producto-destacado-acciones .btn-primary {
+    background-color: rgb(49, 146, 85);
+    border: none;
+}
+
+.producto-destacado-acciones .btn-primary:hover {
+    background-color: rgb(34, 121, 70);
+    transform: translateY(-2px);
+}
+
+/* Animaciones para botones */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Estilos para botones de carousel */
+.presenta_text .btn-primary {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.presenta_text .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+/* Sección Marcas y Certificaciones */
+#marcas-certificaciones {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+#marcas-certificaciones .section-header h2 {
+    color: rgb(49, 146, 85);
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#marcas-certificaciones .section-header h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background-color: rgb(49, 146, 85);
+}
+
+#marcas-certificaciones .section-header .lead {
+    color: #666;
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+}
+
+.marcas-card, .certificaciones-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.marcas-card:hover, .certificaciones-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.marcas-card h3, .certificaciones-card h3 {
+    color: rgb(49, 146, 85);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.marcas-card h3::after, .certificaciones-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: rgb(49, 146, 85);
+}
+
+.marcas-card p, .certificaciones-card p {
+    color: #666;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+.marcas-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.marca-logo {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+.marca-logo img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.marca-logo img:hover {
+    transform: scale(1.1);
+}
+
+.marca-logo p {
+    font-size: 0.9rem;
+    color: #555;
+    font-family: "Inter", sans-serif;
+}
+
+.certificaciones-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.certificacion-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.certificacion-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.certificacion-item i {
+    font-size: 1.5rem;
+    color: rgb(49, 146, 85);
+    flex-shrink: 0;
+}
+
+.certificacion-item h4 {
+    margin: 0;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+}
+
+.certificacion-item p {
+    margin: 5px 0 0;
+    color: #666;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Responsivo para marcas y certificaciones */
+@media (max-width: 767.98px) {
+    #marcas-certificaciones {
+        padding: 40px 0;
+    }
+
+    .marcas-card, .certificaciones-card {
+        padding: 20px;
+    }
+
+    .marcas-card h3, .certificaciones-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .marcas-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marca-logo {
+        margin-bottom: 20px;
+    }
+}
+}

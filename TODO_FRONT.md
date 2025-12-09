@@ -21,6 +21,22 @@
 - [x] Añadir animaciones sutiles para mejorar la experiencia de usuario (transiciones en hover, carga de elementos)
 - [ ] Implementar un sistema de notificaciones toast más robusto (reemplazar alert() por una librería como Toastify en todas las páginas)
 
+## Mejoras para Home (Página Principal)
+
+- [x] Rediseñar el carousel del home con mensajes específicos de fábrica de aberturas y llamadas a acción claras
+- [x] Crear sección "Sobre Sampa Aberturas" con historia, valores y diferenciales de la empresa
+- [x] Mejorar sección de servicios con detalles técnicos específicos de la industria
+- [x] Crear galería "Nuestros Proyectos" con imágenes de obras realizadas y filtros por tipo
+- [x] Añadir sección "Proceso de Trabajo" mostrando los pasos desde medición hasta instalación
+- [x] Implementar sección de testimonios de clientes con fotos y calificaciones
+- [x] Crear sección "Tienda Destacada" con productos seleccionados para venta directa
+- [x] Añadir sección "Preguntas Frecuentes" sobre materiales, tiempos y garantías
+- [x] Implementar sección "Marcas y Certificaciones" con logos de proveedores y certificados
+- [x] Mejorar jerarquía visual en sección de productos con descripciones y badges
+- [x] Optimizar llamadas a acción en todo el home con botones más visibles
+- [ ] Implementar sistema de colores consistente con la identidad de marca
+- [x] Asegurar responsividad perfecta en todas las nuevas secciones para móviles
+
 ## Funcionalidad y Interactividad
 
 - [ ] Implementar búsqueda en tiempo real en la tienda (autocomplete con AJAX)
