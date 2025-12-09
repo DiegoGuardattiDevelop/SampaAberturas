@@ -1,5 +1,5 @@
 /* Importaciones */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 /* Estilos globales */
 
@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgba(233, 251, 229, 0.85);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .page-container {
@@ -130,12 +130,14 @@ body {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    font-family: "Poppins", sans-serif;
 }
 
 .presentacion h2 {
     font-size: 25px;
     margin-bottom: 25px;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .presentacion h2 span {
@@ -143,10 +145,12 @@ body {
     color: rgb(49, 146, 85);
     text-transform: uppercase;
     font-weight: bold;
+    font-family: "Poppins", sans-serif;
 }
 
 .presentacion .descripcion {
     font-size: 16px;
+    font-family: "Inter", sans-serif;
 }
 
 .container_presenta {
@@ -166,7 +170,7 @@ body {
 
 .presenta_text h1 {
     font-size: 6vh;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .presenta_img {
@@ -189,6 +193,7 @@ body {
 .servicios h2 {
     margin-bottom: 30px;
     color: #333;
+    font-family: "Poppins", sans-serif;
 }
 
 .servicios i {
@@ -200,10 +205,12 @@ body {
 .servicios h3 {
     color: #fff;
     margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
 }
 
 .servicios p {
     color: #fff;
+    font-family: "Inter", sans-serif;
 }
 
 .imagen_fondo {
@@ -461,6 +468,7 @@ body {
 .contact-section h2 {
     color: rgb(49, 146, 85);
     margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 .contact-section .form-control {
@@ -557,7 +565,7 @@ body {
     position: relative;
     background-color: rgb(49, 146, 85);
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     margin-bottom: 20px;
     color: white;
     text-align: center;
@@ -743,7 +751,7 @@ body {
 }
 
 .aberturas-card-title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
     color: #2d3436;
@@ -754,6 +762,7 @@ body {
     font-size: 0.95rem;
     color: #636e72;
     margin-bottom: 0;
+    font-family: "Inter", sans-serif;
 }
 
 .aberturas-section-alt .aberturas-card-title,
@@ -879,6 +888,7 @@ body {
     margin: 0;
     color: #333;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .line-card p {
@@ -886,6 +896,7 @@ body {
     color: #666;
     text-align: center;
     font-size: 14px;
+    font-family: "Inter", sans-serif;
 }
 
 /* Media Queries */
