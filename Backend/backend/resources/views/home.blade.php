@@ -104,16 +104,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 servicio">
-                        <i class="bi bi-gear"></i> <h3>Asesoramiento Personalizado</h3>
-                        <p>Te ayudamos a elegir las mejores <br>soluciones para tus espacios.</p>
+                        <i class="bi bi-rulers"></i> <h3>Medición Profesional</h3>
+                        <p>Servicio de medición técnico sin cargo <br>para garantizar precisión milimétrica.</p>
                     </div>
                     <div class="col-md-4 servicio">
-                        <i class="bi bi-tools"></i> <h3>Servicio Postventa</h3>
-                        <p>Garantizamos tu satisfacción <br>con un excelente servicio postventa.</p>
+                        <i class="bi bi-shield-check"></i> <h3>Garantía Extendida</h3>
+                        <p>5 años de garantía en materiales <br>y 2 años en mano de obra.</p>
                     </div>
                     <div class="col-md-4 servicio">
-                        <i class="bi bi-house-door"></i> <h3>Fabricamos e Instalamos a Medida</h3>
-                        <p>Creamos aberturas personalizadas<br> para tus necesidades.</p>
+                        <i class="bi bi-calendar-check"></i> <h3>Entrega en Tiempo</h3>
+                        <p>Plazos de fabricación claros <br>y cumplimiento garantizado.</p>
                     </div>
                 </div>
             </div>
