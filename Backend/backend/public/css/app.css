@@ -1,13 +1,13 @@
 /* Importaciones */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 
 /* Estilos globales */
 
 body {
     margin: 0;
     padding: 0;
-    background-color:rgba(233, 251, 229, 0.85);
-    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(233, 251, 229, 0.85);
+    font-family: "Montserrat", sans-serif;
 }
 
 .page-container {
@@ -99,7 +99,7 @@ body {
 }
 
 .hero-header {
-    background: linear-gradient(135deg, #2c3e50 0%, rgb(49, 146, 85)100%);
+    background: linear-gradient(135deg, #2c3e50 0%, rgb(49, 146, 85) 100%);
 }
 
 .hero::before {
@@ -166,7 +166,7 @@ body {
 
 .presenta_text h1 {
     font-size: 6vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .presenta_img {
@@ -208,7 +208,7 @@ body {
 
 .imagen_fondo {
     position: relative;
-    background-image: url('/Images/sampa_casa_2.jpg');
+    background-image: url("/Images/sampa_casa_2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -232,7 +232,7 @@ body {
     z-index: 1;
 }
 
-.imagen_fondo * { 
+.imagen_fondo * {
     position: relative;
     z-index: 2;
 }
@@ -297,7 +297,7 @@ body {
 .producto-item:hover img {
     /* filter: grayscale(0); */
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .producto-item .overlay {
@@ -375,7 +375,10 @@ body {
     opacity: 1;
 }
 
-.card-title, .card-text, .prev-image, .next-image {
+.card-title,
+.card-text,
+.prev-image,
+.next-image {
     display: none;
 }
 
@@ -482,8 +485,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-    url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L10 10" stroke="white" stroke-width="0.5" opacity="0.3"/></svg>') repeat;
+    background: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L10 10" stroke="white" stroke-width="0.5" opacity="0.3"/></svg>')
+        repeat;
     opacity: 0.1;
 }
 
@@ -508,7 +511,7 @@ body {
 }
 
 .shadow-hover:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 .icon-container {
@@ -534,7 +537,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
 }
 
 .color-sample {
@@ -581,7 +588,6 @@ body {
     margin-bottom: 20px;
     text-align: center; /* Centrado en móviles */
 }
-
 
 .footer .row {
     align-items: center;
@@ -725,7 +731,7 @@ body {
 
 .aberturas-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .aberturas-card-body {
@@ -737,7 +743,7 @@ body {
 }
 
 .aberturas-card-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
     color: #2d3436;
@@ -781,7 +787,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-top: auto; /* Empuja el video hacia abajo */
 }
 
@@ -798,14 +804,14 @@ body {
 }
 
 .aberturas-video-wrapper::before {
-    content: '\f144';
-    font-family: 'Bootstrap-icons';
+    content: "\f144";
+    font-family: "Bootstrap-icons";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -888,25 +894,25 @@ body {
     .navbar-brand img {
         height: 45px;
     }
-    
+
     .presenta_text h1 {
         font-size: 2.5rem;
     }
-    
+
     .producto-item {
         flex-basis: 48%;
         margin: 1%;
     }
-    
+
     #marcas .col-6 {
         flex: 0 0 33.333%;
         max-width: 33.333%;
     }
-    
+
     .aberturas-card-title {
         font-size: 1.2rem;
     }
-    
+
     .aberturas-video {
         height: 180px;
     }
@@ -914,16 +920,16 @@ body {
         padding: 40px 0;
         background-attachment: scroll;
     }
-    
+
     .servicios {
         padding: 25px 15px;
     }
-    
+
     .servicios i {
         font-size: 2.8rem;
         margin-bottom: 15px;
     }
-    
+
     .servicios h3 {
         font-size: 1.3rem;
     }
@@ -934,80 +940,114 @@ body {
         margin-bottom: 0;
     }
 
-}
+    /* Tienda */
+    .hero-header {
+        padding: 3rem 2rem;
+    }
 
+    .category-card, .filter-card {
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn-green {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .product-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+}
 @media (max-width: 767.98px) {
     /* Navbar y Header */
     .navbar {
         padding: 10px 0;
     }
-    
+
     .navbar-brand img {
         height: 40px;
     }
-    
+
     .offcanvas {
         width: 85%;
     }
-    
+
     /* Sección Presentación */
     .container_presenta {
         flex-direction: column;
     }
-    
-    .presenta_info, .presenta_img {
+
+    .presenta_info,
+    .presenta_img {
         width: 100%;
         padding: 0 15px;
     }
-    
+
     .presenta_text h1 {
         font-size: 2rem;
         line-height: 1.3;
     }
-    
+
     /* Productos */
     .producto-item {
         flex-basis: 100%;
         margin: 15px 0;
     }
-    
+
+    .producto-item img {
+        height: 180px;
+    }
+
+    .producto-item .overlay p {
+        font-size: 0.8rem;
+    }
+
     /* Marcas */
     #marcas .col-6 {
         flex: 0 0 50%;
         max-width: 50%;
         padding: 5px;
     }
-     /* Footer */
+    /* Footer */
     .footer-logo {
         max-height: 70px;
     }
-    
+
     .footer .row > div {
         margin-bottom: 25px;
         text-align: center;
     }
-    
+
     .footer .row > div:last-child {
         margin-bottom: 0;
     }
-    
+
     /* Aberturas */
     .aberturas-card-body {
         padding: 15px;
     }
-    
+
     .aberturas-card-title {
         font-size: 1.1rem;
     }
-    
+
     .aberturas-card-text {
         font-size: 0.9rem;
     }
-    
+
     .aberturas-video {
         height: 150px;
     }
-    
+
     .aberturas-video-wrapper::before {
         font-size: 2.5rem;
     }
@@ -1016,24 +1056,24 @@ body {
         min-height: auto;
         padding: 50px 0;
     }
-    
+
     .servicios {
         margin-bottom: 20px;
         background: rgba(255, 255, 255, 0.05);
     }
-    
+
     .servicios i {
         font-size: 2.5rem;
     }
-    
+
     .servicios h3 {
         font-size: 1.25rem;
     }
-    
+
     .servicios p {
         font-size: 0.95rem;
     }
-    
+
     /* Cambiamos a 2 columnas en tablets pequeñas */
     .servicios {
         flex: 0 0 50%;
@@ -1046,46 +1086,46 @@ body {
     .hero-min {
         min-height: 60px;
     }
-    
+
     .navbar-brand img {
         height: 35px;
     }
-    
+
     /* Textos */
     .presenta_text h1 {
         font-size: 1.8rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     /* Marcas */
     #marcas .col-6 {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    
+
     /* Aberturas */
     .aberturas-video {
         height: 120px;
     }
-    
+
     .aberturas-video-wrapper::before {
         font-size: 2rem;
     }
-    
+
     /* Botones */
     .btn {
         padding: 8px 16px;
         font-size: 0.9rem;
     }
-    
+
     /* Footer */
     .footer {
         text-align: center;
     }
-    
+
     .footer-links {
         justify-content: center;
     }
@@ -1093,26 +1133,26 @@ body {
     .imagen_fondo {
         padding: 40px 0;
     }
-    
+
     /* Cambiamos a 1 columna en móviles */
     .servicios {
         flex: 0 0 100%;
         max-width: 100%;
         padding: 20px;
     }
-    
+
     .servicios i {
         font-size: 2.2rem;
     }
-    
+
     .servicios h3 {
         font-size: 1.2rem;
     }
-    
+
     .servicios p {
         font-size: 0.9rem;
     }
-    
+
     .servicios p br {
         display: none; /* Eliminamos los saltos de línea forzados en móviles */
     }
@@ -1122,11 +1162,11 @@ body {
     .nav-link:hover {
         color: var(--primary-green) !important;
     }
-    
+
     .btn:hover {
         transform: translateY(-2px);
     }
-    
+
     .producto-item:hover {
         transform: translateY(-5px);
     }
@@ -1137,17 +1177,15 @@ body {
     .hero-full {
         min-height: 120vh;
     }
-    
+
     .navbar {
         padding: 5px 0;
     }
 }
 /* Pantallas con alta resolución (2x) */
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .logo-img {
-        background-image: url('/Images/Sampa_Logo_Livianno.png');
+        background-image: url("/Images/Sampa_Logo_Livianno.png");
         background-size: contain;
         background-repeat: no-repeat;
     }

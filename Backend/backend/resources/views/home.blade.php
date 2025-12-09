@@ -80,7 +80,7 @@
     <section id="productos" class="productos">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-3">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/aberturas-aluminio') }}';">
                         <img src="{{ asset('Images/sampa_aluminio.jpeg') }}" alt="Aberturas de Aluminio" class="img-fluid rounded">
                         <div class="overlay">
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/puertas-placa') }}';">
                         <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas Placas" class="img-fluid rounded">
                         <div class="overlay">
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/mamparas') }}';">
                         <img src="{{ asset('Images/sampa_mampara.jpg') }}" alt="Mamparas" class="img-fluid rounded">
                         <div class="overlay">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/mosquiteros') }}';">
                         <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Mosquiteros" class="img-fluid rounded">
                         <div class="overlay">
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/herrajes') }}';">
                         <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Herrajes" class="img-fluid rounded">
                         <div class="overlay">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/perfileria') }}';">
                         <img src="{{ asset('Images/sampa_perfileria.jpg') }}" alt="Perfilería" class="img-fluid rounded">
                         <div class="overlay">

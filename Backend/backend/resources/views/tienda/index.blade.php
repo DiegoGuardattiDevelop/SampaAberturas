@@ -109,7 +109,7 @@
                     @if($productos->count() > 0)
                     <div class="row g-4" id="product-container">
                         @foreach($productos as $producto)
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                             <div class="card h-100 border-0 shadow-hover">
                                 @if($producto->nuevo)
                                 <div class="product-badge bg-success">Nuevo</div>
@@ -137,16 +137,16 @@
                                             </div>
                                         </div>
                                         <p class="card-text text-muted small">{{ $producto->descripcion_corta }}</p>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
                                             @if($producto->descuento)
-                                            <div>
+                                            <div class="mb-2 mb-sm-0">
                                                 <span class="text-decoration-line-through text-muted me-2">${{ number_format($producto->precio_original, 0) }}</span>
                                                 <span class="h5 text-success fw-bold">${{ number_format($producto->precio_actual, 0) }}</span>
                                             </div>
                                             @else
-                                            <span class="h5 text-success fw-bold m-0">${{ number_format($producto->precio_actual, 0) }}</span>
+                                            <span class="h5 text-success fw-bold mb-2 mb-sm-0">${{ number_format($producto->precio_actual, 0) }}</span>
                                             @endif
-                                            <button class="btn btn-sm btn-green add-to-cart" data-product-id="{{ $producto->id }}">
+                                            <button class="btn btn-sm btn-green add-to-cart w-100 w-sm-auto" data-product-id="{{ $producto->id }}">
                                                 <i class="bi bi-cart-plus me-1"></i> Añadir
                                             </button>
                                         </div>
