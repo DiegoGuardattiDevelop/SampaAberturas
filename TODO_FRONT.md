@@ -49,12 +49,12 @@
 
 ## SEO y Rendimiento
 
-- [ ] Añadir meta tags dinámicas en todas las páginas (Open Graph, Twitter Cards)
-- [ ] Implementar structured data (JSON-LD) para productos y empresa
+- [x] Añadir meta tags dinámicas en todas las páginas (Open Graph, Twitter Cards)
+- [x] Implementar structured data (JSON-LD) para productos y empresa
 - [ ] Optimizar el Core Web Vitals (Lighthouse score > 90)
-- [ ] Añadir breadcrumbs de navegación
-- [ ] Implementar sitemap.xml dinámico
-- [ ] Mejorar la accesibilidad (ARIA labels, navegación por teclado, contraste de colores)
+- [x] Añadir breadcrumbs de navegación
+- [x] Implementar sitemap.xml dinámico
+- [x] Mejorar la accesibilidad (ARIA labels, navegación por teclado, contraste de colores)
 
 ## Contenido y Multimedia
 

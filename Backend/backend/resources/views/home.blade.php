@@ -2,6 +2,13 @@
 
 @section('title', 'Sampa Aberturas - Inicio')
 
+@php
+$metaTitle = 'Sampa Aberturas - Fabricación profesional de aberturas de aluminio';
+$metaDescription = 'Sampa Aberturas - Fabricación e instalación de aberturas de aluminio premium, puertas placas, mamparas y mosquiteros. Más de 15 años de experiencia con garantía extendida de 5 años.';
+$metaImage = asset('Images/sampa_casa1.jpg');
+$metaType = 'website';
+@endphp
+
 @section('content')
 <main class="content mt-5">
     <section id="presenta" class="presenta">

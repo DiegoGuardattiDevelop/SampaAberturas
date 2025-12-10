@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TiendaController;
+use App\Http\Controllers\SitemapController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -55,3 +56,6 @@ Route::get('/contacto', function () {
 Route::get('/outlet', [TiendaController::class, 'mostrarTienda'])->name('tienda.index');
 Route::get('/outlet/categoria/{categoria:slug}', [TiendaController::class, 'categoria'])->name('tienda.categoria');
 Route::get('/outlet/{producto:slug}', [TiendaController::class, 'producto'])->name('tienda.producto');
+
+// Sitemap XML
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');

@@ -2,6 +2,19 @@
 
 @section('title', 'Sampa - Contacto')
 
+@php
+$metaTitle = 'Contacto Sampa Aberturas - Solicita tu presupuesto';
+$metaDescription = 'Contacta con Sampa Aberturas para solicitar presupuesto, asesoramiento técnico o información sobre nuestros productos. Fabricación e instalación de aberturas de aluminio.';
+$metaImage = asset('Images/sampa_casa1.jpg');
+$metaType = 'website';
+
+// Datos para breadcrumb
+$breadcrumbItems = [
+    ['name' => 'Inicio', 'url' => url('/')],
+    ['name' => 'Contacto']
+];
+@endphp
+
 @section('content')
     <main class="container contact-section">
         <!-- Hero Header -->
@@ -14,7 +27,10 @@
             <hr class="bg-white-light">
         </div>
     </div>
-    
+
+    <!-- Breadcrumbs -->
+    @include('partials.breadcrumbs')
+
     <!-- Formulario de Contacto -->
     <section class="section-card bg-section-soft rounded-4 p-5 mb-5" data-aos="fade-up">
         <div class="section-header mb-4 text-center">

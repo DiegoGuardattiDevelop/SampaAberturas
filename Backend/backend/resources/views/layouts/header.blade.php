@@ -5,60 +5,58 @@
     <div class="hero-overlay"></div>
     @endif
     
-    <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100">
+    <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100" aria-label="Menú principal">
         <div class="container">
-            <a href="/home" class="navbar-brand">
-                <img src="{{ asset('Images/Sampa_Logo_Livianno.png') }}" alt="Sampa Aberturas" class="logo-img" style="height: 50px;">
+            <a href="/home" class="navbar-brand" aria-label="Sampa Aberturas - Inicio">
+                <img src="{{ asset('Images/Sampa_Logo_Livianno.png') }}" alt="Logo de Sampa Aberturas" class="logo-img" style="height: 50px;" aria-hidden="false">
             </a>
-            
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+    
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <div class="offcanvas offcanvas-end bg-section-soft" tabindex="-1" id="offcanvasNavbar">
+    
+            <div class="offcanvas offcanvas-end bg-section-soft" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header border-bottom">
-                    <img src="{{ asset('Images/Sampa_Logo_Livianno.png') }}" alt="Sampa Aberturas" style="height: 40px;">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    <img src="{{ asset('Images/Sampa_Logo_Livianno.png') }}" alt="Logo de Sampa Aberturas" style="height: 40px;" aria-hidden="false">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('/home') ? 'active text-green' : '' }}" href="{{ url('/home') }}">Inicio</a>
+                    <ul class="navbar-nav ms-auto align-items-lg-center" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a class="nav-link fw-semibold {{ Request::is('/home') ? 'active text-green' : '' }}" href="{{ url('/home') }}" role="menuitem" aria-current="{{ Request::is('/home') ? 'page' : 'false' }}" accesskey="h">Inicio</a>
                         </li>
-                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link fw-semibold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-lg-end p-2 border-0 shadow">
-                                <li><a class="dropdown-item py-2" href="{{ url('/aberturas-aluminio') }}">Aberturas de aluminio</a></li>
-                                <li><hr class="dropdown-divider mx-2 my-1"></li>
-                                <li><a class="dropdown-item py-2" href="{{ url('/puertas-placa') }}">Puertas de Interior</a></li>
-                                <li><hr class="dropdown-divider mx-2 my-1"></li>
-                                <li><a class="dropdown-item py-2" href="{{ url('/mamparas') }}">Vidrios y Mamparas</a></li>
-                                <li><hr class="dropdown-divider mx-2 my-1"></li>
-                                <li><a class="dropdown-item py-2" href="{{ url('/mosquiteros') }}">Cortinas y Mosquiteros</a></li>
-                                <li><hr class="dropdown-divider mx-2 my-1"></li>
-                                <li><a class="dropdown-item py-2" href="{{ url('/herrajes') }}">Herrajes y perfileria</a></li>
-                                <li><hr class="dropdown-divider mx-2 my-1"></li>
-                                <li><a class="dropdown-item py-2" href="{{ url('/perfileria') }}">Portones Automáticos</a></li>
+    
+                        <li class="nav-item dropdown" role="none">
+                            <a class="nav-link fw-semibold dropdown-toggle" href="#" data-bs-toggle="dropdown" role="menuitem" aria-expanded="false" aria-haspopup="true" id="productosMenu" accesskey="p">Productos</a>
+                            <ul class="dropdown-menu dropdown-menu-lg-end p-2 border-0 shadow" aria-labelledby="productosMenu" role="menu">
+                                <li role="none"><a class="dropdown-item py-2" href="{{ url('/aberturas-aluminio') }}" role="menuitem">Aberturas de aluminio</a></li>
+                                <li role="none"><hr class="dropdown-divider mx-2 my-1"></li>
+                                <li role="none"><a class="dropdown-item py-2" href="{{ url('/puertas-placa') }}" role="menuitem">Puertas de Interior</a></li>
+                                <li role="none"><hr class="dropdown-divider mx-2 my-1"></li>
+                                <li role="none"><a class="dropdown-item py-2" href="{{ url('/mamparas') }}" role="menuitem">Vidrios y Mamparas</a></li>
+                                <li role="none"><hr class="dropdown-divider mx-2 my-1"></li>
+                                <li role="none"><a class="dropdown-item py-2" href="{{ url('/mosquiteros') }}" role="menuitem">Cortinas y Mosquiteros</a></li>
+                                <li role="none"><hr class="dropdown-divider mx-2 my-1"></li>
+                                <li role="none"><a class="dropdown-item py-2" href="{{ url('/herrajes') }}" role="menuitem">Herrajes y perfileria</a></li>
+                                <li role="none"><hr class="dropdown-divider mx-2 my-1"></li>
+                                <li role="none"><a class="dropdown-item py-2" href="{{ url('/perfileria') }}" role="menuitem">Portones Automáticos</a></li>
                             </ul>
                         </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('obras') ? 'active text-green' : '' }}" href="{{ url('/obras') }}">Obras</a>
+    
+                        <li class="nav-item" role="none">
+                            <a class="nav-link fw-semibold {{ Request::is('obras') ? 'active text-green' : '' }}" href="{{ url('/obras') }}" role="menuitem" aria-current="{{ Request::is('obras') ? 'page' : 'false' }}" accesskey="o">Obras</a>
                         </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('outlet') ? 'active text-green' : '' }}" href="{{ url('/outlet') }}">Tienda</a>
+    
+                        <li class="nav-item" role="none">
+                            <a class="nav-link fw-semibold {{ Request::is('outlet') ? 'active text-green' : '' }}" href="{{ url('/outlet') }}" role="menuitem" aria-current="{{ Request::is('outlet') ? 'page' : 'false' }}" accesskey="t">Tienda</a>
                         </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('nosotros') ? 'active text-green' : '' }}" href="{{ url('/nosotros') }}">Nosotros</a>
+    
+                        <li class="nav-item" role="none">
+                            <a class="nav-link fw-semibold {{ Request::is('nosotros') ? 'active text-green' : '' }}" href="{{ url('/nosotros') }}" role="menuitem" aria-current="{{ Request::is('nosotros') ? 'page' : 'false' }}" accesskey="n">Nosotros</a>
                         </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('contacto') ? 'active text-green' : '' }}" href="{{ url('/contacto') }}">Contacto</a>
+    
+                        <li class="nav-item" role="none">
+                            <a class="nav-link fw-semibold {{ Request::is('contacto') ? 'active text-green' : '' }}" href="{{ url('/contacto') }}" role="menuitem" aria-current="{{ Request::is('contacto') ? 'page' : 'false' }}" accesskey="c">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -67,17 +65,20 @@
     </nav>
 
     @if(Request::is('home'))
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link" tabindex="0">Saltar al contenido principal</a>
+
     <div class="hero-content">
         <div class="container text-center text-white position-relative">
-            <p class="bienvenida lead mb-2">Bienvenidos</p>
-            <h1 class="display-4 fw-bold mb-3">Sampa Aberturas</h1>
-            <p class="descripcion hero-subtitle mb-4">Creamos ambientes en tu hogar</p>
+            <p class="bienvenida lead mb-2" id="bienvenida">Bienvenidos</p>
+            <h1 class="display-4 fw-bold mb-3" id="main-title">Sampa Aberturas</h1>
+            <p class="descripcion hero-subtitle mb-4" id="main-subtitle">Creamos ambientes en tu hogar</p>
             <div class="hero-buttons">
-                <a href="{{ route('contacto') }}" class="btn btn-custom-green btn-lg px-4">
-                    <i class="bi bi-envelope me-1"></i> Contactanos
+                <a href="{{ route('contacto') }}" class="btn btn-custom-green btn-lg px-4" aria-label="Contactar con Sampa Aberturas" accesskey="1">
+                    <i class="bi bi-envelope me-1" aria-hidden="true"></i> Contactanos
                 </a>
-                <a href="#productos" class="btn btn-custom-outline-green btn-lg px-4">
-                    <i class="bi bi-box-seam me-1"></i> Ver Productos
+                <a href="#productos" class="btn btn-custom-outline-green btn-lg px-4" aria-label="Ver sección de productos" accesskey="2">
+                    <i class="bi bi-box-seam me-1" aria-hidden="true"></i> Ver Productos
                 </a>
             </div>
         </div>
@@ -258,6 +259,53 @@
     
     .navbar.scrolled .btn-custom-outline-green:hover {
         background-color: rgba(49, 146, 85, 0.1);
+    }
+
+    /* Skip link para accesibilidad */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: rgb(49, 146, 85);
+        color: white;
+        padding: 8px 16px;
+        z-index: 1001;
+        transition: top 0.3s ease;
+        text-decoration: none;
+        border-radius: 0 0 5px 0;
+    }
+
+    .skip-link:focus {
+        top: 0;
+    }
+
+    /* Mejorar contraste de colores para accesibilidad */
+    .nav-link {
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled .nav-link {
+        color: #212529 !important;
+    }
+
+    .nav-link.active {
+        color: rgb(49, 146, 85) !important;
+        font-weight: 600;
+    }
+
+    /* Estilos de enfoque para accesibilidad */
+    .nav-link:focus,
+    .dropdown-item:focus,
+    .btn:focus,
+    a:focus {
+        outline: 2px solid rgb(49, 146, 85);
+        outline-offset: 2px;
+    }
+
+    /* Mejorar contraste en texto sobre imágenes */
+    .hero-content {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     }
 </style>
 

@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Sampa Aberturas')</title>
-    
+    @include('partials.meta_tags', [
+        'title' => $metaTitle ?? 'Sampa Aberturas - Fabricación de aberturas de aluminio',
+        'description' => $metaDescription ?? 'Sampa Aberturas - Fabricación e instalación profesional de aberturas de aluminio, puertas placas, mamparas y mosquiteros. Más de 15 años de experiencia con garantía extendida.',
+        'image' => $metaImage ?? asset('Images/Sampa_Logo.jpg'),
+        'url' => $metaUrl ?? url()->current(),
+        'type' => $metaType ?? 'website'
+    ])
+
     <!-- Fuentes y librerías -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Toastify CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    
+
     <!-- Estilos -->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     @stack('styles') <!-- Para estilos específicos de vistas -->
+
+    <!-- Datos estructurados (JSON-LD) -->
+    @include('partials.structured_data')
 </head>
 <body>
     @include('layouts.header')

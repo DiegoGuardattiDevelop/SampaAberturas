@@ -2,6 +2,19 @@
 
 @section('title', 'Sampa - Tienda')
 
+@php
+$metaTitle = 'Tienda de Aberturas Sampa - Productos de aluminio premium';
+$metaDescription = 'Tienda online de Sampa Aberturas. Encuentra puertas placas, mosquiteros, herrajes y perfilería de aluminio con envíos a todo el país. Calidad garantizada.';
+$metaImage = asset('Images/todas_lineas.png');
+$metaType = 'website';
+
+// Datos para breadcrumb
+$breadcrumbItems = [
+    ['name' => 'Inicio', 'url' => url('/')],
+    ['name' => 'Tienda']
+];
+@endphp
+
 @section('content')
 <main class="container mt-5">
     <!-- Hero Header -->
@@ -14,6 +27,9 @@
             <hr class="bg-white-light">
         </div>
     </div>
+
+    <!-- Breadcrumbs -->
+    @include('partials.breadcrumbs')
 
     <!-- Sección de Tienda -->
     <section id="tienda" class="mb-5" data-aos="fade-up">
@@ -177,3 +193,35 @@
     </section>
 </main>
 @endsection
+
+@push('structured-data')
+@if($productos->count() > 0)
+@php
+// Generar datos estructurados para productos
+$productData = [
+    "@context" => "https://schema.org",
+    "@type" => "ItemList",
+    "itemListElement" => $productos->map(function($producto, $index) {
+        return [
+            "@type" => "ListItem",
+            "position" => $index + 1,
+            "url" => route('tienda.producto', $producto->slug),
+            "name" => $producto->nombre,
+            "image" => $producto->imagen_principal,
+            "description" => $producto->descripcion_corta,
+            "offers" => [
+                "@type" => "Offer",
+                "priceCurrency" => "ARS",
+                "price" => $producto->precio_actual,
+                "availability" => "https://schema.org/InStock",
+                "url" => route('tienda.producto', $producto->slug)
+            ]
+        ];
+    })->values()->all()
+];
+@endphp
+<script type="application/ld+json">
+{!! json_encode($productData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endif
+@endpush
