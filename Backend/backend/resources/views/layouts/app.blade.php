@@ -12,6 +12,47 @@
     <!-- Toastify CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     
+    <!-- Variables CSS Globales -->
+    <style>
+        :root {
+            /* Colores */
+            --color-primary: rgb(49, 146, 85);
+            --color-primary-dark: rgb(39, 126, 75);
+            --color-primary-light: rgba(49, 146, 85, 0.1);
+            --color-primary-transparent: rgba(233, 251, 229, 0.85);
+            --color-dark: #2D3748;
+            --color-light: #718096;
+            --color-white: #FFFFFF;
+            --color-bg-light: rgba(233, 251, 229, 0.85);
+            
+            /* Espaciado */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            
+            /* Bordes */
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 15px;
+            --border-radius-xl: 24px;
+            
+            /* Sombras */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+            
+            /* Transiciones */
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+    </style>
+    
     <!-- Estilos -->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     @stack('styles') <!-- Para estilos específicos de vistas -->
