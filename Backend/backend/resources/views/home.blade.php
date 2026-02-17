@@ -5,7 +5,13 @@
 @section('content')
 <main class="content mt-5">
     <section id="presenta" class="presenta">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="container_presenta">
@@ -13,7 +19,7 @@
                             <div class="presenta_text">
                                 <h1>Fabricación profesional <br> de aberturas de aluminio</h1>
                                 <p>Más de 15 años de experiencia en soluciones a medida</p>
-                                <a href="{{ url('/contacto') }}" class="btn btn-primary">Solicitar presupuesto</a>
+                                <a href="{{ url('/contacto') }}" class="btn btn-custom-green">Solicitar presupuesto</a>
                             </div>
                         </div>
                         <div class="presenta_img">
@@ -30,7 +36,7 @@
                             <div class="presenta_text">
                                 <h1>Proyectos realizados <br> con garantía de calidad</h1>
                                 <p>Más de 500 obras entregadas a clientes satisfechos</p>
-                                <a href="{{ url('/obras') }}" class="btn btn-primary">Ver nuestros proyectos</a>
+                                <a href="{{ url('/obras') }}" class="btn btn-custom-green">Ver nuestros proyectos</a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +47,7 @@
                             <div class="presenta_text">
                                 <h1>Tecnología y diseño <br> para tu hogar u oficina</h1>
                                 <p>Materiales de primera calidad con instalación profesional</p>
-                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver productos disponibles</a>
+                                <a href="{{ url('/tienda') }}" class="btn btn-custom-green">Ver productos disponibles</a>
                             </div>
                         </div>
                         <div class="presenta_img">
@@ -54,8 +60,14 @@
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
 
-    <section id="sobre-nosotros" class="seccion">
+    <section id="sobre-nosotros" class="seccion animate-on-scroll">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -91,14 +103,8 @@
             </div>
         </div>
     </section>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-    </section>
 
-    <section id="servicios" class="servicios">
+    <section id="servicios" class="servicios animate-on-scroll">
         <div class="container">
             <h2>NUESTROS SERVICIOS DIFERENCIALES</h2>
             <div class="row">
@@ -133,7 +139,7 @@
         </div>
     </section>
 
-    <section id="proyectos-destacados" class="seccion">
+    <section id="proyectos-destacados" class="seccion animate-on-scroll">
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h2>Nuestros Proyectos Destacados</h2>
@@ -193,7 +199,7 @@
         </div>
     </section>
 
-    <section id="tienda-destacada" class="seccion">
+    <section id="tienda-destacada" class="seccion animate-on-scroll">
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h2>Productos Destacados</h2>
@@ -266,7 +272,7 @@
         </div>
     </section>
 
-    <section id="productos" class="productos">
+    <section id="productos" class="productos animate-on-scroll">
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h2>Nuestros Productos</h2>
@@ -275,7 +281,7 @@
 
             <div class="row g-4">
                 <!-- Aberturas de Aluminio -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/aberturas-aluminio') }}';">
                         <div class="producto-badge">Línea Premium</div>
                         <img src="{{ asset('Images/sampa_aluminio.jpeg') }}" alt="Aberturas de Aluminio" class="img-fluid rounded">
@@ -289,7 +295,7 @@
                 </div>
 
                 <!-- Puertas Placas -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/puertas-placa') }}';">
                         <div class="producto-badge">Novedad</div>
                         <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas Placas" class="img-fluid rounded">
@@ -303,7 +309,7 @@
                 </div>
 
                 <!-- Mamparas -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/mamparas') }}';">
                         <div class="producto-badge">Oferta</div>
                         <img src="{{ asset('Images/sampa_mampara.jpg') }}" alt="Mamparas" class="img-fluid rounded">
@@ -317,7 +323,7 @@
                 </div>
 
                 <!-- Mosquiteros -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/mosquiteros') }}';">
                         <div class="producto-badge">Más Vendido</div>
                         <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Mosquiteros" class="img-fluid rounded">
@@ -331,7 +337,7 @@
                 </div>
 
                 <!-- Herrajes -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/herrajes') }}';">
                         <div class="producto-badge">Accesorios</div>
                         <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Herrajes" class="img-fluid rounded">
@@ -345,7 +351,7 @@
                 </div>
 
                 <!-- Perfilería -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="producto-item" onclick="window.location='{{ url('/perfileria') }}';">
                         <div class="producto-badge">Profesional</div>
                         <img src="{{ asset('Images/sampa_perfileria.jpg') }}" alt="Perfilería" class="img-fluid rounded">
@@ -361,7 +367,7 @@
         </div>
     </section>
 
-    <section id="proceso-trabajo" class="seccion">
+    <section id="proceso-trabajo" class="seccion animate-on-scroll">
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h2>Nuestro Proceso de Trabajo</h2>
