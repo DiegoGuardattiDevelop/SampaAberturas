@@ -401,7 +401,7 @@
         </div>
     </section>
 
-    <section id="marcas-certificaciones" class="marcas-seccion">
+    {{-- <section id="marcas-certificaciones" class="marcas-seccion">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">Calidad Garantizada</span>
@@ -450,7 +450,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section id="preguntas-frecuentes" class="seccion">
         <div class="container">
@@ -469,7 +469,7 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            <p>Utilizamos aluminio de primera calidad con perfiles de la línea Aluar System, que ofrecen excelente resistencia, durabilidad y aislamiento térmico/acústico. Todos nuestros materiales cumplen con las normas IRAM y cuentan con certificaciones de calidad.</p>
+                            <p>Utilizamos aluminio de primera calidad con perfiles de la líneas Módena, A30 New, A40, que ofrecen excelente resistencia, durabilidad y aislamiento térmico/acústico. Todos nuestros materiales cumplen con las todas las normas de calidad.</p>
                         </div>
                     </div>
                 </div>
@@ -485,9 +485,9 @@
                         <div class="accordion-body">
                             <p>Los plazos varían según la complejidad del proyecto:</p>
                             <ul>
-                                <li>Productos estándar: 7-10 días hábiles</li>
-                                <li>Proyectos personalizados: 15-20 días hábiles</li>
-                                <li>Instalación: 1-2 días una vez fabricados los productos</li>
+                                <li>Después de la medición: 25-30 días hábiles</li>
+                                <li>Proyectos con tratamientos especiales: 30-45 días hábiles</li>
+                                <li>Instalación: 1-2 días previa coordinación con el responsable</li>
                             </ul>
                             <p>Todos los plazos son coordinados y confirmados antes de iniciar la fabricación.</p>
                         </div>
@@ -505,7 +505,7 @@
                         <div class="accordion-body">
                             <p>Sí, ofrecemos garantía extendida:</p>
                             <ul>
-                                <li>5 años en materiales contra defectos de fabricación</li>
+                                <li>1 años en materiales contra defectos de fabricación</li>
                                 <li>2 años en mano de obra e instalación</li>
                                 <li>1 año en herrajes y accesorios</li>
                             </ul>
@@ -518,12 +518,12 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            ¿Realizan envíos a todo el país?
+                            ¿Realizan proyectos en todo el país?
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            <p>Sí, realizamos envíos a todo el territorio argentino. Los costos de envío varían según la ubicación y el volumen del pedido. Para proyectos grandes, ofrecemos descuentos especiales en logística.</p>
+                            <p>Sí, realizamos proyectos en todo el territorio argentino. Si tu proyecto es fuera de la provincia de Córdoba, consúltanos para una mejor asesoría.</p>
                         </div>
                     </div>
                 </div>
@@ -540,7 +540,6 @@
                             <p>Puedes solicitar un presupuesto de varias formas:</p>
                             <ul>
                                 <li>Completando el formulario en nuestra sección de contacto</li>
-                                <li>Llamando a nuestro número de teléfono</li>
                                 <li>Visitando nuestro showroom para una asesoría personalizada</li>
                                 <li>Enviando un mensaje por WhatsApp con las medidas y requisitos</li>
                             </ul>

@@ -1,11 +1,5 @@
-<header class="hero position-relative {{ Request::is('home') ? 'hero-full' : 'hero-min' }}">
-    <!-- Background solo en home -->
-    @if(Request::is('home'))
-    <div class="hero-bg home-gradient"></div>
-    <div class="hero-overlay"></div>
-    @endif
-    
-    <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 navbar-custom">
+<header class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark w-100 navbar-custom">
         <div class="container">
             <a href="/home" class="navbar-brand">
                 <img src="{{ asset('Images/Sampa_Logo_Livianno.png') }}" alt="Sampa Aberturas" class="logo-img" style="height: 50px;">
@@ -25,6 +19,14 @@
                         <li class="nav-item">
                             <a class="nav-link fw-semibold {{ Request::is('/home') ? 'active text-green' : '' }}" href="{{ url('/home') }}">Inicio</a>
                         </li>
+                                            
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold {{ Request::is('obras') ? 'active text-green' : '' }}" href="{{ url('/obras') }}">Obras</a>
+                        </li>
+                        
+                        {{-- <li class="nav-item">
+                            <a class="nav-link fw-semibold {{ Request::is('outlet') ? 'active text-green' : '' }}" href="{{ url('/outlet') }}">Tienda</a>
+                        </li> --}}
                         
                         <li class="nav-item dropdown">
                             <a class="nav-link fw-semibold dropdown-toggle" href="#" data-bs-toggle="dropdown">
@@ -39,20 +41,12 @@
                                 <li><hr class="dropdown-divider mx-2 my-1"></li>
                                 <li><a class="dropdown-item py-2" href="{{ url('/mosquiteros') }}">Cortinas y Mosquiteros</a></li>
                                 <li><hr class="dropdown-divider mx-2 my-1"></li>
-                                <li><a class="dropdown-item py-2" href="{{ url('/herrajes') }}">Herrajes y perfileria</a></li>
+                                <li><a class="dropdown-item py-2" href="{{ url('/herrajes') }}">Herrajes y Accesorios</a></li>
                                 <li><hr class="dropdown-divider mx-2 my-1"></li>
                                 <li><a class="dropdown-item py-2" href="{{ url('/perfileria') }}">Portones Automáticos</a></li>
                             </ul>
                         </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('obras') ? 'active text-green' : '' }}" href="{{ url('/obras') }}">Obras</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold {{ Request::is('outlet') ? 'active text-green' : '' }}" href="{{ url('/outlet') }}">Tienda</a>
-                        </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link fw-semibold {{ Request::is('nosotros') ? 'active text-green' : '' }}" href="{{ url('/nosotros') }}">Nosotros</a>
                         </li>
@@ -65,24 +59,6 @@
             </div>
         </div>
     </nav>
-
-    @if(Request::is('home'))
-    <div class="hero-content-custom">
-        <div class="container text-center text-white position-relative">
-            <p class="bienvenida lead mb-2">Bienvenidos</p>
-            <h1 class="display-4 fw-bold mb-3">Sampa Aberturas</h1>
-            <p class="descripcion hero-subtitle-custom mb-4">Creamos ambientes en tu hogar</p>
-            <div class="hero-buttons">
-                <a href="{{ route('contacto') }}" class="btn btn-custom-green btn-lg px-4">
-                    <i class="bi bi-envelope me-1"></i> Contactanos
-                </a>
-                <a href="#productos" class="btn btn-custom-outline-green btn-lg px-4">
-                    <i class="bi bi-box-seam me-1"></i> Ver Productos
-                </a>
-            </div>
-        </div>
-    </div>
-    @endif
 </header>
 
 <script>

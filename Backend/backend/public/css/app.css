@@ -6,55 +6,29 @@
    ESTILOS DEL HEADER - Refactorizados
    ============================================ */
 
-/* Hero Header */
-.hero-full {
-    min-height: 100vh;
-    position: relative;
-}
-
-.hero-min {
-    min-height: 80px;
-    position: relative;
-}
-
-.hero-full .hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../Images/sampa_casa_3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-.hero-full .home-gradient::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
-}
-
-.hero-full .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
-    z-index: 0;
-}
-
 /* Navbar Styles */
+.navbar-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
 .navbar-custom {
     z-index: 1000;
     transition: all var(--transition-normal);
-    padding: 15px 0;
+    padding: 10px 0;
+}
+
+/* Page content spacing after sticky navbar */
+main {
+    padding-top: 0;
+}
+
+.presenta {
+    margin-top: 0 !important;
 }
 
 .navbar-custom.scrolled {
@@ -77,12 +51,32 @@
     max-width: 100%;
 }
 
+/* Navbar Toggler - Hamburger Menu */
+.navbar-toggler {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33, 37, 41, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
 /* Navigation Links */
+.navbar-nav {
+    padding-left: 15px;
+}
+
 .nav-link-custom {
     position: relative;
-    padding: 8px 12px;
+    padding: 8px 16px;
     transition: all var(--transition-normal);
     color: white;
+}
+
+/* Target Bootstrap's nav-link class used in header */
+.navbar-dark .navbar-nav .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .navbar-custom.scrolled .nav-link-custom {
@@ -121,23 +115,7 @@
     color: var(--color-primary);
 }
 
-/* Hero Content */
-.hero-content-custom {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 1;
-}
 
-.hero-subtitle-custom {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Button Styles */
 .btn-custom-green {
     background-color: var(--color-primary);
     color: white;
@@ -295,18 +273,25 @@ body {
     text-align: center;
 }
 
+/* Page Hero Header - Used in all non-home pages */
 .hero-header {
     background: linear-gradient(135deg, #2c3e50 0%, rgb(49, 146, 85) 100%);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+.bg-gradient-green {
+    background: linear-gradient(135deg, #2c3e50 0%, rgb(49, 146, 85) 100%) !important;
+}
+
+.text-gradient-green {
+    background: linear-gradient(135deg, #2c3e50 0%, rgb(49, 146, 85) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .presentacion {
@@ -3158,11 +3143,6 @@ body {
         margin-bottom: 0;
     }
 
-    /* Tienda */
-    .hero-header {
-        padding: 3rem 2rem;
-    }
-
     .category-card, .filter-card {
         padding: 1.5rem;
     }
@@ -3301,10 +3281,6 @@ body {
 /* Dispositivos muy pequeños (teléfonos verticales, menos de 576px) */
 @media (max-width: 575.98px) {
     /* Header */
-    .hero-min {
-        min-height: 60px;
-    }
-
     .navbar-brand img {
         height: 35px;
     }
@@ -3390,16 +3366,6 @@ body {
     }
 }
 
-/* Orientación horizontal en móviles */
-@media (max-width: 767.98px) and (orientation: landscape) {
-    .hero-full {
-        min-height: 120vh;
-    }
-
-    .navbar {
-        padding: 5px 0;
-    }
-}
 /* Pantallas con alta resolución (2x) */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .logo-img {
