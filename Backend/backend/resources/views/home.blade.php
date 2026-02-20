@@ -14,27 +14,23 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="container_presenta">
-                        <div class="presenta_info">
-                            <div class="presenta_text">
-                                <h1>Fabricación profesional <br> de aberturas de aluminio</h1>
-                                <p>Más de 15 años de experiencia en soluciones a medida</p>
+                    <div class="presenta-bg" style="background-image: url('{{ asset('Images/sampa_casa1.jpg') }}')">
+                        <div class="presenta-overlay"></div>
+                        <div class="presenta-content">
+                            <div class="presenta_text animate__animated animate__fadeInUp">
+                                <h1>Fabricación profesional <br>de aberturas de aluminio</h1>
+                                <p>Más de 17 años de experiencia en soluciones a medida</p>
                                 <a href="{{ url('/contacto') }}" class="btn btn-custom-green">Solicitar presupuesto</a>
                             </div>
-                        </div>
-                        <div class="presenta_img">
-                            <img src="{{ asset('Images/sampa_casa1.jpg') }}" alt="Imagen 1">
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="container_presenta">
-                        <div class="presenta_img">
-                            <img src="{{ asset('Images/sampa_casa_2.jpg') }}" alt="Imagen 2">
-                        </div>
-                        <div class="presenta_info">
-                            <div class="presenta_text">
-                                <h1>Proyectos realizados <br> con garantía de calidad</h1>
+                    <div class="presenta-bg" style="background-image: url('{{ asset('Images/sampa_casa_2.jpg') }}')">
+                        <div class="presenta-overlay"></div>
+                        <div class="presenta-content">
+                            <div class="presenta_text animate__animated animate__fadeInUp">
+                                <h1>Proyectos realizados <br>con garantía de calidad</h1>
                                 <p>Más de 500 obras entregadas a clientes satisfechos</p>
                                 <a href="{{ url('/obras') }}" class="btn btn-custom-green">Ver nuestros proyectos</a>
                             </div>
@@ -42,16 +38,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="container_presenta">
-                        <div class="presenta_info">
-                            <div class="presenta_text">
-                                <h1>Tecnología y diseño <br> para tu hogar u oficina</h1>
+                    <div class="presenta-bg" style="background-image: url('{{ asset('Images/sampa_casa_3.jpg') }}')">
+                        <div class="presenta-overlay"></div>
+                        <div class="presenta-content">
+                            <div class="presenta_text animate__animated animate__fadeInUp">
+                                <h1>Tecnología y diseño <br>para tu hogar u oficina</h1>
                                 <p>Materiales de primera calidad con instalación profesional</p>
                                 <a href="{{ url('/tienda') }}" class="btn btn-custom-green">Ver productos disponibles</a>
                             </div>
-                        </div>
-                        <div class="presenta_img">
-                            <img src="{{ asset('Images/sampa_casa_3.jpg') }}" alt="Imagen 3">
                         </div>
                     </div>
                 </div>
@@ -64,40 +58,74 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <span>Descubre más</span>
+                <div class="scroll-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="sobre-nosotros" class="seccion animate-on-scroll">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <div class="nosotros-imagen">
-                        <img src="{{ asset('Images/sampa_nosotros_1.jpg') }}" alt="Nuestro taller" class="img-fluid rounded">
+                        <div class="image-wrapper">
+                            <img src="{{ asset('Images/sampa_nosotros_1.jpg') }}" alt="Nuestro taller" class="img-fluid rounded-4">
+                            <div class="image-badge">
+                                <span class="badge-years">17+</span>
+                                <span class="badge-text">Años de experiencia</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="nosotros-contenido">
-                        <h2>Sobre Sampa Aberturas</h2>
-                        <p>Con más de 15 años de experiencia en el mercado, <strong>Sampa Aberturas</strong> se ha consolidado como líder en la fabricación e instalación de aberturas de aluminio de alta calidad en la región.</p>
+                        <span class="section-subtitle">Sobre Nosotros</span>
+                        <h2>Líderes en aberturas de aluminio de calidad</h2>
+                        <p>Con más de 17 años de experiencia en el mercado, <strong>Sampa Aberturas</strong> se ha consolidado como líder en la fabricación e instalación de aberturas de aluminio de alta calidad en la región.</p>
 
                         <div class="nosotros-destacados">
                             <div class="destacado-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Más de 500 proyectos realizados</span>
+                                <div class="icon-box">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="destacado-text">
+                                    <h4>Más de 500 proyectos realizados</h4>
+                                    <p>Clientes satisfechos en toda la región</p>
+                                </div>
                             </div>
                             <div class="destacado-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Materiales de primera calidad con garantía</span>
+                                <div class="icon-box">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="destacado-text">
+                                    <h4>Materiales de primera calidad</h4>
+                                    <p>Con garantía extendida</p>
+                                </div>
                             </div>
                             <div class="destacado-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Equipo profesional con experiencia certificada</span>
+                                <div class="icon-box">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="destacado-text">
+                                    <h4>Equipo profesional certificado</h4>
+                                    <p>Experiencia y profesionalismo</p>
+                                </div>
                             </div>
                         </div>
 
-                        <p>Nos especializamos en soluciones a medida para hogares, oficinas y proyectos comerciales, combinando tecnología avanzada con diseño personalizado.</p>
+                        <p class="mb-4">Nos especializamos en soluciones a medida para hogares, oficinas y proyectos comerciales, combinando tecnología avanzada con diseño personalizado.</p>
 
-                        <a href="{{ url('/nosotros') }}" class="btn btn-primary">Conocer más sobre nosotros</a>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="{{ url('/nosotros') }}" class="btn btn-custom-green">Conocer más</a>
+                            <a href="{{ url('/contacto') }}" class="btn btn-outline-dark">Contactarnos</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,418 +134,320 @@
 
     <section id="servicios" class="servicios animate-on-scroll">
         <div class="container">
-            <h2>NUESTROS SERVICIOS DIFERENCIALES</h2>
-            <div class="row">
-                <div class="col-md-4 servicio">
-                    <div class="servicio-icon-container">
-                        <i class="bi bi-rulers"></i>
-                    </div>
-                    <div class="servicio-content">
-                        <h3>Medición Profesional</h3>
-                        <p>Servicio de medición técnico sin cargo para garantizar precisión milimétrica en cada proyecto.</p>
+            <div class="section-header">
+                <span class="section-subtitle">Nuestros Servicios</span>
+                <h2>¿Por qué elegirnos?</h2>
+                <p class="section-desc">Compromiso, calidad y profesionalismo en cada proyecto</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="servicio-card">
+                        <div class="servicio-icon-wrapper">
+                            <div class="servicio-icon">
+                                <i class="bi bi-rulers"></i>
+                            </div>
+                            <div class="servicio-number">01</div>
+                        </div>
+                        <div class="servicio-content">
+                            <h3>Medición Profesional</h3>
+                            <p>Servicio de medición técnico sin cargo para garantizar precisión milimétrica en cada proyecto.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 servicio">
-                    <div class="servicio-icon-container">
-                        <i class="bi bi-shield-check"></i>
-                    </div>
-                    <div class="servicio-content">
-                        <h3>Garantía Extendida</h3>
-                        <p>5 años de garantía en materiales y 2 años en mano de obra para tu total tranquilidad.</p>
+                <div class="col-md-4">
+                    <div class="servicio-card">
+                        <div class="servicio-icon-wrapper">
+                            <div class="servicio-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <div class="servicio-number">02</div>
+                        </div>
+                        <div class="servicio-content">
+                            <h3>Equipo Profesional</h3>
+                            <p>Contamos con profesionales altamente capacitados para asegurar la excelencia de tu proyecto y brindarte máxima tranquilidad.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 servicio">
-                    <div class="servicio-icon-container">
-                        <i class="bi bi-calendar-check"></i>
-                    </div>
-                    <div class="servicio-content">
-                        <h3>Entrega en Tiempo</h3>
-                        <p>Plazos de fabricación claros y cumplimiento garantizado según lo acordado.</p>
+                <div class="col-md-4">
+                    <div class="servicio-card">
+                        <div class="servicio-icon-wrapper">
+                            <div class="servicio-icon">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <div class="servicio-number">03</div>
+                        </div>
+                        <div class="servicio-content">
+                            <h3>Entrega en Tiempo</h3>
+                            <p>Plazos de fabricación claros y cumplimiento garantizado según lo acordado.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="proyectos-destacados" class="seccion animate-on-scroll">
+    <section id="proyectos-destacados" class="proyectos-seccion animate-on-scroll">
         <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2>Nuestros Proyectos Destacados</h2>
-                <p class="lead">Más de 500 obras realizadas con los más altos estándares de calidad</p>
+            <div class="section-header">
+                <span class="section-subtitle">Portafolio</span>
+                <h2>Proyectos Destacados</h2>
+                <p class="section-desc">Más de 500 obras realizadas con los más altos estándares de calidad</p>
             </div>
 
-            <div class="row g-4">
+            <div class="proyectos-grid">
                 <!-- Proyecto 1 -->
-                <div class="col-md-4">
-                    <div class="proyecto-card">
-                        <div class="proyecto-imagen">
-                            <img src="{{ asset('Images/sampa_obra_1.jpg') }}" alt="Proyecto Residencial Moderno" class="img-fluid">
-                        </div>
-                        <div class="proyecto-info">
-                            <h3>Residencia Moderna</h3>
-                            <p class="proyecto-lugar"><i class="bi bi-geo-alt"></i> Buenos Aires, Argentina</p>
-                            <p class="proyecto-tipo"><i class="bi bi-house"></i> Residencial</p>
-                            <a href="{{ url('/obras') }}" class="btn btn-outline-primary">Ver todos los proyectos</a>
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="{{ asset('Images/sampa_obra_1.jpg') }}" alt="Proyecto Residencial Moderno" class="img-fluid">
+                        <div class="proyecto-overlay">
+                            <div class="proyecto-overlay-content">
+                                <span class="proyecto-categoria">Residencial</span>
+                                <h3>Residencia Moderna</h3>
+                                <p class="proyecto-lugar"><i class="bi bi-geo-alt-fill"></i> Buenos Aires, Argentina</p>
+                                <a href="{{ url('/obras') }}" class="btn btn-proyecto">Ver Proyecto</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Proyecto 2 -->
-                <div class="col-md-4">
-                    <div class="proyecto-card">
-                        <div class="proyecto-imagen">
-                            <img src="{{ asset('Images/sampa_obra_2.jpg') }}" alt="Proyecto Comercial" class="img-fluid">
-                        </div>
-                        <div class="proyecto-info">
-                            <h3>Edificio Comercial</h3>
-                            <p class="proyecto-lugar"><i class="bi bi-geo-alt"></i> Córdoba, Argentina</p>
-                            <p class="proyecto-tipo"><i class="bi bi-building"></i> Comercial</p>
-                            <a href="{{ url('/obras') }}" class="btn btn-outline-primary">Ver todos los proyectos</a>
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="{{ asset('Images/sampa_obra_2.jpg') }}" alt="Proyecto Comercial" class="img-fluid">
+                        <div class="proyecto-overlay">
+                            <div class="proyecto-overlay-content">
+                                <span class="proyecto-categoria">Comercial</span>
+                                <h3>Edificio Comercial</h3>
+                                <p class="proyecto-lugar"><i class="bi bi-geo-alt-fill"></i> Córdoba, Argentina</p>
+                                <a href="{{ url('/obras') }}" class="btn btn-proyecto">Ver Proyecto</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Proyecto 3 -->
-                <div class="col-md-4">
-                    <div class="proyecto-card">
-                        <div class="proyecto-imagen">
-                            <img src="{{ asset('Images/sampa_obra_3.jpg') }}" alt="Proyecto de Remodelación" class="img-fluid">
-                        </div>
-                        <div class="proyecto-info">
-                            <h3>Remodelación Integral</h3>
-                            <p class="proyecto-lugar"><i class="bi bi-geo-alt"></i> Rosario, Argentina</p>
-                            <p class="proyecto-tipo"><i class="bi bi-tools"></i> Remodelación</p>
-                            <a href="{{ url('/obras') }}" class="btn btn-outline-primary">Ver todos los proyectos</a>
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="{{ asset('Images/sampa_obra_3.jpg') }}" alt="Proyecto de Remodelación" class="img-fluid">
+                        <div class="proyecto-overlay">
+                            <div class="proyecto-overlay-content">
+                                <span class="proyecto-categoria">Remodelación</span>
+                                <h3>Remodelación Integral</h3>
+                                <p class="proyecto-lugar"><i class="bi bi-geo-alt-fill"></i> Rosario, Argentina</p>
+                                <a href="{{ url('/obras') }}" class="btn btn-proyecto">Ver Proyecto</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-4">
-                <a href="{{ url('/obras') }}" class="btn btn-primary btn-lg">Ver Todos Nuestros Proyectos</a>
+            <div class="text-center mt-5">
+                <a href="{{ url('/obras') }}" class="btn btn-custom-green btn-lg">Ver Todos Nuestros Proyectos</a>
             </div>
         </div>
     </section>
 
-    <section id="tienda-destacada" class="seccion animate-on-scroll">
+    <section id="productos" class="productos-seccion animate-on-scroll">
         <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2>Productos Destacados</h2>
-                <p class="lead">Selección especial con entrega inmediata</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Producto 1 - Puerta Placa -->
-                <div class="col-md-4">
-                    <div class="producto-destacado-card">
-                        <div class="producto-destacado-badge">¡EN STOCK!</div>
-                        <div class="producto-destacado-imagen">
-                            <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puerta Placa Premium" class="img-fluid">
-                        </div>
-                        <div class="producto-destacado-info">
-                            <h3>Puerta Placa Premium</h3>
-                            <p class="producto-destacado-precio">$125.000</p>
-                            <p class="producto-destacado-desc">Puerta placa de 80cm x 210cm con aislamiento térmico y acústico. Incluye herrajes y instalación.</p>
-                            <div class="producto-destacado-acciones">
-                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver en Tienda</a>
-                                <a href="{{ url('/contacto') }}" class="btn btn-outline-primary">Consultar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 2 - Mosquitero -->
-                <div class="col-md-4">
-                    <div class="producto-destacado-card">
-                        <div class="producto-destacado-badge">¡EN STOCK!</div>
-                        <div class="producto-destacado-imagen">
-                            <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Mosquitero Corredizo" class="img-fluid">
-                        </div>
-                        <div class="producto-destacado-info">
-                            <h3>Mosquitero Corredizo</h3>
-                            <p class="producto-destacado-precio">$45.000</p>
-                            <p class="producto-destacado-desc">Mosquitero de aluminio corredizo para ventana estándar. Incluye malla anti-insectos de alta durabilidad.</p>
-                            <div class="producto-destacado-acciones">
-                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver en Tienda</a>
-                                <a href="{{ url('/contacto') }}" class="btn btn-outline-primary">Consultar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 3 - Herrajes -->
-                <div class="col-md-4">
-                    <div class="producto-destacado-card">
-                        <div class="producto-destacado-badge">¡EN STOCK!</div>
-                        <div class="producto-destacado-imagen">
-                            <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Kit de Herrajes" class="img-fluid">
-                        </div>
-                        <div class="producto-destacado-info">
-                            <h3>Kit de Herrajes Premium</h3>
-                            <p class="producto-destacado-precio">$28.500</p>
-                            <p class="producto-destacado-desc">Kit completo de herrajes para puerta de aluminio. Incluye manija, cerradura y bisagras de alta resistencia.</p>
-                            <div class="producto-destacado-acciones">
-                                <a href="{{ url('/tienda') }}" class="btn btn-primary">Ver en Tienda</a>
-                                <a href="{{ url('/contacto') }}" class="btn btn-outline-primary">Consultar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-4">
-                <a href="{{ url('/tienda') }}" class="btn btn-primary btn-lg">Ver Todos los Productos</a>
-                <p class="mt-2">Envíos a todo el país | Stock limitado</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="productos" class="productos animate-on-scroll">
-        <div class="container">
-            <div class="section-header text-center mb-5">
+            <div class="section-header">
+                <span class="section-subtitle">Catálogo</span>
                 <h2>Nuestros Productos</h2>
-                <p class="lead">Soluciones completas para tu hogar u oficina</p>
+                <p class="section-desc">Soluciones completas para tu hogar u oficina</p>
             </div>
 
-            <div class="row g-4">
-                <!-- Aberturas de Aluminio -->
-                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/aberturas-aluminio') }}';">
-                        <div class="producto-badge">Línea Premium</div>
-                        <img src="{{ asset('Images/sampa_aluminio.jpeg') }}" alt="Aberturas de Aluminio" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>ABERTURAS<br>DE ALUMINIO</p>
+            <div class="productos-grid">
+                <!-- 1. Aberturas de Aluminio -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="{{ asset('Images/sampa_aluminio.jpeg') }}" alt="Aberturas de Aluminio" class="img-fluid">
+                        <div class="producto-overlay">
+                            <a href="{{ url('/aberturas-aluminio') }}" class="btn btn-producto">Ver Más</a>
                         </div>
-                        <div class="producto-desc">
-                            <p>Perfiles de alta resistencia con aislamiento térmico y acústico</p>
-                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Aberturas de Aluminio</h3>
+                        <p>Perfiles de alta resistencia con aislamiento térmico y acústico</p>
                     </div>
                 </div>
 
-                <!-- Puertas Placas -->
-                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/puertas-placa') }}';">
-                        <div class="producto-badge">Novedad</div>
-                        <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas Placas" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>PUERTAS<br>PLACAS</p>
+                <!-- 2. Puertas de Interior -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="{{ asset('Images/sampa_placa.jpg') }}" alt="Puertas de Interior" class="img-fluid">
+                        <div class="producto-overlay">
+                            <a href="{{ url('/puertas-placa') }}" class="btn btn-producto">Ver Más</a>
                         </div>
-                        <div class="producto-desc">
-                            <p>Diseño moderno con máxima seguridad y aislamiento</p>
-                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Puertas de Interior</h3>
+                        <p>Diseño moderno con máxima seguridad y aislamiento</p>
                     </div>
                 </div>
 
-                <!-- Mamparas -->
-                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/mamparas') }}';">
-                        <div class="producto-badge">Oferta</div>
-                        <img src="{{ asset('Images/sampa_mampara.jpg') }}" alt="Mamparas" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>MAMPARAS<br>PARA BAÑO</p>
+                <!-- 3. Vidrios y Mamparas -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="{{ asset('Images/sampa_mampara.jpg') }}" alt="Vidrios y Mamparas" class="img-fluid">
+                        <div class="producto-overlay">
+                            <a href="{{ url('/mamparas') }}" class="btn btn-producto">Ver Más</a>
                         </div>
-                        <div class="producto-desc">
-                            <p>Mamparas de vidrio templado con perfiles de aluminio</p>
-                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Vidrios y Mamparas</h3>
+                        <p>Vidrio templado con perfiles de aluminio de alta calidad</p>
                     </div>
                 </div>
 
-                <!-- Mosquiteros -->
-                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/mosquiteros') }}';">
-                        <div class="producto-badge">Más Vendido</div>
-                        <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Mosquiteros" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>MOSQUITEROS</p>
+                <!-- 4. Cortinas y Mosquiteros -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="{{ asset('Images/sampa_mosquitero.jpeg') }}" alt="Cortinas y Mosquiteros" class="img-fluid">
+                        <div class="producto-overlay">
+                            <a href="{{ url('/mosquiteros') }}" class="btn btn-producto">Ver Más</a>
                         </div>
-                        <div class="producto-desc">
-                            <p>Protección contra insectos con mallas de alta durabilidad</p>
-                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Cortinas y Mosquiteros</h3>
+                        <p>Protección contra insectos y control de luz natural</p>
                     </div>
                 </div>
 
-                <!-- Herrajes -->
-                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/herrajes') }}';">
-                        <div class="producto-badge">Accesorios</div>
-                        <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Herrajes" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>HERRAJES</p>
+                <!-- 5. Portones Automáticos -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="{{ asset('Images/sampa_casa1.jpg') }}" alt="Portones Automáticos" class="img-fluid">
+                        <div class="producto-overlay">
+                            <a href="{{ url('/contacto') }}" class="btn btn-producto">Ver Más</a>
                         </div>
-                        <div class="producto-desc">
-                            <p>Herrajes de alta resistencia para mayor durabilidad</p>
-                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Portones Automáticos</h3>
+                        <p>Automatización y seguridad para tu hogar</p>
                     </div>
                 </div>
 
-                <!-- Perfilería -->
-                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="producto-item" onclick="window.location='{{ url('/perfileria') }}';">
-                        <div class="producto-badge">Profesional</div>
-                        <img src="{{ asset('Images/sampa_perfileria.jpg') }}" alt="Perfilería" class="img-fluid rounded">
-                        <div class="overlay">
-                            <p>PERFILERÍA</p>
+                <!-- 6. Herrajes y Accesorios -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="{{ asset('Images/sampa_herrajes.jpeg') }}" alt="Herrajes y Accesorios" class="img-fluid">
+                        <div class="producto-overlay">
+                            <a href="{{ url('/herrajes') }}" class="btn btn-producto">Ver Más</a>
                         </div>
-                        <div class="producto-desc">
-                            <p>Perfiles de aluminio para estructuras personalizadas</p>
-                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Herrajes y Accesorios</h3>
+                        <p>Componentes de alta resistencia para mayor durabilidad</p>
                     </div>
                 </div>
             </div>
+
+            {{-- <div class="text-center mt-5">
+                <a href="{{ url('/tienda') }}" class="btn btn-custom-green btn-lg">Ver Catálogo Completo</a>
+            </div> --}}
         </div>
     </section>
 
-    <section id="proceso-trabajo" class="seccion animate-on-scroll">
+    <!-- Eliminado: tienda-destacada (unificado con productos) -->
+
+    <section id="proceso-trabajo" class="proceso-seccion animate-on-scroll">
         <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2>Nuestro Proceso de Trabajo</h2>
-                <p class="lead">De la idea inicial a la instalación final, cada paso con profesionalismo</p>
+            <div class="section-header">
+                <span class="section-subtitle">Proceso</span>
+                <h2>Cómo Trabajamos</h2>
+                <p class="section-desc">De la idea inicial a la instalación final</p>
             </div>
 
-            <div class="proceso-timeline">
+            <div class="proceso-grid">
                 <!-- Paso 1 -->
-                <div class="proceso-paso">
+                <div class="proceso-card">
+                    <div class="proceso-numero">01</div>
                     <div class="proceso-icon">
                         <i class="bi bi-pencil-square"></i>
-                        <span class="proceso-numero">1</span>
                     </div>
-                    <div class="proceso-contenido">
-                        <h3>Consulta y Diseño</h3>
-                        <p>Asesoramiento personalizado para entender tus necesidades y crear el diseño perfecto para tu espacio.</p>
-                    </div>
+                    <h3>Consulta y Diseño</h3>
+                    <p>Asesoramiento personalizado para entender tus necesidades y crear el diseño perfecto.</p>
                 </div>
 
                 <!-- Paso 2 -->
-                <div class="proceso-paso">
+                <div class="proceso-card">
+                    <div class="proceso-numero">02</div>
                     <div class="proceso-icon">
                         <i class="bi bi-rulers"></i>
-                        <span class="proceso-numero">2</span>
                     </div>
-                    <div class="proceso-contenido">
-                        <h3>Medición Profesional</h3>
-                        <p>Nuestro equipo técnico realiza mediciones precisas sin cargo para garantizar un ajuste perfecto.</p>
-                    </div>
+                    <h3>Medición Profesional</h3>
+                    <p>Mediciones precisas sin cargo para garantizar un ajuste perfecto.</p>
                 </div>
 
                 <!-- Paso 3 -->
-                <div class="proceso-paso">
+                <div class="proceso-card">
+                    <div class="proceso-numero">03</div>
                     <div class="proceso-icon">
                         <i class="bi bi-hammer"></i>
-                        <span class="proceso-numero">3</span>
                     </div>
-                    <div class="proceso-contenido">
-                        <h3>Fabricación a Medida</h3>
-                        <p>Producción con materiales de primera calidad en nuestro taller equipado con tecnología avanzada.</p>
-                    </div>
+                    <h3>Fabricación</h3>
+                    <p>Producción con materiales de primera calidad y tecnología avanzada.</p>
                 </div>
 
                 <!-- Paso 4 -->
-                <div class="proceso-paso">
-                    <div class="proceso-icon">
-                        <i class="bi bi-truck"></i>
-                        <span class="proceso-numero">4</span>
-                    </div>
-                    <div class="proceso-contenido">
-                        <h3>Entrega y Logística</h3>
-                        <p>Coordinación de entrega en el plazo acordado con protección especial para tus aberturas.</p>
-                    </div>
-                </div>
-
-                <!-- Paso 5 -->
-                <div class="proceso-paso">
+                <div class="proceso-card">
+                    <div class="proceso-numero">04</div>
                     <div class="proceso-icon">
                         <i class="bi bi-tools"></i>
-                        <span class="proceso-numero">5</span>
                     </div>
-                    <div class="proceso-contenido">
-                        <h3>Instalación Profesional</h3>
-                        <p>Instalación realizada por nuestro equipo especializado con limpieza y sin molestias.</p>
-                    </div>
-                </div>
-
-                <!-- Paso 6 -->
-                <div class="proceso-paso">
-                    <div class="proceso-icon">
-                        <i class="bi bi-shield-check"></i>
-                        <span class="proceso-numero">6</span>
-                    </div>
-                    <div class="proceso-contenido">
-                        <h3>Garantía y Soporte</h3>
-                        <p>5 años de garantía en materiales y servicio postventa para tu total tranquilidad.</p>
-                    </div>
+                    <h3>Instalación</h3>
+                    <p>Equipo especializado en el proceso de instalación que garantiza calidad y durabilidad.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="marcas-certificaciones" class="seccion">
+    <section id="marcas-certificaciones" class="marcas-seccion">
         <div class="container">
-            <div class="section-header text-center mb-5">
+            <div class="section-header">
+                <span class="section-subtitle">Calidad Garantizada</span>
                 <h2>Marcas y Certificaciones</h2>
-                <p class="lead">Trabajamos con los mejores proveedores y contamos con certificaciones de calidad</p>
+                <p class="section-desc">Trabajamos con los mejores proveedores y certificaciones</p>
             </div>
 
-            <div class="row g-4">
-                <!-- Marcas -->
-                <div class="col-md-6">
-                    <div class="marcas-card">
-                        <h3>Nuestros Proveedores</h3>
-                        <p>Trabajamos con las marcas líderes en la industria para garantizar la mejor calidad:</p>
-
-                        <div class="marcas-logos">
-                            <div class="marca-logo">
-                                <img src="{{ asset('Images/aluar-system-01.svg') }}" alt="Aluar System" class="img-fluid">
-                                <p>Perfiles de aluminio premium</p>
-                            </div>
-                            <div class="marca-logo">
-                                <img src="{{ asset('Images/aluar-system-02.svg') }}" alt="Aluar System" class="img-fluid">
-                                <p>Sistemas de apertura avanzados</p>
-                            </div>
-                            <div class="marca-logo">
-                                <img src="{{ asset('Images/aluar-system-06.svg') }}" alt="Aluar System" class="img-fluid">
-                                <p>Tecnología de vanguardia</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Marcas -->
+            <div class="marcas-grid">
+                <div class="marca-card">
+                    <img src="{{ asset('Images/aluar-system-01.svg') }}" alt="Aluar System" class="img-fluid">
+                    <p>Perfiles de aluminio premium</p>
                 </div>
-
-                <!-- Certificaciones -->
-                <div class="col-md-6">
-                    <div class="certificaciones-card">
-                        <h3>Certificaciones de Calidad</h3>
-                        <p>Contamos con certificaciones que avalan nuestra calidad y profesionalismo:</p>
-
-                        <div class="certificaciones-list">
-                            <div class="certificacion-item">
-                                <i class="bi bi-patch-check-fill"></i>
-                                <div>
-                                    <h4>Certificación IRAM</h4>
-                                    <p>Normas argentinas para calidad en aberturas</p>
-                                </div>
-                            </div>
-
-                            <div class="certificacion-item">
-                                <i class="bi bi-patch-check-fill"></i>
-                                <div>
-                                    <h4>ISO 9001:2015</h4>
-                                    <p>Sistema de gestión de calidad internacional</p>
-                                </div>
-                            </div>
-
-                            <div class="certificacion-item">
-                                <i class="bi bi-patch-check-fill"></i>
-                                <div>
-                                    <h4>Garantía Extendida</h4>
-                                    <p>5 años en materiales y 2 años en mano de obra</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="marca-card">
+                    <img src="{{ asset('Images/aluar-system-02.svg') }}" alt="Aluar System" class="img-fluid">
+                    <p>Sistemas de apertura avanzados</p>
+                </div>
+                <div class="marca-card">
+                    <img src="{{ asset('Images/aluar-system-06.svg') }}" alt="Aluar System" class="img-fluid">
+                    <p>Tecnología de vanguardia</p>
                 </div>
             </div>
 
-            <div class="text-center mt-4">
-                <p>Trabajamos con materiales certificados y procesos de fabricación controlados para garantizar tu satisfacción.</p>
+            <!-- Certificaciones -->
+            <div class="certificaciones-grid">
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <h4>Certificación IRAM</h4>
+                    <p>Normas argentinas para calidad en aberturas</p>
+                </div>
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <h4>ISO 9001:2015</h4>
+                    <p>Sistema de gestión de calidad internacional</p>
+                </div>
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <h4>Garantía Extendida</h4>
+                    <p>5 años en materiales y 2 años en mano de obra</p>
+                </div>
             </div>
         </div>
     </section>
