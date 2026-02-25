@@ -275,12 +275,69 @@ body {
 
 /* Page Hero Header - Used in all non-home pages */
 .hero-header {
-    background: linear-gradient(135deg, var(--color-dark-secondary) 0%, var(--color-primary) 100%);
-    min-height: 200px;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    min-height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 0;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+/* Floating variant: text panel over gradient */
+.hero-header--floating .hero-content-panel {
+    background: linear-gradient(135deg, rgba(233,251,229,0.95) 0%, rgba(204,240,208,0.95) 100%);
+    /* subtle green gradient using light primary palette */
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: inline-block;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Compact version: less height and padding */
+.hero-header--compact {
+    min-height: 140px;
+    padding: 1rem 1rem;
+}
+
+/* Image variant adjustments */
+.hero-header--image .bg-overlay {
+    background: rgba(0,0,0,0.3);
+}
+.hero-header--image {
+    color: #fff; /* ensure text on image is white by default */
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+}
+
+.text-gradient-green {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-header .display-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-header .lead {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 0;
+}
+
+/* Improve bg-overlay if it exists */
+.hero-header .bg-overlay {
+    display: none;
 }
 
 .bg-gradient-green {

@@ -5,15 +5,7 @@
 @section('content')
 <main class="container mt-5">
     <!-- Hero Header -->
-    <div class="hero-header bg-gradient-green rounded-4 p-2 mb-5 text-white position-relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
-        <div class="bg-overlay"></div>
-        <div class="position-relative z-index-1 text-center">
-            <hr class="bg-white-light" data-aos="fade" data-aos-delay="100">
-            <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-delay="200">Puertas de Interior</h1>
-            <p class="lead" data-aos="fade-up" data-aos-delay="300">Elegancia y funcionalidad para tus espacios interiores</p>
-            <hr class="bg-white-light" data-aos="fade" data-aos-delay="400">
-        </div>
-    </div>
+    <x-hero-header title="Puertas de Interior" subtitle="Elegancia y funcionalidad para tus espacios interiores" variant="floating" aos="fade-up" classes="" />
 
     <!-- Sección Principal -->
     <section id="puertas-placas" class="section-card bg-section-soft rounded-4 p-5 mb-5">

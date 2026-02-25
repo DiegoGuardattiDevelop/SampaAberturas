@@ -5,15 +5,7 @@
 @section('content')
 <main class="container mt-5">
     <!-- Hero Header -->
-    <div class="hero-header bg-gradient-green rounded-4 p-4 mb-5 text-white position-relative overflow-hidden">
-        <div class="bg-overlay"></div>
-        <div class="position-relative z-index-1 text-center">
-            <hr class="bg-white-light">
-            <h1 class="display-4 fw-bold">Tienda</h1>
-            <p class="lead">Productos de calidad para tus proyectos</p>
-            <hr class="bg-white-light">
-        </div>
-    </div>
+    <x-hero-header title="Tienda" subtitle="Productos de calidad para tus proyectos" variant="floating" />
 
     <!-- Sección de Tienda -->
     <section id="tienda" class="mb-5" data-aos="fade-up">

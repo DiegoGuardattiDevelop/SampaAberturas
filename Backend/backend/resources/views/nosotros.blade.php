@@ -5,15 +5,7 @@
 @section('content')
 <main class="container mt-5">
     <!-- Hero Header -->
-    <div class="hero-header bg-gradient-green rounded-4 p-2 mb-5 text-white position-relative overflow-hidden">
-        <div class="bg-overlay"></div>
-        <div class="position-relative z-index-1 text-center">
-            <hr class="bg-white-light">
-            <h1 class="display-4 fw-bold">Historia</h1>
-            <p class="lead">Más de una década de excelencia en aberturas</p>
-            <hr class="bg-white-light">
-        </div>
-    </div>
+    <x-hero-header title="Historia" subtitle="Más de una década de excelencia en aberturas" variant="floating" />
 
     <!-- Sección Historia -->
     <section id="historia" class="section-card bg-section-soft rounded-4 p-5 mb-5" data-aos="fade-up">
